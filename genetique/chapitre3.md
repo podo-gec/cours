@@ -278,7 +278,7 @@ Nous ne répondrons pas en détail à cette question car elle nécessite des ana
 
 Soit un gène polymorphe avec deux allèles a et b. Ces allèles sont présents avec les fréquences allèliques respectives, Fa et Fb. Evidemment Fa + Fb = 1. Selon nos hypothèses, cela veut dire que les parents vont produire Fa de gamètes a et Fb de gamètes b. Voyons maintenant quelles seront les fréquences de production de gamètes a et b par les descendants issus la rencontre de ces gamètes, Fan+1 et Fbn+1.
  
-TODO img
+![](/img/03/2019-11-18-16-17-55.png)
 
 Donc les fréquences alléliques restent constantes d'une génération à l'autre.
 

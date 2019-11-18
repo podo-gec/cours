@@ -47,7 +47,7 @@ Deux grands types de transposons :
 
 Enfin bien que les rétrovirus ne fassent pas partie des transposons puisqu'ils ont une forme infectieuse, ils sont inclus ici à cause de leurs parentés de structure avec les rétrotransposons.
 
-TODO tab
+![](/img/10/2019-11-18-16-28-35.png)
 
 ### Fréquence de transposition
 

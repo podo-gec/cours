@@ -4,15 +4,15 @@ La méthodologie génétique est une approche très performante pour étudier le
 
 La démarche suivie consiste dans un premier temps à obtenir des mutants qui ont des défauts dans l'objet ou le processus que l'on étudie. Il faut ensuite caractériser les mutations par les méthodes de la génétique classique. Ensuite, les gènes ainsi identifiés et qui interviennent dans le processus sont clonés par des démarches de génétique moléculaire (clonage positionnel ou par expression fonctionnelle). Leur caractérisation fait appel aux méthodes de la biochimie et biologie moléculaire, de la génétique des interactions et de la génétique inverse. La génétique inverse consiste dans l'obtention in vitro de mutations spécifiques dans un gène et la réintroduction de celui-ci par transformation ou transfection dans un organisme, les effets obtenus sont ensuite analysés:
 
-TODO img
+![](/img/05/mutagenese.png)
 
 ## La mutagenèse classique
 
 La mutagenèse classique permet produire toute une palette de mutations ayant des effets divers sur les gènes allant de leur inactivation jusqu'à leur dérégulation en passant par des modifications du fonctionnement des protéines qu'ils codent. Elle se passe en deux étapes:
 
-- l'application du traitement mutagène 
+- l'application du traitement mutagène
 - la sélection des mutants
- 
+
 ### L'application du traitement mutagène
 
 Même si celui-ci n'est pas obligatoire, le faible taux des mutations spontanées entraîne dans la grande majorité des cas, l'utilisation obligée d'un traitement mutagène. Ce traitement va dicter en fonction de sa spécificité le type de mutations qui vont être obtenues, je vous renvoie au chapitre 3. De même, le traitement mutagène va moduler le type de clonage qui pourra être effectué par la suite. Actuellement, deux grands types de mutagènes sont utilisés:
@@ -22,7 +22,7 @@ Même si celui-ci n'est pas obligatoire, le faible taux des mutations spontanée
 D'un point de vue de la sécurité, les UV sont préférables en particulier depuis que du matériel facile d'utilisation et parfaitement sécurisé est disponible. Cependant, le spectre des mutations obtenues avec les UV ne permet pas toujours d'obtenir ce que l'on désire. De même, certains organismes sont très résistants aux traitements avec des UV. Les mutagènes chimiques sont alors utilisés. Il existe alors des conditions draconiennes d'utilisation de ces produits qui se fait dans des pièces sécurisées.
 
 Pour que ce traitement soit efficace, il faut que de nombreuses mutations soit produites. Les mutations apparaissant au hasard dans le génome, beaucoup d'entre elles vont toucher des gènes essentiels et donc après le traitement le taux de survie va être fortement diminué. En pratique, il faut donc partir d'un effectif suffisamment grand pour tenir compte de cette létalité. Réciproquement, le taux de survie est une indication de l'efficacité du traitement mutagène. Classiquement, un taux de survie de 1 à 5% est indicatif que le traitement a bien fonctionné et que de nombreuses mutations ont été produites.
- 
+
 Les mutations obtenues avec ce type de traitement sont le plus souvent ponctuelles (il est aussi possible d'obtenir avec certains produits des délétions). Elles peuvent inactiver le gène, modifier son fonctionnement voir augmenter son fonctionnement. Ce type de mutagenèse permet donc d'obtenir des mutations qui ont un large éventail d'effets.
 
 - la mutagenèse insertionnelle par transposition ou par transformation (le REMI).
@@ -32,7 +32,7 @@ Chez la majorité des organismes, l'ADN transformé recombine par un processus d
 
 ![](img/05/image004.jpg)
 
-Ces morceaux d'ADN en s'insérant vont inactiver ou modifier l'expression de gènes. Le plus souvent le processus d'intégration est complexe et modifie profondément la structure de l'ADN qui s'insère (insertion de plusieurs copies du fragment d'ADN) et celle de l'ADN situé au point de jonction (délétion ou duplication de la séquence d'insertion). Des chercheurs ont constaté chez certains organismes que si l'ADN est préalablement linéarisé par un enzyme de restriction et que l'enzyme de restriction est aussi ajouté dans le mélange de transformation, alors l'intégration se produit proprement (une seule copie de l'ADN est intégrée et l'insertion se fait sans délétion ou duplication à une séquence qui correspond à un site de restriction de l'enzyme utilisé. 
+Ces morceaux d'ADN en s'insérant vont inactiver ou modifier l'expression de gènes. Le plus souvent le processus d'intégration est complexe et modifie profondément la structure de l'ADN qui s'insère (insertion de plusieurs copies du fragment d'ADN) et celle de l'ADN situé au point de jonction (délétion ou duplication de la séquence d'insertion). Des chercheurs ont constaté chez certains organismes que si l'ADN est préalablement linéarisé par un enzyme de restriction et que l'enzyme de restriction est aussi ajouté dans le mélange de transformation, alors l'intégration se produit proprement (une seule copie de l'ADN est intégrée et l'insertion se fait sans délétion ou duplication à une séquence qui correspond à un site de restriction de l'enzyme utilisé.
 
 Exemple en utilisant BamHI
 
@@ -103,7 +103,7 @@ Ce système fourni deux cribles de sélection :
 
 - Il existe un analogue toxique de la phénylalanine, la p-fluorophenylalanine qui entre dans la cellule via mtr. La croissance des transformants est donc inhibée à la lumière si l'on met de la p-fluorophenylalanine dans le milieu. Ceci donne un deuxième moyen de sélection. Il suffit de sélectionner des mutants qui poussent dans ces conditions. Ceux-ci n'expriment plus mtr à partir du promoteur al-3. Il est de plus possible de faire varier la quantité de p-fluorophenylalanine, ce qui permet d'obtenir des mutants ayant des effets plus ou moins importants. Les cibles des mutations dans ce cas sont donc des activateurs d'al-3. Comme prévu, les gènes wc-1 et wc-2 ont été retrouvés en utilisant ce crible et c'est ainsi qu'ont été identifiés deux nouveaux gènes blr-1 et blr-2. Ces deux gènes ont des effets moins importants que wc-1 et wc-2 qui semblent être les seuls gènes dont les mutations rendent les souches complètement aveugles à la lumière bleue.
 
-Ce système a donc permis de sélectionner des nouveaux gènes qui ont une influence plus subtile sur la régulation par la lumière bleue. 
+Ce système a donc permis de sélectionner des nouveaux gènes qui ont une influence plus subtile sur la régulation par la lumière bleue.
 
 ## La technologie de l'ADN recombinant et la mutagenèse dirigée
 
@@ -142,7 +142,7 @@ Pour ce genre d'expérience, il n'est pas nécessaire d'inactiver le(s) gène(s)
 
 exemple:
 Chez C. elegans, il existe deux types de vers qui ont un comportement soit solitaire soit grégaire. La différence est liée à la présence dans les populations d'un gène polymorphe présentant deux allèles. Ce gène npr-1 code pour un produit qui ressemble à un récepteur de neuropeptides. L'allèle solitaire est dominant sur l'allèle grégaire. L'analyse moléculaire des deux allèles montre qu'ils sont tous les deux fonctionnels. L'hypothèse faite est donc que le produit de l'allèle grégaire fonctionne moins bien que celui de l'allèle solitaire. Pour tester ceci, des œufs de la souche grégaire ont été injectés par différentes quantités d'ADN contenant les allèles grégaires ou solitaires. Alors qu'avec l'allèle solitaire toutes les quantités testées donnent des souches transformées avec un comportement solitaire, dans le cas de l'allèle grégaire les seules les souches issues du traitement avec la quantité la plus importante ont un comportement solitaire. Cela montre qu'effectivement l'allèle grégaire code probablement pour une protéine moins fonctionnelle que celle codée par l'allèle solitaire.
- 
+
 ## Comment inactiver un gène
 
 Actuellement, il existe de nombreuses techniques pour inactiver des gènes et ainsi obtenir des allèles nuls. La technologie utilisée dépend de l'organisme et de ses propriétés biologiques.

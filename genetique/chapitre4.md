@@ -80,15 +80,18 @@ En fait, il existe une assez bonne corrélation entre la taille des génomes dan
 Voici d'autres exemples  de discordances:
 
 plantes :
+
 - Arabidosis : 115 Mb
 - Tabac : 3 800 Mb
 - Pin :  68 000 Mb
-Animaux
--Lamproie :  1 900 Mb
+
+Animaux :
+
+- Lamproie :  1 900 Mb
 - Homme :  3 200 Mb
--Protoptère :  140 000 Mb
-- Amoeba dubia:
-670 000 Mb
+- Protoptère :  140 000 Mb
+
+Amoeba dubia: 670 000 Mb
 
 Voici un rappel de la phylogénie globale (les triangles représentent l'effectif approximatif en espèces de chaque groupe) :
 
@@ -98,7 +101,22 @@ La figure et la table suivante vous donnent un ordre de grandeur des génomes, e
 
 ![](img/04/image006.jpg)
 
-TODO tab
+|                        |                         |                         |  taille (kb) | nb de gènes | taille des gènes |
+|------------------------|-------------------------|-------------------------|--------------|-------------|------------------|
+| Eubactéries            |                         | Escherichia coli        | 4636         | 4400        | 1 kb             |
+|                        |                         | Mycoplasma genitalium   | 580          | 483         | 1 kb             |
+| Archaebactéries        |                         | Pyrococcus abyssi       | 1700         | 1765        | 1 kb             |
+|                        |                         | Archeoglobus fulgidus   | 2178         | 2437        | 0,8 kb           |
+| Eucaryotes             | metamonades             | Giardia lamblia         | 12 000       | ?           | ?                |
+|                        | sporozoaire             | Plasmodium falciparum   | 25 000       | ?           | ?                |
+|                        | embryophytes            | Pinus sp.               | 68 000 000   | ?           | ?                |
+|                        |                         | Arabidopsis thaliana    | 115 000      | 25500       | 3-4 kb           |
+|                        | eumycètes               | Saccharomyces cerevisiae| 12155        | 6400        | 2 kb             |
+|                        |                         | Podospora anserina S    | 34 000       | 11000       | 3 kb             |
+|                        | métazoaires             | Caenorhabditis elegans  | 97 565       | 18000       | 3 kb             |
+|                        |                         | Drosophila melanogaster | 140 000      | 13500       | 3 kb             |
+|                        |                         | Fugu rubriceps          | 400 000      | 30000       | 3 kb             |
+|                        |                         | Homo sapiens            | 3 286 000    | 30000       | 5 kb à 100 Mb    |
 
 La séquence complète des génomes de nombreux organismes permet maintenant de mieux comprendre comment les génomes évoluent. De ces études qui dépassent le cadre de ce cours, nous retiendrons quelques tendances marquantes :
 
