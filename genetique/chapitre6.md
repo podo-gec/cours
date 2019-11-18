@@ -64,11 +64,11 @@ exemple:
 
 Dans le génome mitochondrial de levure, la recombinaison est très rapide. Si l'on veut tester la complémentation de mutations mitochondriales affectant la respiration, il faut donc procéder de la manière suivante :
 
-TODO img
+![](/img/06/mata.png)
 
 En effet, le protocole suivant va entraîner la sélection des recombinants sauvages et non pas celle des diploïdes où se produit la complémentation:
 
-TODO img
+![](/img/06/mata2.png)
 
 Des problèmes similaires peuvent se rencontrer dans le cas de l'étude des mutations dans des phages ou des virus. 
 

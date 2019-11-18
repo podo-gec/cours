@@ -361,13 +361,13 @@ On distingue deux types de régulation :
 
 La voie de régulation positive :
 
-TODO fig
+![](/img/12/2019-11-18-16-37-21.png)
 
 Le produit du gène amont est un activateur de la voie.
 
 La voie de régulation négative :
 
-TODO fig
+![](/img/12/2019-11-18-16-37-31.png)
 
 Le produit du gène amont est un répresseur de la voie.
 
@@ -473,7 +473,7 @@ On sait que les 2 mutations sont récessives car on a observé que le phénotype
 
 Résumé
 
-TODO fig
+![](/img/12/2019-11-18-16-39-01.png)
 
 Exemple 2 : Chez la drosophile:
 
@@ -513,4 +513,4 @@ On en conclut que la mutation épistatique est située dans le gène aval.
 
 Résumé
 
-TODO fig
+![](/img/12/2019-11-18-16-39-32.png)
