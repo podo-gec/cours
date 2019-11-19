@@ -1,3 +1,5 @@
+# La ségrégation des gènes au cours des générations dans les champignons
+
 ## Neurospora crassa (et les champignons filamenteux ascomycètes)
 
 Nous avons vu dans le chapitre 1, que chez les champignons du type de Neurospora, la structure de l'asque donne directement accès aux phénomènes de ségrégation qui se sont produits au cours de la méiose car ces asques ont une mémoire de l'orientation des fuseaux aux cours de la méiose : on parle d'asques ordonnés. Chez ce champignon, il est donc possible de faire trois types d'analyse, l'analyse de spores en vrac, l'analyse d'asques non ordonnés et l'analyse d'asques ordonnés. Après la méiose chez ce champignon, il se produit une mitose qui conduit à des asques contenant huit spores. Cela n'est pas gênant car les 2 spores issues d'une mitose sont a priori identiques et cote à cote :

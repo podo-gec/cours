@@ -1,3 +1,5 @@
+# Quelques notions de génomique
+
 ## Qu'est-ce que la génomique ?
 
 Nous disposons maintenant de méthodes de séquençage performantes qui permettent d'étudier finement des génomes entiers. Ceci nous permet maintenant par exemple d'analyser et de comparer les génomes des différents organismes (au sein d'une même espèce ou entre espèces différentes) et donc de mieux comprendre leur fonctionnement, (aussi bien dans leur ressemblance que leur dissemblance) et leur évolution. La génomique est la sous-discipline de la génétique qui regroupe les connaissances sur un organisme et tente de les synthétiser. Elle traite en particulier de l'organisation globale des génomes. En fait, vous possédez maintenant les notions qui vous permettent de comprendre une grande partie de la génomique, surtout en ce qui concerne l'organisation et l'évolution des génomes.

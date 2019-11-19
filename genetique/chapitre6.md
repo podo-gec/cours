@@ -1,3 +1,5 @@
+# La complémentation
+
 ## Principe du test de complémentation
 
 A l'issue d'une mutagenèse, on dispose d'une collection d'allèles mutants. En général, ces allèles confèrent le même phénotype. La question se pose alors de savoir combien de gènes sont mis en jeu pour obtenir cette collection d'allèles. La génétique a développé des méthodes qui permettent de répondre à cette question. Il existe deux méthodes: la complémentation et la cartographie. Nous allons commencer dans ce chapitre par le test de complémentation. C'est en effet le plus rapide à mettre en oeuvre et son application permet d'avoir une bonne idée du nombre de gènes.

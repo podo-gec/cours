@@ -1,3 +1,5 @@
+# La recombinaison et l'établissement de cartes génétiques
+
 ## Utilité des cartes génétiques
  
 La cartographie permet de positionner des gènes sur les chromosomes. A l'issue de mutagenèse, cette méthode permet d'analyser le contenu en mutation(s) des souches obtenues (en effet, à l'issue de la mutagenèse, il n'est pas rare qu'un mutant contiennent plusieurs mutations). Elle permet aussi de ranger les différentes mutations dans des locus (ou loci) sur les chromosomes et donc d'estimer le nombre de ces locus. Cette méthode fonctionne avec les allèles récessifs ou dominants.
