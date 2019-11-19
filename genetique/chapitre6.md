@@ -35,8 +35,8 @@ Le signe - indique que l'hétérocaryon avec mi dans un noyau et mj dans l'autre
 
 De ce tableau nous pouvons tirer que :
 
-- l'allèle m4 complémente avec tous les autres et donc qu'il caractérise un gène. 
-- les allèles m1, m5 et m6 ne complémentent pas entre eux mais complémentent avec tous les autres et donc qu'ils caractérisent un deuxième gène 
+- l'allèle m4 complémente avec tous les autres et donc qu'il caractérise un gène.
+- les allèles m1, m5 et m6 ne complémentent pas entre eux mais complémentent avec tous les autres et donc qu'ils caractérisent un deuxième gène
 - les allèles m2 et m3 ne complémentent pas entre eux mais complémentent avec tous les autres et donc qu'ils caractérisent un troisième gène.
 Au total, trois groupes de complémentation. Il semble donc y avoir trois gènes qui ont pu être identifiés par cette méthode.
 
@@ -44,7 +44,7 @@ Au total, trois groupes de complémentation. Il semble donc y avoir trois gènes
 
 L'application du test se fait différemment en fonction du type d'organisme. En effet, la construction des souches est simple si on est chez un organisme diplobiontique ou haplodiplobiontique. Il suffit dans ce cas de croiser des parents purs pour chacun des allèles mutants et d'observer la F1 ou les diploïdes produits.
 
-Chez les organismes haplobiontique (comme P. anserina) ou dans les cellules en culture, il est souvent impossible de fabriquer des noyaux diploïdes. On a donc recourt à la fabrication d'hétérocaryons. Mais ceci est plus aléatoire. En effet, dans un noyau diploïde, les allèles sont certainement présents à l'état "hétérozygotes" avec un nombre fixe de copies. Chez les hétérocaryons, le rapport des noyaux peut varier, voire à l'extrême un des deux types de noyau peut se perdre. La construction d'hétérocaryons dit balancés peut compenser ceci. Un des noyaux possède un marqueur d'auxotrophie ou de résistance à un antibiotique. L'autre possède un autre marqueur d'auxotrophie ou une autre résistance. 
+Chez les organismes haplobiontique (comme P. anserina) ou dans les cellules en culture, il est souvent impossible de fabriquer des noyaux diploïdes. On a donc recourt à la fabrication d'hétérocaryons. Mais ceci est plus aléatoire. En effet, dans un noyau diploïde, les allèles sont certainement présents à l'état "hétérozygotes" avec un nombre fixe de copies. Chez les hétérocaryons, le rapport des noyaux peut varier, voire à l'extrême un des deux types de noyau peut se perdre. La construction d'hétérocaryons dit balancés peut compenser ceci. Un des noyaux possède un marqueur d'auxotrophie ou de résistance à un antibiotique. L'autre possède un autre marqueur d'auxotrophie ou une autre résistance.
 
 exemple:
 
@@ -64,20 +64,20 @@ exemple:
 
 Dans le génome mitochondrial de levure, la recombinaison est très rapide. Si l'on veut tester la complémentation de mutations mitochondriales affectant la respiration, il faut donc procéder de la manière suivante :
 
-![](/img/06/mata.png)
+![](img/06/mata.png)
 
 En effet, le protocole suivant va entraîner la sélection des recombinants sauvages et non pas celle des diploïdes où se produit la complémentation:
 
-![](/img/06/mata2.png)
+![](img/06/mata2.png)
 
-Des problèmes similaires peuvent se rencontrer dans le cas de l'étude des mutations dans des phages ou des virus. 
+Des problèmes similaires peuvent se rencontrer dans le cas de l'étude des mutations dans des phages ou des virus.
 
 En résumé, il faut pour appliquer le test de complémentation, s'assurer que les mutations sont récessives et qu'elles sont bien présentes et associées en trans.
 
 ## Les limites du test
- 
+
 Si le test de complémentation est un test très puissant, il arrive de rencontrer un certain nombre d'exception. Notez que si des mutations n'ont pas les propriétés attendues dans le test de complémentation, cela apporte des indications sur le fonctionnement des gènes mutants.
- 
+
 Des mutations localisées dans le même gène mais qui complémentent !
 
 Il arrive que des mutations localisées dans un même gène complémentent. On parle alors de complémentation intragénique ou interallélique. Deux explications au moins sont possibles pour l'expliquer.
@@ -134,14 +134,14 @@ Il existe donc un effet spécifique non attendu entre act1-4 et sac6-. Cet effet
 En fait, les 2 cas peuvent se produire dans le cas du système actine, c.a.d. qu'en fonction des couples de mutations l'un ou l'autre s'applique.
 
 ## Le terme de complémentation a été adapté à deux autres situations
- 
+
 
 Par les biochimistes, pour identifier une protéine responsable d'une fonction particulière.
 
 exemple:
 
 Le groupe de Kornberg qui travaillait sur l'initiation de la réplication chez E. coli, disposait de mutants d'initiation de la réplication (dnaB etc.). Il avait aussi un test d'initiation in vitro à partir d'un extrait acellulaire de la souche sauvage. Pour identifier les protéines affectées dans les différents mutants, par exemple dnaB. Ils ont fait un extrait acellulaire de la souche mutante dnaB et ont montré qu'il ne permettait pas la réplication in vitro. Ils ont ensuite fractionné l'extrait acellulaire issue de la souche sauvage et ont ajouté séparément les différentes fractions à leur extrait de dnaB. Ils ont ainsi pu caractériser la fraction qui contenait la protéine dnaBp sur le critère de restauration de l'initiation de la réplication. Des fractionnements successifs de ce type ont ainsi permis de purifier différentes protéines impliquées dans l'initiation de la réplication chez E. coli.
- 
+
 Par les généticiens moléculaires, pour le clonage des gènes par expression (qui est un terme plus correct que le terme de clonage par complémentation). Lorsque l'on dispose d'une souche qui n'exprime pas un caractère (parce qu'elle contient un allèle mutant d'un gène ou parce que l'organisme ne possède pas le gène), il est possible de trouver des gènes qui restaurent le caractère. Il faut pour cela fabriquer une banque à partir d'une souche qui présente le caractère et transformer la souche qui ne le possède pas. L'isolement de transformants qui ont le caractère recherché permet de conclure que ceux-ci contiennent un fragment d'ADN qui confère le caractère et donc le gène responsable (attention, il peut aussi s'agir de réversions).
 
 exemple:

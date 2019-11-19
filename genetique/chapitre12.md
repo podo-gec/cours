@@ -1,4 +1,4 @@
-# LES INTERACTIONS GENIQUES 
+# LES INTERACTIONS GENIQUES
 
 ## LA SUPPRESSION
 
@@ -34,11 +34,11 @@ En F2, on écrit la ségrégation normale de deux couples d’allèles :
 - 3/16 de mouches homozygotes pour su et homozygotes ou hétérozygotes pour vg+, il faut en conclure qu’elles ont des ailes normales.
 - 1/16 de doubles homozygotes vg su donc ailes normales parce que le phénotype est supprimé par l’addition des deux mutations.
 
-Total : 13/16 de mouches à ailes normales et 3/16 à ailes vestigiales ce qui correspond à l’observation expérimentale. 
+Total : 13/16 de mouches à ailes normales et 3/16 à ailes vestigiales ce qui correspond à l’observation expérimentale.
 
-On voit ici nettement que la mutation su n’est pas liée à la mutation vg , puisqu’on a une ségrégation parfaitement indépendante des deux couples d’allèles. su(vg) est un allèle d’un nouveau gène, qui est situé sur le chromosome III. 
+On voit ici nettement que la mutation su n’est pas liée à la mutation vg , puisqu’on a une ségrégation parfaitement indépendante des deux couples d’allèles. su(vg) est un allèle d’un nouveau gène, qui est situé sur le chromosome III.
 
-On peut également remarquer que cette mutation suppressive ne confère pas, par elle-même, de phénotype mutant dans l'aile à l’état homozygote : les 3/16 de mouches vg+ su/su ont des ailes normales. 
+On peut également remarquer que cette mutation suppressive ne confère pas, par elle-même, de phénotype mutant dans l'aile à l’état homozygote : les 3/16 de mouches vg+ su/su ont des ailes normales.
 
 Généralisation
 
@@ -46,7 +46,7 @@ Il arrive fréquemment que la mutation suppressive à l’état homozygote ne do
 
 Exemple: la souche de coli suppresseur d'ambre (suppresseur du non sens UAG) présente une croissance lente (cf exercice de TD).
 
-Parfois, il a un phénotype voisin (voir ci-dessous les complexes multiprotéiques ou les voies régulées). 
+Parfois, il a un phénotype voisin (voir ci-dessous les complexes multiprotéiques ou les voies régulées).
 
 Il arrive fréquemment aussi que le phénotype de la première mutation soit seulement partiellement supprimé par la seconde. Ce qui veut dire que le double mutant n’a pas récupéré un phénotype complètement sauvage.
 
@@ -94,9 +94,9 @@ Les suppresseurs intragéniques permettent d’avoir des informations sur les re
 
 #### Suppresseur informationnel (agit au niveau de la traduction)
 
-Ce sont les suppresseurs de non sens ou de faux sens causés par une mutation dans le gène d’un tARN (voir cours de Biologie moléculaire). Ce type de suppresseur est allèle spécifique mais non gène spécifique. 
+Ce sont les suppresseurs de non sens ou de faux sens causés par une mutation dans le gène d’un tARN (voir cours de Biologie moléculaire). Ce type de suppresseur est allèle spécifique mais non gène spécifique.
 
-Exemple : 
+Exemple :
 
 Chez E. coli une mutation dans un suppresseur d’ambre supprime spécifiquement l’arrêt de traduction du à l’apparition d’un codon UAG, en introduisant à la place un tryptophane : la mutation su est spécifique du codon UAG. La mutation suppressive est située dans le gène codant pour l'ARNtTrp au niveau de l'anticodon (changement de 5' CCA, anticodon normal qui reconnait le codon UGG, en 5' CUA qui est complémentaire du codon stop UAG). Cette mutation su supprimera aussi bien le phénotype lac- causé par l’apparition d’un codon UAG dans la séquence codante de lacZ , que le phénotype trp- causée par cette même mutation dans la sous-unité a de la tryptophane synthétase. De même cette même mutation su introduit un Trp dans une protéine, que la mutation (l'allèle muté) initiale soit le remplacement d'un codon CAG (Gln) ou UAC (Tyr) par exemple, par un codon ambre.
 
@@ -139,7 +139,7 @@ Scénario : la première mutation dans une première protéine, change un acide 
 
 De tels suppresseurs sont allèle-spécifiques et gène spécifiques.
 
-Exemple des mutations act1 et sac6 chez la levure (dans ce cas il y a suppression mutuelle) : 
+Exemple des mutations act1 et sac6 chez la levure (dans ce cas il y a suppression mutuelle) :
 
 La mutation thermosensible act1, dans le gène codant l'actine du cytosquelette, se traduit par une absence de croissance à 37°C. Ce phénotype est supprimé par une seconde mutation, thermosensible elle aussi, dans le gène sac6 qui code la fimbrine, protéine qui se lie aux filaments d'actine pour former des faisceaux. La mutation act1 a lieu dans le domaine de contact avec la fimbrine ce qui diminue l'affinité de la liaison. La mutation suppressive sac6 permet de créer un nouveau contact entre les deux protéines et de restaurer l'interaction, visible par la formation de faisceaux in vitro après mélange des protéines mutées (cf exercice de TD).
 
@@ -161,7 +161,7 @@ On mutagénise des mâles sevE4/Y à l’éthyl méthane sulfonate et on les cro
 
 En effet, les mâles en F1 tiennent leur X de leur mère qui n’a pas été mutagénisée et donc sont sevE4/Y. S'ils ont récupéré un oeil normal c'est qu'une mutation suppressive dominante est apparue sur un autosome dans un gamète, après mutagénèse chez le père. En effet la simple réversion de sevE4 vers sev+ se verrait, par apparition d'yeux normaux, seulement chez les femelles.
 
-On obtient ainsi un mâle chez lequel 36% des ommatidies contiennent un R7 fonctionnel. Il s'agit donc d'une suppression partielle. La nouvelle mutation, localisée sur le chromosome 2 est nommée Son-of-sevenless J (SosJ). Par construction c'est un suppresseur dominant. Par construction toujours, le produit Sos intervient après sevenless dans le développement de R7: en effet la mutation SosJ permet d'outrepasser l'absence d'activité de sevenless. Cela peut se comprendre de la manière suivante: la mutation sevE4 entraine que la protéine activée par Sev ne l'est plus et la voie de détermination de R7 est bloquée; si la protéine mutée Sos (allèle SosJ), agissant quelquepart en aval de Sev est toujours activée (la mutation SosJ est dominante), alors la voie est remise en route à son niveau et R7 est formé, sans que l'activité de la protéine Sev soit requise. 
+On obtient ainsi un mâle chez lequel 36% des ommatidies contiennent un R7 fonctionnel. Il s'agit donc d'une suppression partielle. La nouvelle mutation, localisée sur le chromosome 2 est nommée Son-of-sevenless J (SosJ). Par construction c'est un suppresseur dominant. Par construction toujours, le produit Sos intervient après sevenless dans le développement de R7: en effet la mutation SosJ permet d'outrepasser l'absence d'activité de sevenless. Cela peut se comprendre de la manière suivante: la mutation sevE4 entraine que la protéine activée par Sev ne l'est plus et la voie de détermination de R7 est bloquée; si la protéine mutée Sos (allèle SosJ), agissant quelquepart en aval de Sev est toujours activée (la mutation SosJ est dominante), alors la voie est remise en route à son niveau et R7 est formé, sans que l'activité de la protéine Sev soit requise.
 
 SoSJ ne supprime pas 14 autres allèles perte-de fonction de sev: la mutation SoSJ est donc allèle spécifique. Les mouches SosJ/+ ont un phénotype sauvage donc la mutation n'a pas par elle-même de phénotype dominant dans l'oeil.
 
@@ -181,17 +181,17 @@ Chez la levure S. cerevisiae, une cellule haploïde de génotype MATa peut se co
 
 Une mutation qui inactive une voie peut être supprimée par une deuxième mutation qui active une voie parallèle.
 
-Exemple classique chez E. coli: 
+Exemple classique chez E. coli:
 
 Une mutation dans la maltose perméase rend la bactérie incapable de croître sur maltose. Un suppresseur a été isolé, qui présente une mutation qui modifie la spécificité de la lactose perméase, laquelle devient capable de transporter le maltose (alors que la lactose perméase sauvage en est incapable, les voies d’entrée de ces deux sucres sont indépendantes).
 
 Exemple chez la levure :
 
-Deux gènes codent chacun un cytochrome c. CYC1 code l'iso1cytc qui représente 90% du cytc en cellule et CYC7 code l'iso2-cytc qui représente les 10% restants. Une mutation nulle dans CYC1 provoque un retard de croissance sur milieu glucosé (mais un phénotype glycérol+). On connait une mutation suppressive qui supprime ce phénotype et restaure une croissance normale : il s’agit d’une mutation dans CYC7 qui multiplie par 18 l'expression de l'iso2cytc (cette mutation est une insertion d'un transposon Ty1 à 240bp en amont de la phase codante). 
+Deux gènes codent chacun un cytochrome c. CYC1 code l'iso1cytc qui représente 90% du cytc en cellule et CYC7 code l'iso2-cytc qui représente les 10% restants. Une mutation nulle dans CYC1 provoque un retard de croissance sur milieu glucosé (mais un phénotype glycérol+). On connait une mutation suppressive qui supprime ce phénotype et restaure une croissance normale : il s’agit d’une mutation dans CYC7 qui multiplie par 18 l'expression de l'iso2cytc (cette mutation est une insertion d'un transposon Ty1 à 240bp en amont de la phase codante).
 
-#### Suppresseurs bizarres 
+#### Suppresseurs bizarres
 (cf exercice TD sur le facteur PSI chez la levure).
- 
+
 ## L’ACCENTUATION
 
 
@@ -201,10 +201,10 @@ A l’inverse des suppresseurs il existe des cas ou une deuxième mutation, au l
 Par exemple si on trouve dans un stock de mouches homozygotes pour une certaine mutation, une mouche de phénotype aggravé, et qu’on la croise avec une mouche sauvage, on aura toujours en F1 toute la descendance sauvage mais en F2 on aura les proportions :
 
 - 12/16 sauvage (décomposés en 9/16 portant au moins un allèle sauvage de chacun des deux gènes et 3/16 homozygotes pour la mutation aggravante si elle n’a pas par elle même de phénotype)
-- 3/16 mutant (homozygote pour la première mutation) 
+- 3/16 mutant (homozygote pour la première mutation)
 - 1/16 aggravé correspondant au double homozygote .
 
-Fréquemment le phénotype du double homozygote est tellement aggravé qu’il devient létal : on parle alors de colétalité. 
+Fréquemment le phénotype du double homozygote est tellement aggravé qu’il devient létal : on parle alors de colétalité.
 
 On peut avoir le cas suivant :
 Une mutation nulle dans un gène A donne un phénotype faible voire aucun phénotype mutant, l'homozygote est parfaitement viable. De même dans un gène B. Mais le double mutant homozygote montre un phénotype mutant très net parfois même létal.
@@ -215,18 +215,18 @@ Une mutation nulle dans un gène A donne un phénotype faible voire aucun phéno
  Le manque de A arrête la première voie et reporte tout le métabolisme sur la seconde qui la remplace. Si B manque à son tour alors le processus est complètement arrêté et on observe un phénotype mutant.
 On voit que ceci est exactement l'inverse de la suppression observée par renforcement d'une voie parallèle.
 
-Exemple: 
+Exemple:
 
 Chez les mammifères le gène myoD code pour un effecteur déterminant la différenciation musculaire chez des cellules en culture. Cependant une mutation nulle dans le gène myoD de la souris ne provoque pas de désorganisation du système musculaire: la souris homozygote mutante est viable, fertile et elle développe des muscles. Même effet pour un autre effecteur musculaire, myf5. En fait on voit que chez les souris homozygotes mutantes pour myoD l'expression de myf5 est très élevé et réciproquement. Il y a donc redondance entre les deux produits qui peuvent se remplacer l'un l'autre. En revanche, le double mutant myf5, myoD est létal.
 
-2. Si les deux gènes agissent séquentiellement sur la même voie. 
+2. Si les deux gènes agissent séquentiellement sur la même voie.
 
 Une réduction de A ou B par une mutation de perte de fonction partielle donne un phénotype léger, l'addition des deux donne un phénotype aggravé voire létal si les gènes sont essentiels.
 On remarque que ceci est l'inverse de la suppression par épistasie.
 
 Exemple:
 
-Chez la drosophile un allèle mutant du gène sevenless, sevB4, donne des photorécepteurs R7 normaux à 22°C mais plus de R7 à 24°C (œil rugueux). Cela signifie que la voie de détermination de R7 fonctionne au minimum. On mutagénise des mâles sevB4 /Y et on les croise avec des femelles sevB4. On sélectionne les mâles de la F1 qui ont perdu leurs R7 même à 22°C (œil rugueux) donc un phénotype aggravé. Chez ces mâles on a donc cohabitation d'une mutation hémizygote sevB4 et d'une mutation aggravante hétérozygote E(sev) située dans un gène autosomal. La mutation E(sev) est dominante: pourtant c'est une mutation de perte de fonction. Il faut donc en conclure que le fait de diviser par 2 la dose de la protéine E(sev) suffit pour arrêter la voie de détermination de R7 à 22°(par haploinsuffisance de l'allèle sauvage). 
+Chez la drosophile un allèle mutant du gène sevenless, sevB4, donne des photorécepteurs R7 normaux à 22°C mais plus de R7 à 24°C (œil rugueux). Cela signifie que la voie de détermination de R7 fonctionne au minimum. On mutagénise des mâles sevB4 /Y et on les croise avec des femelles sevB4. On sélectionne les mâles de la F1 qui ont perdu leurs R7 même à 22°C (œil rugueux) donc un phénotype aggravé. Chez ces mâles on a donc cohabitation d'une mutation hémizygote sevB4 et d'une mutation aggravante hétérozygote E(sev) située dans un gène autosomal. La mutation E(sev) est dominante: pourtant c'est une mutation de perte de fonction. Il faut donc en conclure que le fait de diviser par 2 la dose de la protéine E(sev) suffit pour arrêter la voie de détermination de R7 à 22°(par haploinsuffisance de l'allèle sauvage).
 
 Par cette méthode on sélectionne:
 
@@ -249,19 +249,19 @@ Tout comme on se sert de la suppression on peut se servir de cette propriété d
 
 Exemple:
 
-Chez la levure S. cerevisiae la division mitotique se fait par bourgeonnement; la mutation cdc24ts, provoque un arrêt de la division à 36°C, par non formation du bourgeon. Le gène MSB1, situé sur un plasmide multicopie, a été sélectionné à partir d'une banque de plasmides, sur la base de la suppression du phénotype causé par mutation cdc24ts : en présence de ce plasmide la cellule se divise à 36°C. Le gène MSB1 semble donc impliqué dans la formation du bourgeon. Pourtant, une délétion du gène résident MSB1 dans la levure ne produit aucun phénotype. Pour mieux comprendre le rôle de MSB1 on veut identifier de nouveaux gènes dont les produits intéragiraient avec le produit de MSB1 pour la formation du bourgeon. 
+Chez la levure S. cerevisiae la division mitotique se fait par bourgeonnement; la mutation cdc24ts, provoque un arrêt de la division à 36°C, par non formation du bourgeon. Le gène MSB1, situé sur un plasmide multicopie, a été sélectionné à partir d'une banque de plasmides, sur la base de la suppression du phénotype causé par mutation cdc24ts : en présence de ce plasmide la cellule se divise à 36°C. Le gène MSB1 semble donc impliqué dans la formation du bourgeon. Pourtant, une délétion du gène résident MSB1 dans la levure ne produit aucun phénotype. Pour mieux comprendre le rôle de MSB1 on veut identifier de nouveaux gènes dont les produits intéragiraient avec le produit de MSB1 pour la formation du bourgeon.
 
-On opère de la façon suivante: 
+On opère de la façon suivante:
 
-On part d'une souche haploïde msb1 (mutation nulle), ade2, ade3 , transformée avec un plasmide portant les allèles sauvages ADE3 , MSB1. 
+On part d'une souche haploïde msb1 (mutation nulle), ade2, ade3 , transformée avec un plasmide portant les allèles sauvages ADE3 , MSB1.
 
-La souche est auxotrophe pour l'adénine car elle est ade2 et donne alors des colonies rouges par accumulation d'un produit intermédiaire coloré. Sans pression de sélection, c’est-à-dire en présence d’adénine dans le milieu de culture, le plasmide peut être perdu de temps en temps par une cellule: elle devient alors ade2 ade3 et elle est blanche. Bien qu'ayant perdu l'allèle MSB1 sauvage elle est parfaitement viable puisque la mutation msb1 n'a pas de phénotype. Sur boite cela se traduit par des colonies rouges présentant des secteurs blancs. 
+La souche est auxotrophe pour l'adénine car elle est ade2 et donne alors des colonies rouges par accumulation d'un produit intermédiaire coloré. Sans pression de sélection, c’est-à-dire en présence d’adénine dans le milieu de culture, le plasmide peut être perdu de temps en temps par une cellule: elle devient alors ade2 ade3 et elle est blanche. Bien qu'ayant perdu l'allèle MSB1 sauvage elle est parfaitement viable puisque la mutation msb1 n'a pas de phénotype. Sur boite cela se traduit par des colonies rouges présentant des secteurs blancs.
 
 On mutagénise cette souche, on étale les survivants sur boite en présence d'adénine. Chaque cellule survivante étalée donne naissance à une colonie qui est rouge si les cellules portent toujours le plasmide. On sélectionne les colonies qui n'ont pas de secteurs blancs: ce seront celles chez qui la perte du plasmide (donc la perte de l'allèle sauvage MSB1) provoque un phénotype létal. Cela se produit si l'addition d'une nouvelle mutation x à la mutation msb1 cause la létalité.
 
-On sélectionne ainsi deux nouvelles mutations située dans deux gènes BEM1 et BEM2. Après ségrégation des mutations msb1 et bem, on observe que les cellules mutantes pour bem1 ou bem2, (dans un contexte MSB1 sauvage) sont viables mais présentent des défauts dans la croissance : cellules multinuclées donc processus de division cellulaire peu efficace. On peut penser que l'émergence du bourgeon est affectée. 
+On sélectionne ainsi deux nouvelles mutations située dans deux gènes BEM1 et BEM2. Après ségrégation des mutations msb1 et bem, on observe que les cellules mutantes pour bem1 ou bem2, (dans un contexte MSB1 sauvage) sont viables mais présentent des défauts dans la croissance : cellules multinuclées donc processus de division cellulaire peu efficace. On peut penser que l'émergence du bourgeon est affectée.
 On voit que genre de crible permet de trouver des partenaires d'une protéine agissant dans un processus complexe.
- 
+
 ## L’EPISTASIE
 
 ### Mise en évidence
@@ -269,7 +269,7 @@ On voit que genre de crible permet de trouver des partenaires d'une protéine ag
 Couleur du pelage chez la souris
 
 On croise des souris blanches de génotype ca/ca avec des souris noires de génotype a-/a-. Les deux mutations sont récessives.
-En F1 on n'obtient que des souris sauvages (brun lustré) par complémentation. 
+En F1 on n'obtient que des souris sauvages (brun lustré) par complémentation.
 On croise les descendants de la F1 entre eux. On attend en F2:
 
 - 9/16 de sauvages (homozygotes sauvages ou hétérozygotes pour les deux gènes)
@@ -299,7 +299,7 @@ Ce résultat est applicable dans le cas du pelage de la souris décrit ci-dessus
 Agouti code pour une protéine qui permet la distribution dans le poil du pigment jaune à un moment précis de la croissance du poil. En son absence le poil est entièrement noir.
 Chez le double mutant il est aisé de comprendre que le poil sera blanc, puisque c- affecte une voie commune aux 2 pigments a- une voie particulière au pigment jaune. Il est donc normal que la mutation épistatique qui impose son phénotype soit située dans le gène c qui est le plus en amont.
 
-Mais ceci n’est pas généralisable mécaniquement. 
+Mais ceci n’est pas généralisable mécaniquement.
 
 Voyons le cas des yeux de la drosophile : ils sont colorés par deux pigments, un rouge et un brun ; l’œil sauvage est rouge brique. Les mouches mutantes pour white ont les yeux blancs et les mouches mutantes pour rosy ont les yeux rouge vineux. Les doubles mutants homozygotes w-, ry- ont les yeux blancs. La mutation w- est donc épistatique sur la mutation ry-. Cependant le produit du gène white intervient en aval de Rosy.
 Ceci provient du fait que la protéine White a pour fonction de déposer les 2 pigments dans l'oeil: en son absence l'oeil est blanc. La mutation w- affecte une voie commune aux 2 pigments, en aval, ry- affecte la voie particulière de la synthèse du pigment brun, en amont.
@@ -316,7 +316,7 @@ C’est une méthode génétique employée pour classer des allèles mutants aya
 
 Exemple: la classification des mutants rad en trois groupes chez la levure.
 
-Après saturation du génome de la levure en mutations créant un phénotype de sensibilité aux radiations UV, on collecte 96 mutants indépendants. 
+Après saturation du génome de la levure en mutations créant un phénotype de sensibilité aux radiations UV, on collecte 96 mutants indépendants.
 
 On commence par les croiser deux à deux pour tester la complémentation. Ceci permet de regrouper les allèles dans 30 groupes de complémentation différents qui correspondent donc en première approximation à 30 gènes différents.
 
@@ -350,7 +350,7 @@ Au cours de sa vie, une cellule peut être placée devant un choix entre deux pr
 
 ### Les deux types de régulation
 
-Dans la “ voie de régulation ” plusieurs gènes interviennent séquentiellement pour déterminer le choix du bon programme d'expression génétique. 
+Dans la “ voie de régulation ” plusieurs gènes interviennent séquentiellement pour déterminer le choix du bon programme d'expression génétique.
 
 Soit deux gènes impliqués dans la voie de régulation. Il n’est pas nécessaire qu’ils interviennent juste l’un après l’autre, il peut y avoir des intermédaires non impliqués dans l’analyse d’épistasie. A l’état sauvage ces gènes vont, sous l'effet d'un signal, donc à partir d'un certain moment, dans certaines conditions, ou dans certaines cellules si on a affaire à un organisme pluricellulaire :
 
@@ -361,13 +361,13 @@ On distingue deux types de régulation :
 
 La voie de régulation positive :
 
-![](/img/12/2019-11-18-16-37-21.png)
+![](img/12/2019-11-18-16-37-21.png)
 
 Le produit du gène amont est un activateur de la voie.
 
 La voie de régulation négative :
 
-![](/img/12/2019-11-18-16-37-31.png)
+![](img/12/2019-11-18-16-37-31.png)
 
 Le produit du gène amont est un répresseur de la voie.
 
@@ -416,7 +416,7 @@ L'épistasie est d'un grand intérêt pour ordonner les gènes dans des voies de
 
 Si on possède des mutants affectés dans deux gènes de la voie et ayant un phénotype différent on pourra ordonner ceux-ci dans la voie de régulation.
 
-Il faudra pour cela créer un double mutant, par croisement. Si les mutations sont dominantes il suffit que chaque mutation soit présente à l’état hétérozygote dans le même organisme. Si les mutations sont récessives il faudra créer un double mutant homozygote pour les deux mutations. 
+Il faudra pour cela créer un double mutant, par croisement. Si les mutations sont dominantes il suffit que chaque mutation soit présente à l’état hétérozygote dans le même organisme. Si les mutations sont récessives il faudra créer un double mutant homozygote pour les deux mutations.
 
 On observe le phénotype du double mutant: la mutation épistatique est celle dont le phénotype l'emporte.
 
@@ -432,13 +432,13 @@ Démonstration sur quatre cas :
 
 1. Régulation positive, deux mutations nulles dans les gènes amont et aval. Toutes les deux entrainent un phénotype aboli en présence de signal. Chez le double mutant c'est la mutation qui arrête la voie le plus en amont qui impose son phénotype.
 
-2. Régulation négative, deux mutations nulles dans les gènes amont et aval. 
+2. Régulation négative, deux mutations nulles dans les gènes amont et aval.
 La mutation dans le gène amont entraine un phénotype constitutif en absence de signal. La mutation dans le gène aval entraine un phénotype aboli en présence de signal. Chez le double mutant la première mutation entraine que le gène aval devrait être actif, ce qui n’est pas le cas puisqu’il porte une mutation qui l’inactive : en définitive c’est donc la mutation dans le gène aval qui impose son phénotype.
 
-3. Régulation positive, une mutation nulle dans le premier gène, une mutation gain de fonction dans le second. 
+3. Régulation positive, une mutation nulle dans le premier gène, une mutation gain de fonction dans le second.
 La première mutation entraine un phénotype aboli en présence de signal, et la seconde entraine un phénotype constitutif en absence de signal. Chez le double mutant la première mutation devrait entrainer une absence d’expression du second gène ce qui n’est pas le cas puisqu’il et contitutivement actif. C’est donc la mutation dans le gène aval qui impose son phénotype.
 
-4. Régulation négative, une mutation nulle dans le gène amont, une mutation gain de fonction dans le gène aval. 
+4. Régulation négative, une mutation nulle dans le gène amont, une mutation gain de fonction dans le gène aval.
 Les deux mutations entrainent un phénotype constitutif en absence de signal. Chez le double mutant c’est la mutation dans le gène amont qui impose son phénotype puisque l’addition de la seconde mutation ne change rien au phénotype.
 
 Ces démonstrations peuvent être étendues aux douze autres combinaisons incluant des mutations perte et gain de fonction. On en déduit la règle suivante :
@@ -465,15 +465,15 @@ Interprétation
 2. Quelle est la nature des phénotypes?
 Il s'agit d'un organisme haploide, le phénotype apparait d'emblée. Dans le cas de la mutation snf1 on a un phénotype aboli. Dans le cas de cid1 on a un phénotype constitutif.
 Les deux phénotypes sont opposés chez les simples mutants, on en conclut que la mutation épistatique est dans le gène aval, snf1.
-3. Quel est le signal? 
-La cellule sauvage doit décider que si le glucose fait défaut, elle met en route l'induction des enzymes du catabolisme du saccharose. Le signal est donc l’ absence de glucose (ou 2-deoxyglucose). 
-Pour snf1 c'est en absence de glucose qu'on voit apparaitre le phénotype mutant, pour cid1 c'est en sa présence. C'est un état opposé du signal qui révèle les deux phénotypes mutants, donc la mutation épistatique est dans le gène aval (même conclusion qu'en raisonnant à partir des phénotypes). 
+3. Quel est le signal?
+La cellule sauvage doit décider que si le glucose fait défaut, elle met en route l'induction des enzymes du catabolisme du saccharose. Le signal est donc l’ absence de glucose (ou 2-deoxyglucose).
+Pour snf1 c'est en absence de glucose qu'on voit apparaitre le phénotype mutant, pour cid1 c'est en sa présence. C'est un état opposé du signal qui révèle les deux phénotypes mutants, donc la mutation épistatique est dans le gène aval (même conclusion qu'en raisonnant à partir des phénotypes).
 4. Quelle est la nature de la régulation?
 On sait que les 2 mutations sont récessives car on a observé que le phénotype des diploïdes snf1-/+ et cid1-/+ était sauvage. Il s’agit donc de 2 mutations perte de fonction. La régulation est donc négative : CID1, actif en présence de glucose, joue le rôle de répresseur de SNF. Chez le mutant cid- le répresseur est inactivé donc la voie d’utilisation du saccharose est induite en présence de glucose (phénotype constitutif). La mutation snf- est une perte de fonction également; donc même en absence de glucose il n’y a pas de synthèse d'invertase.
 
 Résumé
 
-![](/img/12/2019-11-18-16-39-01.png)
+![](img/12/2019-11-18-16-39-01.png)
 
 Exemple 2 : Chez la drosophile:
 
@@ -489,8 +489,8 @@ On sélectionne plusieurs mutants qui altèrent la différenciation du photoréc
 Interprétation :
 
 1. La mutation Ras1Val12 est épistatique sur la mutation sevd2 . La mutation sina est épistatique sur la mutation Ras1Val12.
-2. Les phénotypes des simples mutants sevd2 et sina sont l'abolition du phénotype sauvage. Le phénotype du simple mutant Ras1Val12 est du type constitutif (plusieurs cellules sont recrutées pour se différencier en R7). Donc dans les deux couples sevd2 , Ras1Val12 ou sina, Ras1Val12 la mutation épistatique est située dans le gène aval. 
-On a donc l'ordre suivant : sev, Ras, sina. 
+2. Les phénotypes des simples mutants sevd2 et sina sont l'abolition du phénotype sauvage. Le phénotype du simple mutant Ras1Val12 est du type constitutif (plusieurs cellules sont recrutées pour se différencier en R7). Donc dans les deux couples sevd2 , Ras1Val12 ou sina, Ras1Val12 la mutation épistatique est située dans le gène aval.
+On a donc l'ordre suivant : sev, Ras, sina.
 3. Les mutations sevd2 et sina sont des perte-de-fonction. La mutation Ras1Val12 dominante à l'état hétérozygote est-elle un gain-de-fonction? En effet on sait que certaines mutations perte-de-fonction sont dominantes, donc on ne peut pas conclure directement. Cependant on sait qu'un autre allèle de Ras, récessif celui-là, donc perte de fonction, donne le phénotype inverse: on en conclut que l'allèle Ras1Val12 est bien un gain-de-fonction. La régulation est donc positive pour les deux couples de gènes. On a la séquence suivante: sev actif entraine l'activité de Ras qui entraine l'activité de sina.
 Dans ce cas les données ne permettent pas de connaitre la nature du signal qui influe sur l'activité de sev.
 
@@ -505,12 +505,12 @@ Le sexe est déterminé par le nombre de chromosome X. Les individus de génotyp
 Interprétation
 
 1. La mutation tra1 est épistatique.
-2. La mutation tra1 ne s’exprime pas chez les individus X0 (qui sont bien normalement mâles) et s’exprime chez les individus XX en empêchant le développement femelle. Le phénotype de tra1 correspond à une abolition du phénotype sauvage chez les XX. 
+2. La mutation tra1 ne s’exprime pas chez les individus X0 (qui sont bien normalement mâles) et s’exprime chez les individus XX en empêchant le développement femelle. Le phénotype de tra1 correspond à une abolition du phénotype sauvage chez les XX.
 A l’inverse la mutation her1 ne s’exprime pas chez les individus XX mais s’exprime chez les individus X0 en provoquant un développement femelle. La mutation her1 entraine un phénotype constitutif chez les X0.
-On en conclut que la mutation épistatique est située dans le gène aval. 
-3. Quel est ici le signal ? C’est le génotype, XX ou X0. 
+On en conclut que la mutation épistatique est située dans le gène aval.
+3. Quel est ici le signal ? C’est le génotype, XX ou X0.
 4. La régulation est négative : her1 joue le rôle de répresseur du développement femelle chez les individus X0.
 
 Résumé
 
-![](/img/12/2019-11-18-16-39-32.png)
+![](img/12/2019-11-18-16-39-32.png)

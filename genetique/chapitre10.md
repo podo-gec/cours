@@ -20,11 +20,11 @@ Enfin ils sont la cause de nombreuses mutations : par exemple on estime que chez
 ### Mise en évidence
 
 C’est Barbara Mc Clintock la pionnière: elle met en évidence chez le maïs des phénomèmes d’instabilité génétique qu’elle attribue à un élément mobile Ds (pour dissociation ) et à son compagnon l’élément Ac (pour activateur). Après plusieurs décennies d’études génétiques et moléculaires (travail commencé en 1940 jusqu’à sa mort en 1992) elle a pu montrer en détail comment fonctionnait les éléments Ds et Ac, comment ils transposaient et comment ils altéraient l’expression des gènes voisins.
-Ce travail a révolutionné les idées précédemment admises sur la stabilité du génôme et ouvert la voie aux conceptions modernes sur la fluidité, la variabilité, la constante réorganisation du génome. 
+Ce travail a révolutionné les idées précédemment admises sur la stabilité du génôme et ouvert la voie aux conceptions modernes sur la fluidité, la variabilité, la constante réorganisation du génome.
 
 
 Chez la larve de drosophile certains tissus sont dits polytènes : ceci signifie que la réplication des chromosomes a lieu de nombreuses fois sans que les noyaux ni les cellules ne se divisent. C’est le cas par exemple des glandes salivaires : les cellules sont géantes, les noyaux aussi et les chromosomes homologues et les copies de chaque chromosome (1000 à 2000) restent accolés les uns aux autres donnant des chromosomes très épais qui sont visibles au microscope. Par simple écrasement du tissu et fixation à l’acide acétique on peut observer les 4 chromosomes (n=4) et les identifier par leur profil de bandes claires et sombres alternées.
-Ensuite par hybridation in situ avec une sonde d’ADN marquée (radioactivement au tritium ou chimiquement à la digoxygénine) provenant d’un gène de drosophile on peut observer une bande de marquage en un point précis d’un chromosome qui correspond à la position du gène dans le génome. Par exemple une sonde provenant du gène « white » s’hybridera sur le chromosome X dans la région « 3C2 » assez proche du télomère. 
+Ensuite par hybridation in situ avec une sonde d’ADN marquée (radioactivement au tritium ou chimiquement à la digoxygénine) provenant d’un gène de drosophile on peut observer une bande de marquage en un point précis d’un chromosome qui correspond à la position du gène dans le génome. Par exemple une sonde provenant du gène « white » s’hybridera sur le chromosome X dans la région « 3C2 » assez proche du télomère.
 
 Si on fait la même expérience d’hybridation in situ, à partir des chromosomes polytènes d’une souche prélevée dans la nature, en utilisant une sonde provenant du transposon copia, on observe non pas une, mais une quarantaine de bandes de marquage dispersées sur tous les chromosomes. De plus les points d’insertion de copia sont variables d’une souche de drosophile à l’autre.
 
@@ -47,7 +47,7 @@ Deux grands types de transposons :
 
 Enfin bien que les rétrovirus ne fassent pas partie des transposons puisqu'ils ont une forme infectieuse, ils sont inclus ici à cause de leurs parentés de structure avec les rétrotransposons.
 
-![](/img/10/2019-11-18-16-28-35.png)
+![](img/10/2019-11-18-16-28-35.png)
 
 ### Fréquence de transposition
 
@@ -129,7 +129,7 @@ Modes de transposition
 
 ### Intérêts des transposons
 
-Les transposons jouent un rôle important dans la dynamique des génomes. 
+Les transposons jouent un rôle important dans la dynamique des génomes.
 
 Rôles :
 
@@ -163,7 +163,7 @@ Réversion spontanée vers le phénotype sauvage (donc il ne s’agit pas d’un
 2. Analyse génétique et moléculaire :
 
 Quand le phage l s’insère près de l’opéron gal (par déplacement du site attl) il peut encapsider la région gal, donnant naissance à un phage recombinant ldgal. Lorsque ce phage infecte une souche gal- , incapable de métaboliser le galactose il lui confère la capacité de pousser sur galactose. A partir d’une souche de coli contenant une mutation polaire décrite ci-dessus on obtient des phages ldgal* qui sont gal-. Analysés en gradient de densité en chlorure de césium on observe que ces phages sont plus lourds que les phages ldgal issus d’une souche sauvage. D’ou l’idée que l’ADN du phage ldgal* contient une séquence supplémentaire insérée dans la région gal. Si on dénature les 2 ADN phagiques ldgal et ldgal* , et qu’on les mélange dans des conditions ou ils peuvent se réhybrider, on observe des molécules hétéroduplexes contenant une boucle non hybridée, simple brin, dont on peut estimer la longueur à environ 800nt.
-L'analyse de nombreuses mutations polaires de ce type par hétéroduplexes, montre que la plupart sont causées par deux séquences distinctes, IS1 et IS2 (1300bp env), insérées dans l’opéron gal. 
+L'analyse de nombreuses mutations polaires de ce type par hétéroduplexes, montre que la plupart sont causées par deux séquences distinctes, IS1 et IS2 (1300bp env), insérées dans l’opéron gal.
 
 Distribution des séquences IS :
 
@@ -197,7 +197,7 @@ Longueur variable entre 700 et 5700bp en moyenne. Flanquées de 2 séquences inv
 
 Historique
 
-Découverte par Naomi Datta en 1971 : 
+Découverte par Naomi Datta en 1971 :
 
 A partir des années 50 on découvre chez certaines bactéries pathogènes des résistances, parfois multiples, à des antibiotiques. Il s’avère que celles-ci sont portées par des éléments génétiques capables de réplication et de transfert d’une bactérie à une autre. On les appelle facteurs R (pour résistance) et ils sont le cauchemar des hôpitaux. En langage " moderne " ce sont des plasmides ayant une origine de réplication et codant pour un ou plusieurs gènes de résistance. Ainsi, chez Pseudomonas il existe un plasmide, RP4, qui porte un gène (bla) codant pour la b-lactamase, qui confère la résistance à l’ampicilline. On observe que ce gène est capable de se transposer sur un autre plasmide non apparenté, R64. En 1972 Richmond et al. observent que le gène bla du plasmide RP1 (voisin de RP4 et collecté au cours de la même épidémie) peut s’intégrer dans le chromosome de E. coli puis sur deux autres plasmides n’ayant aucune homologie avec RP1. Ces auteurs nomment transposon ce nouveau type de gène sauteur, et font le rapprochement avec les séquences d’insertion IS. Dans les années suivantes les exemples se multiplient de transpositions affectant des gènes de résistance aux antibiotiques chez un grand nombre de bactéries aussi bien gram+ que gram-. On découvre aussi des transposons capables de conférer la résistance aux sels de métaux lourds (Tn501) ou la capacité d’utiliser une source de carbone (Tn951 lac).
 
@@ -207,7 +207,7 @@ Du point de vue de leur structure comme de leurs propriétés les Tn sont des s�
 
 Expérience:
 
-Le plasmide R6 conférant la résistance à la tétracycline, est hémicoupé, dénaturé puis renaturé. On observe entre autres des structures en boucle-et-tige. La tige est double brin et longue de 1400bp et la boucle simple brin et longue de 6400bp: c’est donc que la séquence de la tige est présente deux fois dans le plasmide en position inverse : ce sont les séquences IR du transposon. 
+Le plasmide R6 conférant la résistance à la tétracycline, est hémicoupé, dénaturé puis renaturé. On observe entre autres des structures en boucle-et-tige. La tige est double brin et longue de 1400bp et la boucle simple brin et longue de 6400bp: c’est donc que la séquence de la tige est présente deux fois dans le plasmide en position inverse : ce sont les séquences IR du transposon.
 D’un type de plasmide à l’autre la longueur de cette tige est variable de quelques dizaines à 1500bp. Dans le variant R6-5, mutant de R6 qui ne confère plus la résistance à la tétracycline, la tige est inchangée mais la boucle simple brin est plus courte, ce qui permet de situer le gène de résistance tet dans la boucle.
 
 Cette structure : 2 séquences IS encadrant 6,4kb contenant tet est celle du transposon Tn10.
@@ -238,11 +238,11 @@ Structure d’un plasmide multirésistant
 ### Applications. Exemple de Tn917lac.
 
 Tn917-lac est un transposon modifié, dérivé de Tn917, qui permet de faire des fusions transcriptionnelles chez B. subtilis. L'objectif est de générer et sélectionner de nouveaux mutants chez B. subtilis et de les caractériser moléculairement.
-Le transposon de départ, Tn917, est un transposon de B. subtilis, il est inséré dans un plasmide, il porte le gène de résistance à l’erythromycine, eryR. 
+Le transposon de départ, Tn917, est un transposon de B. subtilis, il est inséré dans un plasmide, il porte le gène de résistance à l’erythromycine, eryR.
 
 Construction du dérivé Tn917lac:
 
-On commence par construire un transposon modifié en se servant des outils mis au point chez E. coli et en les adaptant à B. subtilis. 
+On commence par construire un transposon modifié en se servant des outils mis au point chez E. coli et en les adaptant à B. subtilis.
 On introduit in vitro dans Tn917 le gène lacZ amputé des 15 premiers codons et précédé des signaux de départ de traduction de spoVG , un gène de B. subtilis, et de ses 11 premiers codons, en phase avec lacZ. Ceci est nécessaire pour que lacZ soit traduit dans B. subtilis car les signaux d'initiation de traduction sont différents chez coli et subtilis (voir cours sur la traduction).
 
 Mutagénèse et sélection de mutants:
@@ -251,12 +251,12 @@ On transforme des bactéries B. subtilis à l'aide de cet ADN. Dans certaines ce
 
 Cette insertion dans le gène de l'hôte interrompt celui-ci et crée une mutation qui peut être repérée par un phénotype: on sélectionne donc parmi les clones eryR et bleus ceux qui ont un phénotype mutant intéressant.
 
-Clonage du gène cible: 
+Clonage du gène cible:
 
-Ensuite on clone le gène interrompu par le transposon. Pour cela on transforme les bactéries mutantes avec le plasmide pTV21D2 linéarisé. Celui-ci possède le début de la séquence du gène eryR et la fin de la séquence de Tn. La recombinaison entre les séquences homologues a lieu in vivo et permet d’introduire à la fois: 
+Ensuite on clone le gène interrompu par le transposon. Pour cela on transforme les bactéries mutantes avec le plasmide pTV21D2 linéarisé. Celui-ci possède le début de la séquence du gène eryR et la fin de la séquence de Tn. La recombinaison entre les séquences homologues a lieu in vivo et permet d’introduire à la fois:
 
-- une cartouche de résistance au chloramphénicol (gène cat) qui servira pour la sélection dans B.subtilis, 
-- le gène de résistance à l'ampicilline (ampR) et une origine de réplication, pour la sélection et l’amplification dans E. coli. 
+- une cartouche de résistance au chloramphénicol (gène cat) qui servira pour la sélection dans B.subtilis,
+- le gène de résistance à l'ampicilline (ampR) et une origine de réplication, pour la sélection et l’amplification dans E. coli.
 
 Après sélection des clones résistants au chloramphénicol (et sensibles à l'érythromycine) on va pouvoir récupérer la portion 5' du gène cible par "sauvetage de plasmide" . Pour cela on digère l'ADN chromosomique de chaque clone CmR, eryS par l'enzyme HindIII puis on fait agir la ligase. Parmi les multiples réactions catalysées par celle-ci il y a un plasmide (cercle refermé sur lui-même portant une origine de réplication autonome et le gène de résistance à l'ampicilline) portant le début du gène cible. Par transformation de E. coli avec le milieu de ligation et étalement sur milieu contenant de l'ampicilline on sélectionne les cellules qui ont intégré le plasmide. Par analyse de restriction et séquençage on repère la portion de gène X clonée.
 
@@ -264,7 +264,7 @@ Après sélection des clones résistants au chloramphénicol (et sensibles à l'
 
 ### La transposition
 
-Spécificité d’insertion : 
+Spécificité d’insertion :
 
 Les transposons bactériens comme ceux d’eucaryotes semblent s’insérer au hasard. Cependant on note la présence de points chauds (les insertions de Tn10 dans l’opéron his de Salmonella se font pour 40% en un point les autres étant distribuées entre 21 points différents), voire de spécificité parfaite au nucléotide près (IS4 dans galT). On ne peut donc parler de séquence cible consensus bien qu’on relève parfois des régularités (23 sur 28 des insertions de Tn9 séquencées dans lacZ ont un GC à chaque bout de la séquence cible de 9bp).
 L’insertion est indépendante de recA (voir cours sur la recombinaison).
@@ -304,17 +304,17 @@ Une 2ème collection de mutants de Tn3, incapables de transposer, a été obtenu
 
 La transposition nécessiterait donc trois sites en cis : les deux IR et le SIR. Le site SIR, est long de 19bp et est situé entre les gènes tnpA et tnpR, c'est le point de résolution du cointégrat, là où se fait le crossing-over.
 
-Chez certains mutants on observe que la protéine de 19kD est présente mais tronquée et dans ce cas elle est plus fortement exprimée que chez le sauvage. Ceci suggère que la synthèse du répresseur est autoréprimée. 
+Chez certains mutants on observe que la protéine de 19kD est présente mais tronquée et dans ce cas elle est plus fortement exprimée que chez le sauvage. Ceci suggère que la synthèse du répresseur est autoréprimée.
 
 Le répresseur a également une fonction de résolvase des cointégrats.
- 
+
 ## L'ELEMENT P CHEZ DROSOPHILA melanogaster
 
 ### Dysgénèse des hybrides de type P-M
 
 On classe les drosophiles en deux catégories: souches P ou souches M. Selon le sens du croisement la progéniture pourra présenter un taux anormalement élevé de phénotypes mutants spontanés, on dit qu'il y a "dysgénèse" :
 
-	
+
 |        | Femelle M              | Femelle P           |
 |--------|------------------------|---------------------|
 | Mâle M | progéniture normale    | progéniture normale |
@@ -347,7 +347,7 @@ A la génération F2 on obtient un nombre anormalement grand (1 sur 1000 c’est
 
 En d'autres termes dans ce croisement, d’une part le locus singed mute à une fréquence très élevée, d’autre part on met en évidence des mutations sur le chromosome X ailleurs qu’au locus singed.
 
-Analyse moléculaire de la mutation singed weak et de ses dérivées. 
+Analyse moléculaire de la mutation singed weak et de ses dérivées.
 Southern sur l’ADN génomique des différents mutants coupé par des enzymes de restriction appropriés et sondés avec l'ADN du locus sninged sauvage. On trouve que, chez les révertants sn+ et les mutants ayant un phénotype singed plus fort, la structure du locus singed est modifiée par rapport à celle de l’allèle de départ singedweak.
 
 Interprétation.
@@ -391,7 +391,7 @@ La transposition ne se produit pas dans le croisement réciproque:
 
 femelle P X mâle M
 
-Il faut donc supposer que les ovules P, qui contiennent beaucoup de cytoplasme contrairement aux spermatozoïdes, contiennent un inhibiteur de la transposition qui empêche les éléments P des chromosomes femelles d'envahir les chromosomes mâles. Cet héritage maternel est du à la présence des éléments P eux-mêmes. En effet en faisant plusieurs fois de suite le croisement: femelle P X mâle M, 
+Il faut donc supposer que les ovules P, qui contiennent beaucoup de cytoplasme contrairement aux spermatozoïdes, contiennent un inhibiteur de la transposition qui empêche les éléments P des chromosomes femelles d'envahir les chromosomes mâles. Cet héritage maternel est du à la présence des éléments P eux-mêmes. En effet en faisant plusieurs fois de suite le croisement: femelle P X mâle M,
 en prenant à chaque fois les femelles de la F1 et en les recroisant avec des mâles M nouveaux, on finit par perdre le cytotype P, car on "dilue" les chromosomes d'origine P. Il s'ensuit que la concentration du répresseur de transposition diminue et que le taux de transposition augmente.
 
 Quelle est la protéine répresseur de la transposition en cytotype P?
@@ -406,14 +406,14 @@ L'excision se fait par une cassure double brin à chaque extrémité du transpos
 - Réparation sur le chromosome homologue: si celui-ci est sauvage on a une réversion. S'il est muté recopie de la mutation.
 - Dans les deux cas la réparation peut-être imparfaite. Les exonucléases hydrolysent les extrémités libres, la recherche de séquences homologues pour la réparation ne se fait pas ou mal et la réparation se fait par ligature brutale des extrémités libres (fermeture de deux liaisons phospho-diester). On a alors délétion de séquences génomiques ce qui conduit à de nouvelles mutations. La ligature peut aussi avoir lieu alors que la réparation par homologie est en route, on a alors recopie imparfaite des séquences du P et création de P défectifs.
 - Dans tous les cas le P excisé peut s'insérer ailleurs: transposition, donc nouvelles mutations dans d'autres locus. La transposase de P coupe l’ADN génomique de façon décalée sur les deux brins à 8 nucléotides de distance.
- 
+
 ![](img/10/image020.jpg)
 
 ### Applications: L'élément P vecteur de transformation germinale.
 
 Débuts de la transgénèse chez la drosophile : Spradling et Rubin 1982 .
 
-Chez les procaryotes et la levure le transfert de gène d'une cellule à l'autre était déjà pratiqué depuis longtemps (conjugaison, transformation, recombinaison homologue, transduction par des phages). Chez les métazoaires la difficulté vient du manque de vecteurs appropriés. Il faut en effet que l'ADN cloné in vitro, "transgénique", se déplace du site extrachomosomique de construction (plasmide, virus) à un site intrachromosomique, dans une cellule germinale, pour que le transfert soit stable et se transmette de génération en génération. 
+Chez les procaryotes et la levure le transfert de gène d'une cellule à l'autre était déjà pratiqué depuis longtemps (conjugaison, transformation, recombinaison homologue, transduction par des phages). Chez les métazoaires la difficulté vient du manque de vecteurs appropriés. Il faut en effet que l'ADN cloné in vitro, "transgénique", se déplace du site extrachomosomique de construction (plasmide, virus) à un site intrachromosomique, dans une cellule germinale, pour que le transfert soit stable et se transmette de génération en génération.
 
 Chez la drosophile ce vecteur est l'élément P, capable de transposer d'un vecteur plasmidique dans l'ADN chromosomique des noyaux des cellules germinales. Ses propriétés en font un vecteur de choix car il transpose à haute fréquence, dans des conditions bien contrôlables, il n'a besoin pour cela que de la transposase spécifique codée par l’élément P lui-même et des quelques dizaines de nucléotides présents à ses deux extremités (qu’on appelle les " pieds " de P).
 
@@ -429,10 +429,10 @@ Structure du plasmide portant le transgène :
 
 Il porte au minimum la séquence à étudier et un marqueur de transgénèse (gène rosy, white , ou neo), placés entre les pieds de lélément P. On peut ajouter aussi des séquences plasmidiques (ori et ampR) qui permettront le clonage ultérieur des séquences génomiques flanquantes (voir ci-dessous).
 
-Evènement recherché : 
+Evènement recherché :
 
-1. le plasmide portant le gène de la transposase pénêtre dans un noyau y est transcrit, et traduit dans le cytoplasme syncitial de l’embryon ; 
-2. la transposase entre dans un noyau d’une cellule souche germinale en même temps que le plasmide contenant le transgène; elle catalyse à la fois la coupure du plasmide vecteur contenant le transgène au niveau des "pieds de P" et de l'ADN chromosomique au hasard, et y insère le transgène. 
+1. le plasmide portant le gène de la transposase pénêtre dans un noyau y est transcrit, et traduit dans le cytoplasme syncitial de l’embryon ;
+2. la transposase entre dans un noyau d’une cellule souche germinale en même temps que le plasmide contenant le transgène; elle catalyse à la fois la coupure du plasmide vecteur contenant le transgène au niveau des "pieds de P" et de l'ADN chromosomique au hasard, et y insère le transgène.
 
 Le transfert de gène est accompli avec une efficacité raisonnable. Le gène transféré est stable (non remanié); il se transmet de façon stable aux générations suivantes; il est exprimé et garde sa fonction normale. Par exemple, si le gène transféré est l’allèle sauvage d'un gène, il a la capacité de complémenter les allèles mutants et de corriger le défaut génétique.
 
@@ -452,13 +452,13 @@ Exemple :
 Mutagénèse chez la drosophile par insertion létale sur le chromosome X, d'un transposon détecteur d'enhancer (enhancer-trap) de type PlacW.
 
 
-Le but : saturer le chromosome X en mutations létales. 
+Le but : saturer le chromosome X en mutations létales.
 
 Le séquence du génome de la drosophile a été entièrement déterminée en mars 2000. L’annotation de cette séquence, c’est-à-dire le repérage des unités de transcription (point de départ et de terminaison de la transcription, sites d’épissage) permet de prévoir l’existence d’environ 13600 gènes différents. Or seulement 2500 gènes ont été identifiés génétiquement par des mutations et moléculairement caractérisés au cours d’un siècle d’études par toute la communauté des drosophilistes, avant le projet de séquençage systématique. Des mutagénèses par insertion d’éléments P entreprises au cours des 10 dernières années ont permis d’identifier de nombreux gènes essentiels mais situés principalement sur les autosomes : les gènes du X qui représentent environ 1/6 des gènes totaux sont sous-représentés dans les collections actuelles de mutants. D’où l’entreprise ci-dessus.
 
 Le transposon : c’est un élément P modifié qui permet:
 
-1. de créer une mutation de par son insertion dans un gène , 
+1. de créer une mutation de par son insertion dans un gène ,
 2. de détecter la proximité d’une région régulatrice (enhancer) par observation de l’expression de lacZ, repérée par la couleur bleue des tissus en présence de XGal; cela permet donc de savoir dans quels tissus et quand le gène interrompu s’exprime ;
 3. de cloner les régions génomiques adjacentes au transposon et de les séquencer donc de savoir dans quel gène (identifié après séquençage total) le transposon est tombé.
 
@@ -507,7 +507,7 @@ A partir de ces résultats on peut se servir de la drosophile comme d’un organ
 - Deuxième étape: on peut faire une mutagénèse sur cette lignée transgénique pour sélectionner des mutants dans de nouveaux gènes sur la base de phénotypes modifiés. En effet si d’autres gènes sont impliqués dans la même voie soit comme activateurs soit comme répresseurs, on attend dans le premier cas un phénotype atténué (suppression) et dans le second un phénotype accentué (accentuation).
 
 - Troisième étape : une fois trouvés les gènes impliqués chez la drosophile, repérer les mêmes chez l'humain par homologie de séquence.
- 
+
 Caractéristiques de quelques rétrotransposons
 
 | Type | Famille      | Sequence cible (bp) | nb copies/<br>genome haploide | longueur (kb) | Longueur<br> LTR (bp)         | ORFs<br>homologues à |
@@ -526,7 +526,7 @@ D.m. = Drosophila melanogaster
 S.c. = Saccharomyces cerevisiae
 
 H.s. = Homo sapiens
- 
+
 ## LES RETROTRANSPOSONS: L'élément Ty de S. cerevisiae
 
 ### Mise en évidence
@@ -536,7 +536,7 @@ H.s. = Homo sapiens
 - Analyse en Southern de l'ADN de 3 souches différentes de S. cerevisiae et sondage par la séquence de Ty. On obtient trois profils de répartition de bandes différentes. On obtient environ 35 bandes hybridées avec la sonde par génome haploide. Donc les insertions de Ty sont nombreuses (environ 1% du génome haploide ) et au hasard.
 - Une des trois souches précédentes est ensemencée dans trois flacons différents qui sont cultivés 30jours d'affilée en ré-ensemençant une aliquote dans du milieu neuf tous les jours. A la fin on analyse l'ADN des 3 cultures comme précédemment. L'une d'elle a varié : apparition d'une bande supplémentaire révélée par la sonde Ty. Donc Ty est capable de transposer. Cette expérience permet de calculer la fréquence de transposition de Ty: 10-7 à 10-8 (une fois toutes les 20 générations environ). La fréquence d'excision est plus élevée (=fréquence de réversion) : 10-5 à 10-6.
 
-Il existe plusieurs familles apparentées de Ty. Ty1 est la plus fréquente et se rencontre à 35 copies environ/génome haploïde. Outre ces 35 copies de Ty on trouve dans le génome de la levure une centaine de séquences LTR solos. De plus les différentes copies de Ty ne sont pas identiques : on met en évidence un polymorphisme de restriction. La plupart sont des Ty défectifs, parfois réduits à une LTR solo. 
+Il existe plusieurs familles apparentées de Ty. Ty1 est la plus fréquente et se rencontre à 35 copies environ/génome haploïde. Outre ces 35 copies de Ty on trouve dans le génome de la levure une centaine de séquences LTR solos. De plus les différentes copies de Ty ne sont pas identiques : on met en évidence un polymorphisme de restriction. La plupart sont des Ty défectifs, parfois réduits à une LTR solo.
 On trouve des points chauds d’insertion de Ty au voisinage des gènes codant pour des tARN ce qui suggère que le transposon intéragit avec une des protéines de la machinerie de transcription par polIII (par ex TFIIIb). Par ex dans le chromosome 3 on trouve 17 insertions "naturelles" de Ty1 dans un fragment de 200kb. Parmi elles 16 sont dans des gènes codant pour des tARN. Lorsque Ty se trouve inséré dans un plasmide multicopie on trouve dans le cytoplasme de la cellule de levure des pseudo-particules composées de molécules d'ARN de Ty entourées de protéines (voir ci-dessous).
 
 ### Structure et expression
@@ -573,10 +573,10 @@ et on analyse leur plasmide n°1 contenant le gène HIS3. On y trouve Ty, qui s�
 Expérience 2
 
 La seconde expérience permet d'écarter l'hypothèse qu'un Ty sauvage résident de la levure ait transposé dans le plasmide. C'est peu probable car on a spécifiquement induit la transcription du Ty plasmidique par le galactose et la fréquence de transposition spontanée de Ty est de 10-7. Neanmoins il faut écarter cette hypothèse.
-Dans cette expérience non seulement l'intron, mais aussi les séquences flanquantes exoniques d'un autre gène de levure, sont introduites dans Ty. 
+Dans cette expérience non seulement l'intron, mais aussi les séquences flanquantes exoniques d'un autre gène de levure, sont introduites dans Ty.
 On retrouve dans ce cas les séquences exoniques (mais pas l'intron) intégrées dans le Ty qui a transposé dans le plasmide.
 
-Conclusion : 
+Conclusion :
 
 Il y a eu épissage de l'intron avant intégration. Donc la transposition s'est faite par l'intermédiaire de la transcription de Ty. En outre, le processus permet de reconstituer la LTR amont.
 
@@ -596,10 +596,10 @@ Ce tARN servira spécifiquement d'amorce pour la réverse transcription. Une sé
 
 La réplication en ADN double brin se fait par sauts successifs, c’est un mécanisme compliqué, en tout point semblable à la réplication des rétrovirus, qui ne sera pas détaillé ici (cf cours de maitrise).
 La protéine pol qui, outre son activité RT possède une activité intégrase, coupe le génôme de l’hôte et y insère l’ADN double brin nouvellement synthétisé, matérialisant ainsi la transposition de Ty.
- 
+
 ## LES RETROTRANSPOSONS DE CLASSE II
 
-### Caractéristiques générales 
+### Caractéristiques générales
 
 Pas de LTRs. Côté 3' on trouve une portion finale riche en A ce qui suggère que, comme pour les rétrotransposons de classe I (Ty de levure par exemple), il y a eu intervention d'un ARNm.
 Duplication de la séquence cible mais elle est de longueur variable pour un même élément dans un génome.
@@ -611,7 +611,7 @@ Le mode de transposition est mal connu, probablement différent des transposons 
 Très grande variabilité parmi les membres de la famille.
 On trouve en moyenne pour Line1, 20 000 à 50 000 copies par génome de mammifère. Dans le génome humain par exemple, on trouve 103 copies complètes et 105 copies incomplètes. La plupart sont tronquées côté 5'.
 
-Structure du prototype : 
+Structure du prototype :
 
 6,5kb de long. Il y a 2 ORFs, l'un de 1137bp, l'autre de 3900bp qui se chevauchent sur 14nt. La plupart des éléments Lines ne portent pas de gènes fonctionnels : les 2 ORFs sont parfois coupées par des codons stop ou parfois on trouve des décalages du cadre de lecture d'un élément Line à l'autre. Cependant l'ORF II conserve des homologies avec la RT des rétrovirus et dans un certain nombre de cas code pour une RT fonctionnelle.
 Pas de LTR mais la région en 5’ des ORF contient un promoteur et la région en 3’ est riche en A.
@@ -625,7 +625,7 @@ Il est mal connu : pas de LTR donc le mécanisme de réplication de l’ARN en A
 Elles sont appelées séquences Alu chez l'humain, parce que la séquence comporte un site AluI qui a servi à les caractériser. Les équivalents chez la souris s'appellent séquences B1 (50 000 copies/génome). On en trouve aussi chez le hamster et d’autres mammifères.
 Ce sont des éléments de 300bp environ insérés en très grand nombre dans le génome des mammifères: chez l'humain de 300 000 à 900 000 copies dispersées partout; soit environ une séquence Alu tous des 6kb.
 
-Structure du prototype : 
+Structure du prototype :
 
 Duplication en tandem d'une séquence de 130bp suivie d’une séquence de 31bp en aval du dimère et riche en A. Ces séquences de 130bp présentent une homologie avec le 7SLARN, un petit ARN composant de la particule de reconnaissance du peptide signal. Cet ARN est transcrit activement par la RNApolIII qui transcrit aussi les tARN, les petits ARN nucléaires et les ARN5S. Les séquences Alu sont flanquées de répétitions directes de longueur variable (5 à 35bp).
 
@@ -634,7 +634,7 @@ Transcription
 Elles peuvent être transcrites à partir de promoteurs de gènes voisins ou même de façon autonome. En effet on trouve des ARN transcrits à partir de séquences Alu démarrant au ras de l'extrémité 5'. Certains membres de la famille Alu pourraient être transcrits par l’ARNpolIII, jusqu'à ce que l'enzyme trouve une séquence de terminaison riche en T dans le génome flanquant. Cet ARN serait ensuite capable de former à son extrémité 3' une épingle à cheveu par appariement entre la séquence polyU de terminaison et la séquence riche en A à l'extrémité 3' de la séquence Alu. Ceci permettrait le démarrage de la réverse transcription, probablement grâce à l’activité RT des éléments LINE, puis la réplication en ADN double brin, puis l'intégration de l'ADN dans le génome (transposition).
 L'énorme expansion des séquences Alu chez les mammifères a eu lieu au cours des 65 derniers millions d'années d'évolution.
 
-Exemple de mutation causée par l'insertion de séquences Alu: 
+Exemple de mutation causée par l'insertion de séquences Alu:
 Mutation dans le récepteur LDL (pour low density lipoprotein, transporteur de cholestérol) qui cause une hypercholestérolémie. La mutation provient d'une délétion entre 2 séquences Alu insérées à l’intérieur du gène dans la même orientation; l’une est située dans l’intron 15-16 et l’autre dans l’intron 18-19. L’insertion de ces deux séquences Alu ne provoque par elle-même aucun phénotype, mais la recombinaison entre elles entraîne la délétion de la portion de génome située entre elles, soit les exons 16, 17 et 18.
 
 ### Les Pseudogènes.
@@ -656,15 +656,15 @@ Exemples :
 - chez la souris : glycéraldéhyde 3 phosphate déshydrogénase (200 copies /génome)
 - chez le rat : a-tubuline (4 copies/génome).
 
-Mode de transposition supposé : 
+Mode de transposition supposé :
 D’abord transcription normale du gène par l’ARNpolII, polyadénylation, épissage des introns. Ensuite cet ARNm pourrait être répliqué en ADNc en utilisant une réverse transcriptase virale présente dans la lignée germinale ou l’œuf. Le problème de l'amorce n'est pas résolu; peut-être par épingle à cheveux comme pour les séquences Alu. Les pseudogènes pourraient s’insérer dans le génome comme "accidents" en utilisant la machinerie d'un rétrovirus (RT puis intégrase). Ensuite comme ils sont non fonctionnels ils peuvent accumuler des mutations, sans conséquence pour l'organisme.
- 
+
 
 ### Les rétroéléments dans le complexe majeur d'histocompatibilité humain (MHC).
 
 Cet exemple donne une idée de l’importance, au moins numérique, et probablement aussi fonctionnelle des rétrotransposons dans le génome humain. Les protéines codées par le MHC interviennent dans la réponse immunitaire: en particulier sont codés là les familles de gènes I et II du système HLA (human leucocytes antigènes), c'est-à-dire les antigènes présentés à la surface des leucocytes et d'autres cellules et qui permettent d'être reconnus comme non-soi. De plus, le complexe comprend des gènes codant pour des protéines impliquées dans la maturation et le transport des protéines antigènes. En cas de transplantation cellulaire entre deux individus l'identité des types MHC est cruciale pour que la greffe prenne.
 
-Le MHC s'étend sur 4000kb sur le bras court du chromosome 6. Divisé en trois régions principales: I, II et III. Il existe plusieurs allèles par gène (degré de polymorphisme élevé); on appelle haplotype une combinaison d'allèles de gènes du complexe MHC ; on en distingue 5 principaux. 
+Le MHC s'étend sur 4000kb sur le bras court du chromosome 6. Divisé en trois régions principales: I, II et III. Il existe plusieurs allèles par gène (degré de polymorphisme élevé); on appelle haplotype une combinaison d'allèles de gènes du complexe MHC ; on en distingue 5 principaux.
 
 On étudie ici la répartition des rétroéléments dans une fraction de la région II, longue de 400kb, qui code pour 2 chaines polypeptidiques a et b.
 Les éléments répétés trouvés dans le MHC appartiennent à une vingtaine de familles différentes et constituent 20% environ de la longueur totale du complexe. Le MHC étant une région densément transcrite cela peut expliquer la forte concentration dans cette région d'éléments ayant besoin de transcription pour se multiplier.
@@ -685,7 +685,7 @@ Pseudogènes: comme DRB2, et DRB9
 
 ## RETROVIRUS
 
-Les rétrovirus ne font pas partie des transposons, cependant comme ils ont de nombreux points communs, de structure et de reproduction de leur génome, avec les les rétrotransposons, il est nécessaire d’en dire quelques mots (pour le reste voir cours de maitrise). 
+Les rétrovirus ne font pas partie des transposons, cependant comme ils ont de nombreux points communs, de structure et de reproduction de leur génome, avec les les rétrotransposons, il est nécessaire d’en dire quelques mots (pour le reste voir cours de maitrise).
 
 Des rétrovirus ont été isolé chez beaucoup d'espèces: oiseaux, souris, rat, reptiles chats, singes, porcs, bovins, humains, hamster... Les mieux connus sont ceux des oiseaux et des souris. La taille des rétrovirus est variable mais ils ont une communauté de structure d'un groupe à l'autre et des homologies de séquence.
 
@@ -743,7 +743,7 @@ env donne les protéines:
 Maturation du virion:
 
 Les différents ARN sont empaquetés au sein du cytoplasme, puis l'enveloppe extérieure (protéines env + bicouche lipidique prélevée à la membrane plasmique) est appliquée au fur et à mesure que le coeur bourgeonne vers l'extérieur.
- 
+
 ## L'EVOLUTION DES TRANSPOSONS
 
 ### Evolution des transposons à ADN ou " comment naît un transposon ? "
@@ -771,4 +771,4 @@ Ceci pourrait donner à penser que les rétroéléments ont pour origine un rét
 
 En fait l’hypothèse inverse est tout aussi crédible : certains rétrotransposons pourraient être en train d’évoluer à partir d’un gène cellulaire normal par addition successives d’autres gènes apportant de nouvelles fonctions, la forme finale étant le rétrovirus complet, libre et disséminable.
 
-Chez les vertébrés, des arguments expérimentaux viennent en fait appuyer les deux hypothèses et il pourrait y avoir cohabitation des deux processus évolutifs, certains rétrotransposons étant en train de dégénérer, d’autres en train de se construire. 
+Chez les vertébrés, des arguments expérimentaux viennent en fait appuyer les deux hypothèses et il pourrait y avoir cohabitation des deux processus évolutifs, certains rétrotransposons étant en train de dégénérer, d’autres en train de se construire.

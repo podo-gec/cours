@@ -1,5 +1,5 @@
 ## Le polymorphisme
- 
+
 
 Nous avons vu dans l'introduction que la reproduction est invariante. Cependant, lorsque l'on regarde des individus pris dans la nature, on constate que ceux-ci montrent une certaine variabilité phénotypique. Cette variabilité peut être due à des facteurs environnementaux ou historiques mais elle peut aussi provenir de la présence d'allèles différents de certains gènes.
 
@@ -24,7 +24,7 @@ la fréquence de M = 0,835 + 0,156/2 = 0,913, celle de N = 0,009 + 0,156/2
 Ces fréquences sont une mesure du polymorphisme existant pour un gène dans la population. Elles fluctuent en fonction du gène étudiée. Une autre mesure, plus utilisée car elle reflète mieux le polymorphisme, est le % d'hétérozygotes présent dans la population, c'est ce que l'on appelle le taux d'hétérozygotie.
 
 ## les moyens d'étude du polymorphisme
- 
+
 Il est possible d'explorer le polymorphisme à différents niveaux. Le premier niveau est l'exploration de l'aspect phénotypique que l'on peut apprécier par diverses techniques (observation directe, détection immunologique, etc.). Ce que l'on constate c'est que le polymorphisme est extrêmement variable en fonction du type d'organisme étudié, de la population et du caractère.
 
 exemples:
@@ -100,24 +100,24 @@ La protéine P53 est une protéine impliquée dans le contrôle de la proliféra
 | 47         | CCG ou TCG | Pro ou Ser  |
 
 ## Localisation des polymorphismes
- 
+
 Les polymorphismes peuvent être localisés dans les gènes. Dans ce cas, ils peuvent avoir des effets sur le fonctionnement des gènes et entraîneront des variations détectables au niveau de l'organisme. Dans d'autres cas, ils n'entraînent cependant aucune modification de fonctionnement et n'auront pas d'effet.
 
-exemple: nous avons vu que le gène codant la protéine P53 possède des polymorphismes nucléotidiques qui ne se retrouvent pas au niveau de la protéine. Il est donc raisonnable de penser que ces polymorphismes n'ont aucun effet phénotypique au niveau de l'organisme. Dans le même gène, il existe d'autres polymorphismes qui modifient le fonctionnement de la protéine. Les porteurs de certains allèles présentent des prédispositions à développer des cancers. 
+exemple: nous avons vu que le gène codant la protéine P53 possède des polymorphismes nucléotidiques qui ne se retrouvent pas au niveau de la protéine. Il est donc raisonnable de penser que ces polymorphismes n'ont aucun effet phénotypique au niveau de l'organisme. Dans le même gène, il existe d'autres polymorphismes qui modifient le fonctionnement de la protéine. Les porteurs de certains allèles présentent des prédispositions à développer des cancers.
 
-Les polymorphismes localisés entre les gènes n'auront en général pas d'effet au niveau de l'organisme, sauf s'ils touchent des régions qui régulent l'expression des gènes. 
+Les polymorphismes localisés entre les gènes n'auront en général pas d'effet au niveau de l'organisme, sauf s'ils touchent des régions qui régulent l'expression des gènes.
 
 On admet maintenant que la plupart des polymorphismes présents dans les génomes sont neutres d'un point de vue évolutif, c'est à dire qu'ils n'entraînent ni avantages ni désavantages sélectifs. De fait, ils sont dans la plupart des cas localisés dans des régions qui "ne s'expriment pas" (région intergénique ou intron). Nous reviendrons sur ces problèmes d'effets des polymorphismes dans la section qui traite de la mutation.
 
 ## Les différents types de polymorphismes
- 
+
 Il existe de très nombreux types polymorphismes. Ce qui suit concerne principalement les polymorphismes qui sont retrouvés de manière abondante dans la nature.
 
 ### les modifications ponctuelles
 
 On appelle ponctuelles des modifications qui n'affectent que un ou quelques nucléotides. Ces modifications ne sont en général détectables au niveau de la molécule d'ADN que par séquençage. Ce sont soit des variations de nucléotides (sans changement du nombre de nucléotides) soit des insertions/délétions de 1 ou quelques nucléotides. Elles sont très fréquentes.
 
-Exemple: chez l'homme, deux séquences uniques prises au hasard chez deux individus non apparentés diffèrent en moyenne par une paire de base tous les 100 à 500 nucléotides. 
+Exemple: chez l'homme, deux séquences uniques prises au hasard chez deux individus non apparentés diffèrent en moyenne par une paire de base tous les 100 à 500 nucléotides.
 
 ### les insertions / délétions
 
@@ -164,12 +164,12 @@ Chez Saccharomyces cerevisiae
 ![](img/03/image019.jpg)
 
 Les virus killer dsRNA : Ce sont des ARN double brin qui sont localisés dans le cytoplasme et qui ont les caractéristiques de virus. On les appelle dsRNA. Ils sont transmis aux cours des générations mitotiques et méiotiques avec une grande efficacité. Ils ne sont jamais extra-cytoplasmiques. Leur statut (éléments infectieux ou partie du patrimoine génétique) est donc fluctuant en fonction des chercheurs. Les souches qui les portent, produisent et sont résistantes à une toxine qui est létale pour les souches qui ne portent pas ces éléments. Il existe plusieurs types de dsRNA.
- 
+
 ### les mini et les microsatellites
 
 Chez de nombreuses espèces (et en particulier chez les vertébrés), on note la présence de séquences répétées en tandem que l'on appelle satellites car généralement elles ne migrent pas à la même position que l'ADN génomique classique dans les centrifugations en gradients de césium, utilisée pour purifier l'ADN. Ces séquences en général ne codent pour rien (les gènes d'ARN ribosomaux en sont contre exemple). Ce qui est intéressant est que ces séquences présentent le plus souvent une variation du nombre de motifs. Chez l'homme, on distingue particulièrement deux types de séquences en fonction de la taille de l'unité répétée:
 
-Les microsatellites qui ont quelques nucléotides de long (par exemple le dinucléotide CA) 
+Les microsatellites qui ont quelques nucléotides de long (par exemple le dinucléotide CA)
 Les minisatellites qui ont de 10 à 30 nucléotides de long.
 On observe que le nombre de répétition de ces séquences est très variable en fonction des individus (de 10 à 60 répétitions pour les micro et de 10 à 300 pour le mini). Micro et minisatellites sont le plus souvent présents en plusieurs copies dans le génome, où ils sont insérés entre des séquences uniques. Ils sont simples à révéler (par PCR pour les microsatellites et par PCR ou Southern Blot pour les minisatellites). Leur extraordinaire variabilité en fait d'excellents outils pour la cartographie, les recherches judiciaires ou de paternité. Dans certains cas cependant, ils sont trop variables et changent entre les parents et les descendants ou même entre les cellules d'un même individu. L'amplification du nombre de ces motifs est à l'origine de certaines maladies chez l'homme.
 
@@ -209,7 +209,7 @@ Celles-ci sont variées. Citons entre autre des modifications de la structure de
 
 Citons un cas de fusion qui est très utilisé en génétique de la drosophile. On dispose de souches dites avec des X attachés (X^X). Il s'agit en fait de fusion de chromosomes X. Chez la drosophile le contrôle du sexe se fait par une balance entre le nombre de chromosomes X et le nombre de jeux d'autosomes (A).
 
-si X=A alors l'individu est femelle 
+si X=A alors l'individu est femelle
 si X= 1/2 de A alors l'individu est mâle
 
 Dans le cas des X attachés les individus X^X Y sont donc femelle. Que se passe-t-il si nous les croisons avec des mâles classiques ?
@@ -219,13 +219,13 @@ Dans le cas des X attachés les individus X^X Y sont donc femelle. Que se passe-
 Nous voyons par exemple que dans ce type de croisements le mâle hérite son chromosome Y de sa mère et non de son père comme dans les croisements normaux. Nous reviendrons sur l'utilisation de ces chromosomes en génétique de drosophile.
 
 ## L'épigénétique
- 
+
 ou
- 
+
 Quelques exemples de polymorphismes étranges !
- 
+
 ou encore
- 
+
 L'ADN n'est pas le seul support de l'information génétique !
 
 Récemment, des nouvelles recherches ont visé à comprendre l'hérédité de polymorphismes qui ont des modalités qui n'obéissent pas aux lois de Mendel.
@@ -263,22 +263,22 @@ Les 2 allèles ont été clonés et aucune différence de la séquence primaire 
 ![](img/03/image033.jpg)
 
 Comme on le voit l'état de méthylation est héritable. On note cependant une certaine instabilité des états de méthylation qui sont donc réversibles. Il existe d'autres types de phénomènes qui ressemblent à celui-ci, dans le sens qu'il s'agit de modifications structurales de l'ADN (le plus souvent de la chromatine chez les eucaryotes) sans changement de sa séquence
- 
+
 Notez qu'il existe une troisième classe de phénomènes épigénétiques : les états métaboliques ou régulatoires alternatifs.
- 
+
 Ces phénomènes sont très fréquents dans la nature où ils interviennent dans des phénomènes variés surtout dans les cellules eucaryotes. Pratiquement, ils sont importants pour la transgenèse. Il est en effet fréquent qu'après introduction de séquences d'ADN dans une cellule, l'expression de celles-ci soit rapidement inhibée. Il existe deux grands types de mécanismes épigénétiques qui entraînent cette inhibition.
- 
+
 - Les mécanismes dit TGS (pour transciptional gene silencing) qui sont liés soit à de la méthylation soit à des modifications de structure de la chromatine
 - Les mécanismes dit PTGS ( pour post transciptional gene silencing) qui sont liés à des états régulatoires alternatifs (présence ou absence d'une nucléase spécifique) liés à des ARNs double brin. Voyez la page comment inactiver un gène pour en savoir plus.
 
 ## Les mutations
- 
+
 Nous avons vu au début de ce chapitre qu'il existe des polymorphismes dans les populations et avons pu pour un gène donné en calculer les fréquences. Quelle est l'évolution des fréquences des différents allèles polymorphes dans une population ?
 Nous ne répondrons pas en détail à cette question car elle nécessite des analyses qui sont du ressort de la Génétique des Populations. Cependant nous allons quand même montrer que dans une grande population, si les gamètes se rencontrent au hasard et qu'aucune sélection ne s'effectue sur ces gamètes ou sur leurs descendants alors les fréquences des différents allèles restent constantes au cours des générations. C'est la loi de Hardy-Weinberg.
 
 Soit un gène polymorphe avec deux allèles a et b. Ces allèles sont présents avec les fréquences allèliques respectives, Fa et Fb. Evidemment Fa + Fb = 1. Selon nos hypothèses, cela veut dire que les parents vont produire Fa de gamètes a et Fb de gamètes b. Voyons maintenant quelles seront les fréquences de production de gamètes a et b par les descendants issus la rencontre de ces gamètes, Fan+1 et Fbn+1.
- 
-![](/img/03/2019-11-18-16-17-55.png)
+
+![](img/03/2019-11-18-16-17-55.png)
 
 Donc les fréquences alléliques restent constantes d'une génération à l'autre.
 
@@ -313,7 +313,7 @@ Les mutations résultent de deux grands types de phénomènes.
 Voyons plus en détail l'aspect génétique du phénomène.
 
 Le problème de l'apparition des mutations n'est pas trivial et il est encore débattu aujourd'hui. En effet, si la majorité des généticiens s'accordent pour dire que les mutations se produisent au hasard, il en existe quelques-uns qui pensent que celles-ci pourraient être induites par le milieu. Il faut comprendre induite non pas comme "ayant une fréquence augmentée par le milieu" car nous verrons qu'effectivement des conditions de milieu peuvent augmenter de manière considérable le taux de mutation, mais plutôt dirigées par le milieu. Des expériences récentes ont fait resurgir ce débat qui malheureusement sort du cadre de ce cours. Quoi qu'il en soit, des expériences ont clairement montré que les mutations apparaissent spontanément. La première démonstration convaincante de ceci a été faite grâce à ce que l'on appelle aujourd'hui le test de fluctuation.
- 
+
 ## Le test de fluctuation
 
 Prenons l'exemple qu'étudiait Salvator Luria et Max Delbrück (1943) et qui a permis d'apporter la première démonstration que les mutations apparaissent spontanément avant le traitement qui permet de les révéler. Ces chercheurs étudiaient la résistance d'Escherichia coli B au phage a. Pour révéler les bactéries résistantes, ils mettaient en cultures des bactéries sensibles, les laissaient pousser, puis ajoutaient des phages et étalaient la culture sur des boites de Petri. Seules les bactéries résistantes donnaient naissance à des colonies (facilement comptables !). Ils essayaient de mesurer la fréquence d'apparition de bactéries résistantes au phage et observaient de grandes fluctuations dans leurs résultats. Ils ont raisonné justement que cette fluctuation était en fait due à l'apparition stochastique des mutations et pourrait donc permettre de trancher entre les deux hypothèses du moment:
@@ -334,15 +334,15 @@ exemple (parmi 3 expériences témoin) de résultats obtenus si une culture est 
 
 14, 15, 13, 21, 15, 14, 26, 16, 20, 13
 
-moyenne= 16,7 
+moyenne= 16,7
 variance= 15
- 
+
 L'analyse statistique montre que ces deux chiffres ne sont pas différents. Donc la procédure d'étalement n'introduit pas de variation significative autre que l'échantillonnage au hasard.
 exemple (parmi 10 expériences) de résultats obtenus si plusieurs cultures sont faites en parallèle et étalées sur des boites séparées dans les conditions de l'expérience témoin:
 
 1, 0, 3, 0, 0, 5, 0, 6, 107, 0, 0, 0, 1, 0, 0, 64, 0, 35, 0, 5
 
-moyenne= 11,35 
+moyenne= 11,35
 variance= 694 (corrigée pour la variation de l'étalement).
 
 CQFD: il est clair que c'est l'hypothèse n°1 (les mutations préexistent à leur révélation) qui est la bonne !
@@ -364,13 +364,13 @@ Une autre expérience a permis de montrer plus simplement le même résultat. C'
 Des levures sont étalées sur du milieu complet, et ensuite repiquées grâce à du velours sur du milieu minimum. Sur ce milieu, les mutants prototrophes poussent et sont facilement repérables. Il suffit ensuite de retourner vers la boîte de milieu complet pour constater que les levures de la colonie initiale de les repiquer sur du milieu minimum et de constater que la toutes les cellules de la colonie sont aussi prototrophes, et que donc, ce n'est pas le milieu qui a provoqué la mutation d'auxotrophie vers la prototrophie.
 
 Ce résultat est l'un des plus fondamental de la biologie car, combiné avec le processus de sélection naturelle énoncé par Darwin, il a permis de proposer une hypothèse non finaliste de l'évolution de la vie que l'on désigne sous le terme de néodarwinisme. En effet, "un oeil n'a pas été créé dans le but de voir" même s'il sert à ça, mais les organismes possèdes des yeux car (1) aléatoirement par le biais de mutations, certains ont acquis la capacité de détecter la lumière et (2) par ce fait, ils ont été avantagés par rapport à ceux qui en étaient dépourvus au niveau de leur reproduction, probablement parce que les yeux leur permettaient une meilleure connaissance du milieu alentour. Notez que le débat fait toujours rage pour savoir si cette évolution est obligatoirement progressive (c.a.d. que l'établissement de l'œil résulte de la succession de plusieurs mutations) ou s'il est possible de faire des sauts (c.a.d. qu 'un "proto-œil" efficace est apparu à la suite d'une seule mutation).
- 
+
 ## Fréquence d'apparition des mutations
- 
+
 L'exemple du test de fluctuation semble indiquer que le taux des mutations spontanées est très faible, d'autant plus que la résistance au bactériophage pourrait être causée par des mutations localisées dans de nombreux gènes différents et que donc le taux de mutation pour chaque gène est encore plus faible. En fait les taux de mutation peuvent varier grandement en fonction de nombreux paramètres. Par exemple, voyons quelques taux de mutations pour certains caractères chez différents organismes:
 
 | organisme                 | changement de phénotype                              | taux de mutation                             |
-|---------------------------|------------------------------------------------------|----------------------------------------------|     
+|---------------------------|------------------------------------------------------|----------------------------------------------|
 | bactériophage T2          | inhibition de la lyse                                | 10-8 gènes mutants/réplication               |
 |                           | changement spécificité d'hôte                        | 3.10-9 gènes mutants/réplication             |
 | Escherichia coli          | capacité à fermenter lactose à incapacité            | 2.10-7 cellules mutantes/division cellulaire |
@@ -409,9 +409,9 @@ Pour augmenter le taux de mutations, il existe 2 grands types de facteurs: des r
 
 - Les rayons X provoquent des cassures double brin de l'ADN. Ce genre de lésions est réparée par le système de recombinaison (voir vos cours de biologie moléculaire). Elles vont donc générer toute une série d'altérations chromosomiques dont des translocations, des inversions et des délétions de larges régions.
 - Les ultraviolets provoquent par contre une dimérisation des thymines pour donner des cyclobutane-pyrimidines. Ceux-ci sont réparés par deux grands types de mécanismes. (1) La photoréactivation qui s'effectue en présence de lumière visible par une enzyme de photoréactivation (EPR) qui reconnaît directement les cyclobutane-pyrimidines et les régénère. (2) L'excision de nucléotide qui permet de réparer plusieurs types de lésions dont le principe général est conservé au cours de l'évolution.
- 
+
 Les UV vont donc entraîner l'apparition d'une gamme de mutations provenant de la mauvaise réparation de la lésion, le plus souvent au niveau du dimère de thymines.
- 
+
 - Les produits chimiques. Ils sont très nombreux et ont des spécificités d'action particulières qui vont provoquer différents types de mutations.
 exemples:
 * l'EMS réagit avec les guanines et les modifient : il entraîne donc des changements de bases, principalement des guanines
@@ -421,7 +421,7 @@ exemples:
 Notez que ces produits mutagènes sont très toxiques car ils ont des activités cancérigènes ou tératogènes.
 
 ## Les différents types moléculaires de mutations et leurs effets phénotypiques
- 
+
 Nous allons rapidement mentionner les mutations les plus importantes car cette partie est redondante avec votre cours de biologie moléculaire.
 
 ### Les mutations ponctuelles
@@ -479,7 +479,7 @@ Les délétions peuvent aussi servir pour la cartographie. Je vous conseille de 
 Ces évènements sont très fréquents et une bonne partie des mutations dans les populations naturelles est en fait liée à des évènements de transposition. Les effets sont de deux types. Le transposon peut s'insérer dans un gène et l'inactiver ou il peut s'insérer dans ses régions régulatrices et en déréguler l'expression.
 
 ## La recombinaison comme générateur de variation
- 
+
 Si la mutation est le créateur primaire de la variation, la recombinaison peut associer différents polymorphismes et par-là augmenter la variation en générant de nouvelle combinaison.
 
 Vous savez qu'il existe dans la cellule des mécanismes qui permettent l'échange des brins d'ADN. Ceci est clairement visualisé au cours de la méiose par les chiasmas qui sont la manifestation physique des crossing-over qui sont le reflet de ces échanges de brins. Nous verrons en détail les implications de ces crossing-over sur la ségrégation des allèles. Ils se produisent avec une fréquence plus ou moins grande dans toutes les cellules ou ils génèrent de la diversité génétique. Nous nous contenterons de mentionner les phénomènes associés à la recombinaison homologue qui permet de :
