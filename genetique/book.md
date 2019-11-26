@@ -100,14 +100,9 @@ M: Mitose qui est le moment exact où le matériel génétique est réparti dans
 
 Cliquez pour voir le processus dynamique sur les films [mitose1](films/Mitose1.mov) (mitose réelle) et [mitose2](films/Mitose2.mov) (mitose schématisée).
 
-Classiquement, on distingue 4 phases.
+Classiquement, on distingue 4 phases comme illustré chez la levure Saccharomyces cerevisiae:
 
-|                                                                                                                                                                                                                                  |                             |
-| **Interphase**<br>= G1 +S + G2                                                                                                                                                                                                   | ![](img/01/image012.jpg)   |
-| **Prophase**<br>condensation des chromosomes<br>Dans le cytoplasme début de formation<br>du fuseau à partir du centrosome qui se divise<br>durant cette phase les chromosomes ont deux<br>chromatides liées par leur centromère. | ![](img/01/image014.jpg)   |
-| **Métaphase**<br>Le fuseau est complet. Les chromosomes<br>s'alignent sur la plaque équatoriale par leur<br>centromère.                                                                                                          | ![](img/01/image016.jpg)   |
-| **Anaphase**<br>Les chromatides sœurs se séparent.<br>Chacune migre à un pôle.<br>Elles deviennent alors chacune "un chromosome"                                                                                                 | ![](img/01/image018.jpg)   |
-| **Télophase**<br>Les cellules terminent leur division.<br>Les chromosomes se décondensent.<br>L'enveloppe nucléaire se reforme<br>(si elle a disparu).<br>Le cytoplasme est partitionné en deux                                  | ![](img/01/image020.jpg)   |
+![](img/01/image012.ppg)   |
 
 Il existe de nombreuses variations sur ce schéma qui résume les étapes centrales et conservées du processus. Par exemple, chez les champignons, la membrane nucléaire ne disparaît pas pendant le processus. Il n'y a pas d' "asters" mais une structure équivalente qui s'appelle le "Spindle Pole Body". En tout cas, ce qu'il faut retenir c'est qu'à l'issue de la mitose il y a répartition à l'identique des chromosomes : une cellule à n chromosomes donne naissance à deux cellules à n chromosomes, une cellule à 2n chromosomes donne naissance à 2 cellules à 2n chromosomes. Il y a partition du cytoplasme.
 
