@@ -49,7 +49,7 @@ On les regroupe sous le terme générique de Bactéries. Il en existe deux grand
 
 **Structure:**
 
-![](img/01/image006.gif)
+![](img/01/image006.png)
 
 - Ces cellules sont généralement de petite taille (attention, il existe des exceptions !)
 
