@@ -74,7 +74,7 @@ Cet ensemble regroupe une variété de cellules présentant des organisations pl
 
 **Structure:**
 
-![](img/01/image008.jpg)
+![](img/01/image008.png)
 
 - Le plus souvent, outre le noyau, elles présentent une structure interne complexe avec un cytosquelette vrai (microtubules, filaments d'actine etc.) et un système de membranes délimitant de nombreuses organelles (outre le noyau associé au réticulum, appareil de Golgi, mitochondrie, lysosome / vacuole, peroxisome, etc.). De plus, chez de nombreux protistes et chez les plantes, des plastes assurent la photosynthèse. Il y a donc une compartimentation de la production d'énergie (mitochondrie et plastes) et des réactions enzymatiques (entre cytosol, peroxisome, lysosome etc.). La présence du noyau, caractéristique des eucaryotes, entraîne un découplage entre transcription et traduction. Ceci permet des niveaux de régulation supplémentaires.
 
