@@ -102,7 +102,7 @@ Cliquez pour voir le processus dynamique sur les films [mitose1](films/Mitose1.m
 
 Classiquement, on distingue 4 phases comme illustré chez la levure Saccharomyces cerevisiae:
 
-![](img/01/image012.ppg)   |
+![](img/01/image012.png)   |
 
 Il existe de nombreuses variations sur ce schéma qui résume les étapes centrales et conservées du processus. Par exemple, chez les champignons, la membrane nucléaire ne disparaît pas pendant le processus. Il n'y a pas d' "asters" mais une structure équivalente qui s'appelle le "Spindle Pole Body". En tout cas, ce qu'il faut retenir c'est qu'à l'issue de la mitose il y a répartition à l'identique des chromosomes : une cellule à n chromosomes donne naissance à deux cellules à n chromosomes, une cellule à 2n chromosomes donne naissance à 2 cellules à 2n chromosomes. Il y a partition du cytoplasme.
 
