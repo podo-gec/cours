@@ -118,7 +118,7 @@ Oscar Hertwig (1875) montre que pendant la fécondation de l'œuf d'oursin, le n
 
 Sur le schéma qui suit vous avez la terminologie utilisée de manière générale. En fait à pour chaque groupe d'eucaryote, il existe une terminologie particulière pour les gamètes et le zygote. Notez que la fécondation s'appelle conjugaison lorsque les deux gamètes ont la même taille.
 
-![](img/01/image024.jpg)
+![](img/01/image024.png)
 
 La méiose est la division particulière qui permet le passage de la phase diploïde à la phase haploïde. Pour effectuer la méiose, il faut donc partir d'une cellule diploide à 2n chomosomes. Cette division est précédée comme pour la mitose de la duplication du matériel génétique (réplication de l'ADN). Au cours de la méiose, il y a deux divisions successives qui aboutissent à la production de 4 cellules haploïdes à n chromosomes suivant le schéma général suivant. Pour une vision dynamique de la méiose, cliquez les films [méiose1](films/Meiose1.mov) (images séquentielles d'une méiose) et [méiose2](films/Meiose2.mov) (schéma de la méiose)
 
