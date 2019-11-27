@@ -122,7 +122,7 @@ Sur le schéma qui suit vous avez la terminologie utilisée de manière généra
 
 La méiose est la division particulière qui permet le passage de la phase diploïde à la phase haploïde. Pour effectuer la méiose, il faut donc partir d'une cellule diploide à 2n chomosomes. Cette division est précédée comme pour la mitose de la duplication du matériel génétique (réplication de l'ADN). Au cours de la méiose, il y a deux divisions successives qui aboutissent à la production de 4 cellules haploïdes à n chromosomes suivant le schéma général suivant. Pour une vision dynamique de la méiose, cliquez les films [méiose1](films/Meiose1.mov) (images séquentielles d'une méiose) et [méiose2](films/Meiose2.mov) (schéma de la méiose)
 
-![](img/01/image026.jpg)
+![](img/01/image026.png)
 
 La durée des phases haploïdes et diploïdes est variable en fonction des organismes. Cela veut donc dire que pour chaque organisme, l'analyse génétique des croisements suivra des modalités différentes en fonction de la phase qui peut être observée facilement. Les cycles décrits ci-dessous présentent les trois grands groupes de cycles qui sont distingués, en prenant les exemples des organismes les plus étudiés en génétique. Ensuite, vous sont données quelques caractéristiques génétiques de ces organismes.
 
