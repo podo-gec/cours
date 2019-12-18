@@ -55,14 +55,14 @@ On les regroupe sous le terme générique de Bactéries. Il en existe deux grand
 
 - Leur structure est très simple, le plus souvent sans cytosquelette ni réseau de membrane interne (la production d'énergie n'est pas compartimentée, elle se produit au niveau de la membrane plasmique). Autour de la cellule, on note la présence d'une paroi complexe. Dans le cytoplasme, il y a présence des ribosomes et d'une masse "plus claire", le nucléoïde qui contient l'ADN. Attention le nucléoïde n'est pas un noyau car il n'est pas entouré par une membrane (il existe de ce fait un couplage entre transcription et traduction). L'ADN est présent sous forme d'un ou quelques chromosomes, le plus souvent circulaire.
 
-- Ces bactéries n'ont pas de processus d'endocytose et "n'ingère" donc que des molécules solubles.
+- Ces bactéries n'ont pas de processus d'endocytose et "n'ingèrent" donc que des molécules solubles.
 
-- Elle ne forme jamais d'organisme pluricellulaire vrai, mais néanmoins les cellules sont capables de se différencier pour former des spores ou des colonies contenant des cellules de morphologies différentes.
+- Elles ne forment jamais d'organisme pluricellulaire vrai, mais néanmoins les cellules sont capables de se différencier pour former des spores ou des colonies contenant des cellules de morphologies différentes.
 
 - Leur unité de structure cache une grande complexité de métabolisme et de fonctionnement au niveau moléculaire. Ceci entraîne une diversité biologique très importante. Les procaryotes ont ainsi pu coloniser quasiment tous les milieux : des plus froids (mers polaires à la limite de la congélation) aux plus chauds (sources thermales à plus de 100°C), sous la croûte terrestre ou à l'intérieur du corps humain. Je vous renvoie au cours de microbiologie de maîtrise pour approfondir vos connaissances sur le sujet.
 Division
 
-- Elles se divisent simplement par fission, en général pour donner deux cellules identiques (voir film). Il n'y aucune structure marquante qui semble apparaître.
+- Elles se divisent simplement par fission, en général pour donner deux cellules identiques. Il n'y aucune structure marquante qui semble apparaître.
 
 - Il n'y a pas d'individualisation de chromosomes visibles en cytologie à aucun moment de leur cycle de vie. Attention, le processus de division est cependant hautement contrôlé par des structures particulières; la petitesse des cellules empêche leur visualisation facile avec un microscope optique.
 
