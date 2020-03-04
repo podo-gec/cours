@@ -1,4 +1,4 @@
-## Cours de génétique
+# Cours de génétique
 
-# Philippe Silar
+## Philippe Silar
 
