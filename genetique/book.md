@@ -141,7 +141,7 @@ Les premières cellules ont été décrites par Robert Hooke en 1665 (figure 1).
 <figcaption>
 <small><strong>Figure 1: première représentation de cellules par Robert Hooke dans son "Micrographia" publié en 1665.</strong></small>
 </figcaption>
-</figure><br>
+</figure><br><br>
 
 <figure>
 <img src="img/image002.png">
