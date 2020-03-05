@@ -145,7 +145,7 @@ Avant de rentrer plus avant dans l'analyse génétique, nous allons avoir besoin
 **Tout organisme est constitué de cellules :**
 Les premières cellules ont été décrites par Robert Hooke en 1665 (figure 1). La théorie actuelle a été formulée par Mathias-Jacob Schleiden et Théodore Schwann en 1837-1839 (figure 2).
 
-| ![image001](C:\Users\philippe\Desktop\genetique\img\image001.png) | ![image002](C:\Users\philippe\Desktop\genetique\img\image002.png) |
+| ![image001](img/image001.png) | ![image002](img/image002.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | <small><strong>Figure 1: première représentation de cellules par Robert Hooke dans son "Micrographia" publié en 1665.</strong></small> | <small><strong>Figure  2: représentation de cellules végétales et animales pour étayer la théorie cellulaire dans le livre de Theodor Schwann "Mikroskopische Untersuchungen " publié en 1839.</strong></small> |
 
