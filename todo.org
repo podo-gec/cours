@@ -1,0 +1,6 @@
+* Inbox
+** DONE Update images shortcodes to be Pandoc-compliant
+CLOSED: [2020-06-17 Wed 18:39]
+** TODO Convert full book to chapters
+** TODO Markdown linting
+** TODO Convert math notation to Latex
