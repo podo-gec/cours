@@ -1,2 +1,2 @@
 all:
-	pandoc book.md --toc -o book.docx
+	pandoc book.md --toc --filter pandoc-fignos --filter pandoc-tablenos -o book.docx
