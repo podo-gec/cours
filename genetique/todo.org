@@ -3,3 +3,4 @@
 ** TODO Merge/rename first chapter (introduction + preface)
 ** TODO Backlink PDF + website
 ** DONE Second update
+** TODO Add Google Analytics tracker (UA-176880648-1)
