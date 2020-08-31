@@ -1,4 +1,5 @@
 ** TODO Check duplicate figure number (e.g. Fig. 53), which explains why figure reference are shifted by 4 or more.
-** TODO Update all chapters with latest corrections
+** TODO Update all chapters with latest corrections (first update)
 ** TODO Merge/rename first chapter (introduction + preface)
 ** TODO Backlink PDF + website
+** DONE Second update
