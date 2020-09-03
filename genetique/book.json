@@ -11,5 +11,6 @@
             "url": "http://gec.sdv.univ-paris-diderot.fr/cours/genetique/cover.png",
             "style": "background: none;"
         }
-    }
+    },
+    "styles": { "website": "styles/website.css" }
 }
