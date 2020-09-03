@@ -1,8 +1,8 @@
 ** TODO Check duplicate figure number (e.g. Fig. 53), which explains why figure reference are shifted by 4 or more.
 ** DONE Update all chapters with latest corrections (first update)
 ** CANC Merge/rename first chapter (introduction + preface)
-** TODO Backlink PDF + website
+** DONE Backlink PDF + website
 ** DONE Second update
-** TODO Add Google Analytics tracker (UA-176880648-1)
-** TODO Remove caption for cover image
+** DONE Add Google Analytics tracker (UA-176880648-1)
+** DONE Remove caption for cover image
 ** TODO Check HTML page title
