@@ -3,5 +3,5 @@
 CLOSED: [2020-06-17 Wed 18:39]
 ** DONE Convert full book to chapters
 CLOSED: [2020-06-18 Thu 06:58]
-** TODO Markdown linting
-** TODO Convert math notation to Latex
+** DONE Markdown linting
+** CANC Convert math notation to Latex

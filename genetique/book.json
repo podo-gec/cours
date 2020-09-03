@@ -1,10 +1,11 @@
 {
-    "plugins": [
-        "image-captions"
-    ],
+    "plugins": ["image-captions", "analytics"],
     "pluginsConfig": {
-      "image-captions": {
-          "caption": "Figure _BOOK_IMAGE_NUMBER_ : _CAPTION_"
-      }
-  }
+        "image-captions": {
+            "caption": "Figure _BOOK_IMAGE_NUMBER_ : _CAPTION_"
+        },
+        "analytics": {
+            "google": "UA-176880648-1"
+        }
+    }
 }
