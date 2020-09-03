@@ -1,11 +1,15 @@
 {
-    "plugins": ["image-captions", "analytics"],
+    "plugins": ["image-captions", "analytics", "insert-logo"],
     "pluginsConfig": {
         "image-captions": {
             "caption": "Figure _BOOK_IMAGE_NUMBER_ : _CAPTION_"
         },
         "analytics": {
             "google": "UA-176880648-1"
+        },
+        "insert-logo": {
+            "url": "http://gec.sdv.univ-paris-diderot.fr/cours/genetique/cover.png",
+            "style": "background: none;"
         }
     }
 }
