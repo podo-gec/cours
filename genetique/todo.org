@@ -6,3 +6,4 @@
 ** DONE Add Google Analytics tracker (UA-176880648-1)
 ** DONE Remove caption for cover image
 ** TODO Check HTML page title
+** TODO Google Analytics doesn't seem to work. This may be caused by the plugin name which starts with an underscore. However, ae634572d81923cf05749184beead952dea985d7 didn't fix it. Maybe try [[https://github.com/igrigorik/ga-beacon]]?
