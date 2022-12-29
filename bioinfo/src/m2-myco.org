@@ -1,0 +1,41 @@
+#+TITLE: Programme TD/TP M2 Mycologie
+#+AUTHOR: chl
+#+DATE:
+#+LANGUAGE: fr
+
+* Mercredi 04/01[fn::Horaires journée : 9-12h, 13h-16h30]
+
+- Lois de probabilité utiles pour la génétique
+- Analyse probabilistique des séquences génomiques
+- Classification d'espèces par approches multivariées
+
+* Jeudi 05/01
+
+- Environnement Unix, langages R et Python
+- Principaux outils bioinformatiques (=mafft=, =seaview=, =artemis=)
+- Gestion d'un projet bioinformatique avec Galaxy
+
+* Lundi 09/01
+
+- Contrôle de qualité, visualisation sequences (=fastqc=, =artemis=)
+- Mapping PSN 822 + souche SpoD1 + souche PSN240 sur /P. anserina/ (=bowtie2=)
+
+* Mardi 10/01
+
+- Assemblage et détection de mutation (=varscan=)
+- Annotation de deux codes barre (=artemis=)
+
+* Mercredi 11/01
+
+- Arbre phylogénétique des Sordariales 4 gènes/ITS (=phyml=)
+- Comparaison des arbres
+
+* Jeudi 12/01
+
+- Analyse de transcriptome données Silar & Debuchy (=kallisto=)
+- Interprétation des clusters de gènes
+
+* Vendredi 13/01
+
+- Analyse métagénomique données Egidi et al. (=frogs=)
+- Interprétation données d'abondance

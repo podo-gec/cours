@@ -1,0 +1,231 @@
+#+TITLE: M2 Mycologie
+#+SUBTITLE: Rappels biostatistiques
+#+DATE:
+#+OPTIONS: H:2
+
+* Inbox :noexport:
+
+** TODO Fix Latex expressions in marginnote
+** TODO Add illustrations for probability laws
+
+* Introduction
+
+** Plan de la séance
+
+1. Panorama des techniques statistiques
+  - Bases de l'estimation et des tests d'hypothèse
+  - Lois de probabilité utiles pour la génétique
+  - Analyse probabilistique des séquences génomiques
+  - Classification d'espèces par approches multivariées
+2. Applications bioinformatiques
+
+
+** Statisticians are applied philosophers
+
+#+BEGIN_QUOTE
+Philosophers argue how many angels can dance on the head of a needle; statisticians count them. Or rather, count how many can probably dance. (...) We can predict nothing with certainty but we can predict how uncertain our predictions will be, on average that is. Statistics is the science that tells us how. -- Stephen Senn \cite{senn-2003-dicin-death}
+#+END_QUOTE
+
+* Estimation et test d'hypothèse
+
+** L'inférence en statistiques
+
+Deux questions récurrentes :
+
+- quelle est la meilleure manière de caractériser l'objet d'intérêt dans une étude scientifique ?
+- peut-on généraliser les effets observés au cours d'une expérience à une population plus vaste ?
+
+La première question soulève le choix d'un estimateur efficace et consistant, la seconde celle de définir une statistique de test en lien avec une distribution de probabilité.
+
+$$ \underbrace{\text{variable mesurée}}_{\text{échantillon aléatoire}} = \underbrace{\text{vraie valeur}}_{\text{population théorique}} + \underbrace{\text{erreur de mesure}}_{\text{aléatoire et/ou systématique}} $$
+
+** Puissance statistique et erreur de mesure \cite{ioannidis-2005-why-most}
+
+[[./p/img-ioannidis.png]]
+
+** Construction d'un estimateur et d'un test d'hypothèse
+
+On dispose de 6 lots contenant des cellules en culture (pendant 24h), dont 3 ont reçu un supplément de vitamine E (groupe expérimental). Après 10 jours, on examine les auto-radiographies pour dénombrer le nombre total de cellules dans chaque lot.
+
+Le technicien qui apporte les résultats indique au chercheur que les étiquettes permettant d'identifier quels lots ont été traités ont été égarées \cite{good-2005-permut-param}.
+
+[[./p/img-dishes.png]]
+
+** Formulation d'une hypothèse
+
+Si les trois premiers lots correspondent au groupe traité à la vitamine E, alors /a priori/ l'expérience semble concluante : quel que soit le lot, le nombre de cellules apparaît largement supérieur à n'importe lequel des trois derniers lots.
+
+[[./p/img-dishes2.png]]
+
+Est-il possible d'évaluer la plausibilité d'un tel résultat ?
+
+** Définition d'un cadre décisionnel
+
+Il faut définir un cadre décisionnel comprenant une hypothèse à tester et un outil permettant de prendre une décision :
+
+- Il nous faut un moyen de comparer l'effet de l'adjonction de vitamine E par rapport à la situation où les lots ne sont pas traités.
+- Un test statistique judicieusement choisi nous permettra de tester l'invraisemblance d'une hypothèse, appelée hypothèse nulle et formulée dans un cadre hypothético-déductif.
+
+\marginnote{Comme dans un essai clinique, on cherche donc à comparer l'effet d'un traitement A à celui d'un traitement B de référence (ou placebo), qui sert de comparateur. La différence observée entre les effets de A et B peut faire l'objet d'un test statistique. Celui-ci permet de confronter la valeur observée à celles pouvant résulter de simples fluctuations d'échantillonnage (c.a.d. des différences dûes au "hasard", signifiant ici l'absence d'une réelle différence).}
+
+** Définition d'un cadre décisionnel (2)
+
+Si la différence observée est suffisamment grande, et on considérera que c'est le cas s'il y a moins de 5 % de chance d'observer un *résultat aussi extrême*, alors on conclue que celle-ci ne peut vraisemblablement pas être expliquée par de simples fluctuations d'échantillonnage et que les données observées ne sont pas compatibles avec l'*hypothèse nulle d'absence d'effet*, appelée $H_0$.
+
+On rejettera donc $H_0$ si la probabilité d'observer, du seul fait du hasard, une différence au moins aussi grande que celle observée entre les effets de A et B est inférieure à 5 %. Cette probabilité est appelée *degré de signification*. Ce seuil de signification est arbitraire, mais largement admis dans la communauté biomédicale. En somme, on accepte de se tromper dans 5 % des cas en rejetant l'hypothèse d'absence de différence.
+
+\marginnote{D'un autre côté, il existe un risque $\beta$ de ne pas être en mesure de rejeter l'hypothèse nulle lorsqu'une réelle différence existe. Le complément $1-\beta$, appelée puissance du test, représente donc la probabilité de rejeter correctement l'hypothèse nulle en faveur de l'hypothèse alternative.}
+
+** Démarche du test d'hypothèse
+
+1. Définir une hypothèse nulle ($H_0$), une hypothèse alternative, et les risques associés à la prise d'une décision concernant le résultat observé à partir d'un échantillon.
+2. Choisir une statistique de test, $S$.
+3. Calculer la valeur de $S$.
+4. Définir la distribution d'échantillonnage de $S$ sous $H_0$.
+5. Conclure à partir de cette distribution.
+
+** Construction d'un estimateur
+
+Soit $H_0$ "la vitamine E ne modifie pas la croissance des cultures" ; en d'autres termes, les étiquettes "traité" ou "non traité" n'apportent aucune information du point de vue de la mesure considérée (tous les lots sont "échangeables"). Il y a ${6 \choose 3} = 20$ manières de définir un groupe composé de 3 éléments pris parmi 6. Considérons la somme de l'ensemble des cellules développées dans les 3 lots définissant un même groupe. Appelons la $s$. Ici, $s_{\text{obs}} = 121 + 118 + 110 = 349$.
+
+Quelles sont les valeurs possibles de $s$ lorsque l'on recombine les lots pour former deux groupes indépendants ?
+
+|    |  L1 |  L2 |  L3  |   $s$ |
+|----+-----+-----+------+-------|
+|  1 | 121 | 118 | 110  | *349* |
+|  2 | 121 | 118 |  34  |   273 |
+|  3 | 121 | 118 |  12  |   251 |
+| -- |  -- |  -- |  --  |    -- |
+| 18 | 110 |  34 |  22  |   166 |
+| 19 | 110 |  12 |  22  |   144 |
+| 20 |  34 |  12 |  22  |    68 |
+
+** Interprétation du test
+
+Parmi les 20 résultats possibles, le résultat $s_{\text{obs}} = 349$ est le plus extrême et il y a exactement 1/20 = 5 % de chances d'observer un résultat aussi extrême.
+
+Il est donc peu probable que les résultats observés (les trois premiers lots sont ceux qui ont été traités) puissent s'expliquer simplement par les fluctuations d'échantillonnage.
+
+** Pile ou face
+
+On lance une pièce 10 fois et on observe la séquence de résultats suivants :
+
+#+BEGIN_EXAMPLE
+P P P P F F F P F P
+#+END_EXAMPLE
+
+Question générale : la pièce est-elle truquée ?
+
+(Question à reformuler sous forme d'hypothèse nulle)
+
+** Opérationnalisation
+
+Si l'on suppose une pièce bien équilibrée et des lancers indépendants, le nombre attendu de "Pile" est $10 \times 0.5 = 5$. La fréquence observée de "Pile" dans l'expérience est de $4/10 = 0.4$.
+
+Nous pouvons formuler une hypothèse nulle selon laquelle $p = 0.5$, et l'hypothèse alternative est $p \neq 0.5$. En utilisant un test binomial, il est possible de vérifier si la proportion observée diffère de celle attendue théoriquement, en considérant un risque de 5 % de prendre une mauvaise décision en rejetant l'hypothèse nulle.
+
+Voici les résultats calculés à l'aide d'un logiciel statistique :
+
+#+BEGIN_SRC stata
+Pr(k >= 4)           = 0.828125  (one-sided test)
+Pr(k <= 4)           = 0.376953  (one-sided test)
+Pr(k <= 4 or k >= 6) = 0.753906  (two-sided test)
+#+END_SRC
+
+Le résultat suggère que cette séquence de Pile/Face n'est pas incompatible avec l'hypothèse d'équi-distribution des deux côtés de la pièce.
+
+** Approche bayésienne
+
+[[./p/img-bayesian-prior.png]]
+
+* Quelques lois de probabilités utiles
+
+** Variables discrètes
+
+|--------------------+-----------+--------------+--------------------------------|
+|--------------------+-----------+--------------+--------------------------------|
+| loi                | espérance | variance     | application                    |
+|--------------------+-----------+--------------+--------------------------------|
+| binomiale          | $np$      | $npq$        | succession d'événements 0/1    |
+| Poisson            | $\lambda$ | $\lambda$    | comptage                       |
+| binomiale négative | $n/p$     | $nq/p^2$     | temps d'attente avant n succès |
+| géométrique        | $1/p$     | $q/p^2$      | temps d'attente avant 1 succès |
+|--------------------+-----------+--------------+--------------------------------|
+|--------------------+-----------+--------------+--------------------------------|
+
+** Exemple de la loi binomiale
+
+TODO : CDF et PDF
+
+** Variables continues
+
+|--------------------+-----------+--------------+--------------------------------|
+|--------------------+-----------+--------------+-------------------------------|
+| loi                | espérance | variance     | application                   |
+|--------------------+-----------+--------------+-------------------------------|
+| uniforme           | $(b+a)/2$ | $(b-a)^2/12$ | distribution p-valeurs $H_0$  |
+| gaussienne         | $\mu$     | $\sigma^2$   | cumul d'erreurs indépendantes |
+| $\chi^2$ (Pearson) | $n$       | $2n$         | tableau de contingence        |
+| Gamma              | $k\theta$ | $k\theta^2$  | processus temps réel          |
+|--------------------+-----------+--------------+-------------------------------|
+|--------------------+-----------+--------------+--------------------------------|
+
+** Exemple de la loi normale
+
+TODO : CDF et PDF
+
+* Applications en bioinformatique
+
+** Seconde loi de Mendel
+
+Deux organismes hétérozygotes ont pour génotype =Aa= et =Bb=. Quelle est la probabilité que leur descendant ait le génotype =aa BB= ?[fn::[[https://rosalind.info/problems/lia/][Rosalind bioinformatics problems]]]
+
+|------+-------+-------+-------+-------|
+|------+-------+-------+-------+-------|
+|      |  AB   |  Ab   |  aB   |  ab   |
+|------+-------+-------+-------+-------|
+| AB   | AA BB | AA Bb | Aa Bb | Aa Bb |
+| Ab   | AA bB | AA bb | Aa bB | Aa bb |
+| aB   | aA BB | aA Bb | aa BB | aa Bb |
+| ab   | aA bB | aA bb | aa bB | aa bb |
+|------+-------+-------+-------+-------|
+|------+-------+-------+-------+-------|
+
+Puisqu'il y indépendance, on a $P(\text{aa})\times P(\text{BB})=\frac{1}{4}\times\frac{1}{4}=\frac{1}{16}$.
+
+\marginnote{Le terme 1/4 vient du fait que la probabilité d'observer un descendant de ce sous-type est uniforme quelque soit le croisement considéré.}
+
+# On calcule dans un premier temps la probabilité d'observer $n$ Aa Bb descendants après $k$ générations. Il s'agit d'une succession d'événements de Bernoulli jusqu'à la génération $k$, d'où $P(b,k) = {2^k \choose n}(1/4)^n (1-1/4)^{2^k-n}$, qui n'est autre que la fonction de densité d'une variable aléatoire suivant une loi Binomiale de paramètre $n=2k$ (il y a deux enfants à chaque étape) et $p=1/4$. Ensuite il s'agit de trouver la probabilité qu'au moins $N$ organismes se trouvent à la génération $k$, qui vaut $1-\sum_{x=0}^{N-1}P(X=x)$, où $X$ est une variable aléatoire représentant le nombre de descendants, c'est-à-dire 1 moins tous les cas $P(X\neq N)$.
+
+** Prolifération bactérienne
+
+Une suspension bactérienne contient 5000 bactéries/litre. On ensemence à partir de cette suspension 50 boites de Pétri (1 \si{\centi\meter\cubed} par boite). Si $X$ représente le nombre de colonies par boite, $X$ suit une loi de Poisson de paramètre 5, $\mathcal{P}(\lambda=5)$.[fn::[[https://cermics.enpc.fr/~jourdain/][Benjamin Jourdain, Probabilités et statistique pour l'ingénieur (2018)]]]
+
+Quelle est la probabilité qu'il n'y ait aucune colonie sur la boite de Pétri ?
+
+# Le nombre moyen de bactéries par boite est 5. On suppose que le nombre de colonies par boite est le même que le nombre moyen de bactéries par boite. On a alors $P(X=0) = \frac{5^0e^{-5}}{0!} = 0.0067$, soit approximativement 0,67 % de chance. On remarquera que la probabilité qu'il y ait au moins une colonie sur la boite de Pétri vaut $P(X > 0) = 1 - P(X = 0) = 1 - 0.0067 = 0.9933$  (99,3 % de chance) !
+
+** Le modèle de Jukes-Cantor en phylogénie
+
+On souhaite comparer deux espèces (eucaryotes) ayant un ancêtre commun. Des mutations aléatoires intervenant sur le génome au cours de leur évolution, un alignement des deux séquences ne donnera pas 100 % d'identité.
+
+Matrice de transition :
+
+$$ \begin{pmatrix*}[S]
+-0.886 & 0.190 & 0.633 & 0.063\\
+0.253 & -0.696 & 0.127 & 0.316\\
+1.266 & 0.190 & -1.519 & 0.063\\
+0.253 & 0.949 & 0.127 & -1.329
+\end{pmatrix*} $$
+
+Si l'on se trouve dans l'état =A=, on y restera un temps exponentiel de paramètre $-q_{ii} = 0.886$. La probabilité d'observer la transition =A->C= est donnée par $-q_{ij}/q_{ii} = \frac{0.190}{0.886}$.
+
+\marginnote{En somme, si l'on part de =A=, on attendra $\exp(0.886)=2.425$ unités de temps, et la probabilité de transitionner vers un autre état sera de 0.214 (pour C), 0.714 (G) et 0.071 (T). La transition la plus probable =A->G= implique d'attendre $\exp(−0.633)=0.531$ unité de temps.}
+
+** PCR et processus de branchement
+
+Considérons $N_0$ brins d'ADN au début du processus. Chacun de ces brins peut être vu comme un ancêtre d'un processus de Galton-Watson, ayant pour loi de probabilité $p_1=1-p$, $p_2=p$ et $p_k=0$ pour $k\ne 1, 2$. Ici, $p$ représente la probabilité de succès du cycle d'amplification. L'espérance mathématique de la reproduction vaut $m=1+p$, et sa variance $\sigma^2 = p(1-p)=(m-1)(2-m)$, avec $q=0$ (probabilité d'extinction). Le nombre attendu de brins d'ADN après $n$ cycles vaut alors $N_0m^n$.
+
+** Références
+
+#+LATEX: \printbibliography

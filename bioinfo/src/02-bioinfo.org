@@ -1,0 +1,55 @@
+#+TITLE: M2 Mycologie
+#+SUBTITLE: Outils bioinformatiques
+#+DATE:
+#+OPTIONS: H:2
+
+* Introduction
+
+** Plan de la séance
+
+1. Enjeux des données bioinformatiques
+2. Tâches courantes
+3. Outils intégrés
+4. Développements avancés
+
+* Enjeux des données bioinformatiques
+
+** Quelques ordres de grandeur
+
+TODO
+
+** Implications informatiques
+
+TODO
+
+* Tâches courantes
+
+** Recherche de motifs
+
+TODO
+
+** Alignement de séquence
+
+TODO
+
+** Mapping
+
+TODO
+
+** Assemblage de génome
+
+TODO
+
+** Phylogénie moléculaire
+
+TODO
+
+** RNA-Seq
+
+TODO
+
+* Outils intégrés
+
+** Galaxy
+
+TODO
