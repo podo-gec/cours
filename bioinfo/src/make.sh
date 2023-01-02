@@ -10,3 +10,5 @@ rm *.synctex.gz
 rm *.tex
 rm *.tex~
 rm *.bib
+
+mv *.pdf ../dist
