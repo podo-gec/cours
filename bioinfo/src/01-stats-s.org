@@ -22,7 +22,7 @@
 Philosophers argue how many angels can dance on the head of a needle; statisticians count them. Or rather, count how many can probably dance. (...) We can predict nothing with certainty but we can predict how uncertain our predictions will be, on average that is. Statistics is the science that tells us how. -- Stephen Senn \cite{senn-2003-dicin-death}
 #+END_QUOTE
 
-* Estimation et test d'hypothèse
+* Hasard, probabilités et statistiques
 
 ** L'inférence en statistiques
 
@@ -46,6 +46,33 @@ $$ \underbrace{\text{variable mesurée}}_{\text{échantillon aléatoire}} = \und
 ** Puissance statistique et erreur de mesure \cite{ioannidis-2005-why-most}
 
 [[./p/img-ioannidis.png]]
+
+** Reproductibilité des résultats scientifiques
+
+1. Peng, R. [[http://biostatistics.oxfordjournals.org/content/10/3/405.full][Reproducible research and Biostatistics]]. Biostatistics (2009), 10(3):405.
+2. Prinz, F et al. [[http://goo.gl/joadr][Believe it or not: how much can we rely on published data on potential drug targets]]? Nature Reviews Drug Discovery (2011), 10:712.
+3. Simmons, JP et al. [[http://pss.sagepub.com/content/22/11/1359.full.pdf][False-Positive Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant]]. Psychological Science (2011), 22(11): 1359.
+
+** Hasard, probabilité et statistique
+
+Lorsque l'on connaît exactement la loi qui gouverne la survenue d'événements, l'analyse combinatoire suffit dans la plupart des cas.
+
+- Probabiliste : chaque face d'un dé a une probabilité $1/6$ d'apparaître, donc je peux savoir quelles sont mes chances de succès à chaque tirage.
+- Statisticien : regardons combien de fois chaque face apparaît après un certain nombre de tirage , et ensuite je déciderai si mes observations sont compatibles avec l'hypothèse d'un dé équilibré.
+
+** Hasard, probabilité et statistique (2)
+
+[[./p/img-lancer-de.png]]
+
+** Fluctuations d'échantillonnage
+
+Considérons une expérience imaginaire où on simule des données de pression systolique dans deux échantillons tirés dans des populations où les moyennes sont de 160 et 130 mmHg. L'écart-type est le même dans les deux populations (20). La différence théorique est donc de 30 mmHg.
+
+** Fluctuations d'échantillonnage (2)
+
+[[./p/img-sampling-d30n30.png]]
+
+* Estimation et test d'hypothèse
 
 ** Construction d'un estimateur et d'un test d'hypothèse
 
@@ -90,6 +117,8 @@ Soit $H_0$ "la vitamine E ne modifie pas la croissance des cultures" ; en d'autr
 
 Quelles sont les valeurs possibles de $s$ lorsque l'on recombine les lots pour former deux groupes indépendants ?
 
+** Construction d'un estimateur (2)
+
 |    |  L1 |  L2 |  L3  |   $s$ |
 |----+-----+-----+------+-------|
 |  1 | 121 | 118 | 110  | *349* |
@@ -123,6 +152,8 @@ Si l'on suppose une pièce bien équilibrée et des lancers indépendants, le no
 
 Nous pouvons formuler une hypothèse nulle selon laquelle $p = 0.5$, et l'hypothèse alternative est $p \neq 0.5$. En utilisant un test binomial, il est possible de vérifier si la proportion observée diffère de celle attendue théoriquement, en considérant un risque de 5 % de prendre une mauvaise décision en rejetant l'hypothèse nulle.
 
+** Opérationnalisation (2)
+
 Voici les résultats calculés à l'aide d'un logiciel statistique :
 
 #+BEGIN_SRC stata
@@ -133,11 +164,17 @@ Pr(k <= 4 or k >= 6) = 0.753906  (two-sided test)
 
 Le résultat suggère que cette séquence de Pile/Face n'est pas incompatible avec l'hypothèse d'équi-distribution des deux côtés de la pièce.
 
+** Plans d'expérience
+
+#+BEGIN_QUOTE
+One of the principal uses of statistical models is to attempt to explain variation in measurements. This variation may be due to a variety of factors, including variation from the measurement system, variation due to environmental conditions which change over the course of a study, variation from individual to indi- vidual (or experimental unit to experimental unit), etc. Factors which are not controlled from observation to observation can introduce variation in measured values. In designed experiments, the experimenter deliberately changes the levels of experimental factors to induce variation in the measured quantities, to lead to a better understanding of the relationship between experimental factors and the response. -- Armitage and Colton \cite{armitage-2005-encyclopedia-biostats}
+#+END_QUOTE
+
 ** Différents cadres de raisonnement pour l'inférence
 
-- approche fréquentiste : ce qui a été discuté jusqu'à présent
-- approche par vraisemblance :
-- approche bayésienne
+- approche fréquentiste : ce qui a été discuté jusqu'à présent (confronter une hypothèse unique, dans une expérience contrôlée, via un principe de falsification ; Fisher, puis Neyman & Pearson). Aucune information sur $P(H_0\mid \text{data})$.
+- approche par vraisemblance : utilisation des données observées pour arbitrer entre deux modèles en compétition (vraisemblance des données pour un modèle donné).
+- approche bayésienne : utilisation d'information externe pour évaluer /a priori/ quel modèle est le plus vraisemblable (mise à jour d'une probabilité /a priori/ par les données pour former une probabilité /a posteriori/)
 
 ** Approche bayésienne
 
@@ -177,12 +214,28 @@ TODO : CDF et PDF
 
 ** Exemple de la loi normale
 
-TODO : CDF et PDF
+[[./p/img-normal-distribution.png]]
 
 ** Tests exacts, approchés, paramétriques et non paramétriques
 
 - Les tests paramétriques constituent de bonnes approximations aux tests exacts (permutation), en général.
-- Les tests non-paramétriques ont, pour certains, une efficacité relative $>80$ % par rapport aux tests paramétriques.
+- Les tests non-paramétriques ont, pour certains, une puissance relative $\ge 80$ % par rapport aux tests paramétriques (c'est le cas du test de Mann-Whitney-Wilcoxon pour comparer deux échantillons).
+
+** Panorama des tests statistiques usuels
+
+|--------------------+------------+-----------------+-----------------------|
+|--------------------+--------------+---------------+-----------------------|
+| non paramétrique   | prédicteur   | réponse       | paramétrique          |
+|--------------------+--------------+---------------+-----------------------|
+| Spearman ($\rho$)  | quantitative | quantitative  | Pearson (r)           |
+| Fisher             | qualitative  | qualitative   | Pearson ($\chi^2$)    |
+| Signe              | qualitative  | quantitative  | Student 1 éch. (t)    |
+| Kruskal-Wallis (H) | qualitative  | quantitative  | ANOVA 1 grp. (F)      |
+| ANOSIM             | qualitative  | quantitative+ | MANOVA                |
+| Mann-Whitney       | qualitative  | quantitative  | Student grp. ind. (t) |
+| Wilcoxon           | qualitative  | quantitative  | Student grp. app. (t) |
+|--------------------+------------+-----------------+-----------------------|
+|--------------------+--------------+---------------+-----------------------|
 
 * Applications en bioinformatique
 
