@@ -232,13 +232,13 @@ Les petis échantillons sont plus susceptibles de présenter des valeurs extrêm
 
 ** Analyse de variance
 
-Soit $y_{ij}$ la j\textsuperscript{ème} observation dans le groupe $i$. Le modèle d'ANOVA ou "effect model" s'écrit $$ y_{ij}=\mu+\alpha_i+\varepsilon_{ij}, $$ où $\mu$ désigne la moyenne générale, $\alpha_i$ l'effet du groupe $i$, et $\varepsilon_{ij}\sim \mathcal{N}(0,\sigma^2)$ un terme d'erreur aléatoire. On impose généralement que $\sum_{i=1}^k\alpha_i=0$.
+On utilise des données collectées dans le cadre d'une étude sur le polymorphisme du gène du récepteur estrogène en fonction de l'âge de diagnostic des individus \cite{dupont-2009-statis-model}.
 
-L'hypothèse nulle se lit $H_0:\alpha_1=\alpha_2=\dots=\alpha_k$. Sous cette hypothèse d'égalité des moyennes de groupe, la variance entre groupe ("between") et la variance propre à chaque groupe ("within") permettent d'estimer $\sigma^2$. D'où le test F d'égalité de ces deux variances. Sous $H_0$, le rapport entre les carrés moyens inter et intra-groupe (qui estiment les variances ci-dessus) suit une loi F de Fisher-Snedecor à $k-1$ et $N-k$ degrés de liberté.
+1. Décrire le plan d'expérience.
+2. Quelle hypothèse(s) peut-on formuler ?
+3. Quel estimateur statistique est le plus approprié ?
 
 ** Analyse de variance (2)
-
-On utilise des données collectées dans le cadre d'une étude sur le polymorphisme du gène du récepteur estrogène en fonction de l'âge de diagnostic des individus \cite{dupont-2009-statis-model}.
 
 +--------+-------+--+-------+-------+
 |        |       |N |Mean   |SD     |
