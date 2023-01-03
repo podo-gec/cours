@@ -2,19 +2,9 @@
 #+SUBTITLE: Rappels biostatistiques
 #+DATE:
 #+LANGUAGE: fr
-#+OPTIONS: H:2
+#+OPTIONS: H:2 num:t toc:t
 
 * Introduction
-
-** Plan de la séance
-
-1. Panorama des techniques statistiques
-  - Bases de l'estimation et des tests d'hypothèse
-  - Lois de probabilité utiles pour la génétique
-  - Analyse probabilistique des séquences génomiques
-  - Classification d'espèces par approches multivariées
-2. Applications bioinformatiques
-
 
 ** Statisticians are applied philosophers
 
@@ -62,7 +52,7 @@ Lorsque l'on connaît exactement la loi qui gouverne la survenue d'événements,
 
 ** Hasard, probabilité et statistique (2)
 
-[[./p/img-lancer-de.png]]
+[[./p/fig-lancer-de.png]]
 
 ** Fluctuations d'échantillonnage
 
@@ -71,6 +61,10 @@ Considérons une expérience imaginaire où on simule des données de pression s
 ** Fluctuations d'échantillonnage (2)
 
 [[./p/img-sampling-d30n30.png]]
+
+** Taille d'effet et nombre de sujets nécessaires \cite{campbell-1995-estim-sampl}
+
+[[./p/img-sample-size.png]]
 
 * Estimation et test d'hypothèse
 
@@ -172,13 +166,26 @@ One of the principal uses of statistical models is to attempt to explain variati
 
 ** Différents cadres de raisonnement pour l'inférence
 
-- approche fréquentiste : ce qui a été discuté jusqu'à présent (confronter une hypothèse unique, dans une expérience contrôlée, via un principe de falsification ; Fisher, puis Neyman & Pearson). Aucune information sur $P(H_0\mid \text{data})$.
+- approche fréquentiste : ce qui a été discuté jusqu'à présent (confronter une hypothèse unique, dans une expérience contrôlée, via un principe de falsification ; Fisher, puis Neyman & Pearson). Aucune information sur $P(H_0\mid \text{data})$. \cite{cohen-1994-earth-round}
 - approche par vraisemblance : utilisation des données observées pour arbitrer entre deux modèles en compétition (vraisemblance des données pour un modèle donné).
-- approche bayésienne : utilisation d'information externe pour évaluer /a priori/ quel modèle est le plus vraisemblable (mise à jour d'une probabilité /a priori/ par les données pour former une probabilité /a posteriori/)
+- approche bayésienne : utilisation d'information externe pour évaluer /a priori/ quel modèle est le plus vraisemblable (mise à jour d'une probabilité /a priori/ par les données pour former une probabilité /a posteriori/) \cite{nascimento-2017-bayes}
 
 ** Approche bayésienne
 
 [[./p/img-bayesian-prior.png]]
+
+** La description avant l'inférence
+
+La démarche statistique ne se limite pas à l'inférence, mais inclut au préalable
+
+- le recueil des données : collecte et pré-traitements de données numériques
+- la description des données : résumés numérique et graphique synthétiques
+
+Les petis échantillons sont plus susceptibles de présenter des valeurs extrêmes (observations influentes), ils rendent difficile la mise en évidence de "petites différences", et il est plus difficile de vérifier les conditions de validité des tests statistiques usuels.
+
+** La description avant l'inférence (2)
+
+[[./p/fig-anscombe-all.png]]
 
 * Quelques lois de probabilités utiles
 
@@ -194,10 +201,6 @@ One of the principal uses of statistical models is to attempt to explain variati
 | géométrique        | $1/p$     | $q/p^2$      | temps d'attente avant 1 succès |
 |--------------------+-----------+--------------+--------------------------------|
 |--------------------+-----------+--------------+--------------------------------|
-
-** Exemple de la loi binomiale
-
-TODO : CDF et PDF
 
 ** Variables continues
 
