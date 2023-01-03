@@ -12,6 +12,8 @@ D'un autre côté, il existe un risque $\beta$ de ne pas être en mesure de reje
 
 ** Seconde loi de Mendel
 
+Le terme 1/4 vient du fait que la probabilité d'observer un descendant de ce sous-type est uniforme quelque soit le croisement considéré.
+
 On calcule dans un premier temps la probabilité d'observer $n$ Aa Bb descendants après $k$ générations. Il s'agit d'une succession d'événements de Bernoulli jusqu'à la génération $k$, d'où $P(b,k) = {2^k \choose n}(1/4)^n (1-1/4)^{2^k-n}$, qui n'est autre que la fonction de densité d'une variable aléatoire suivant une loi Binomiale de paramètre $n=2k$ (il y a deux enfants à chaque étape) et $p=1/4$. Ensuite il s'agit de trouver la probabilité qu'au moins $N$ organismes se trouvent à la génération $k$, qui vaut $1-\sum_{x=0}^{N-1}P(X=x)$, où $X$ est une variable aléatoire représentant le nombre de descendants, c'est-à-dire 1 moins tous les cas $P(X\neq N)$.
 
 ** Prolifération bactérienne

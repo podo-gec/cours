@@ -1,6 +1,7 @@
 #+TITLE: M2 Mycologie
 #+SUBTITLE: Rappels biostatistiques
 #+DATE:
+#+LANGUAGE: fr
 #+OPTIONS: H:2
 
 * Introduction
@@ -27,12 +28,20 @@ Philosophers argue how many angels can dance on the head of a needle; statistici
 
 Deux questions récurrentes :
 
-- quelle est la meilleure manière de caractériser l'objet d'intérêt dans une étude scientifique ?
-- peut-on généraliser les effets observés au cours d'une expérience à une population plus vaste ?
+- Quelle est la meilleure manière de caractériser l'objet d'intérêt dans une étude scientifique ?
+- Peut-on généraliser les effets observés au cours d'une expérience à une population plus vaste ?
 
 La première question soulève le choix d'un estimateur efficace et consistant, la seconde celle de définir une statistique de test en lien avec une distribution de probabilité.
 
 $$ \underbrace{\text{variable mesurée}}_{\text{échantillon aléatoire}} = \underbrace{\text{vraie valeur}}_{\text{population théorique}} + \underbrace{\text{erreur de mesure}}_{\text{aléatoire et/ou systématique}} $$
+
+** Quelques mots-clés
+
+- test paramétrique, non paramétrique et test exact
+- risque d'erreur et puissance statistique
+- estimateur consistant et efficace
+- compromis biais/variance
+- significativité statistique et pratique
 
 ** Puissance statistique et erreur de mesure \cite{ioannidis-2005-why-most}
 
@@ -42,7 +51,7 @@ $$ \underbrace{\text{variable mesurée}}_{\text{échantillon aléatoire}} = \und
 
 On dispose de 6 lots contenant des cellules en culture (pendant 24h), dont 3 ont reçu un supplément de vitamine E (groupe expérimental). Après 10 jours, on examine les auto-radiographies pour dénombrer le nombre total de cellules dans chaque lot.
 
-Le technicien qui apporte les résultats indique au chercheur que les étiquettes permettant d'identifier quels lots ont été traités ont été égarées \cite{good-2005-permut-param}.
+Le technicien qui apporte les résultats rapporte au chercheur que les étiquettes permettant d'identifier quels lots ont été traités ont été égarées \cite{good-2005-permut-param}.
 
 [[./p/img-dishes.png]]
 
@@ -97,7 +106,7 @@ Parmi les 20 résultats possibles, le résultat $s_{\text{obs}} = 349$ est le pl
 
 Il est donc peu probable que les résultats observés (les trois premiers lots sont ceux qui ont été traités) puissent s'expliquer simplement par les fluctuations d'échantillonnage.
 
-** Pile ou face
+** Un jeu de pile ou face
 
 On lance une pièce 10 fois et on observe la séquence de résultats suivants :
 
@@ -105,9 +114,8 @@ On lance une pièce 10 fois et on observe la séquence de résultats suivants :
 P P P P F F F P F P
 #+END_EXAMPLE
 
-Question générale : la pièce est-elle truquée ?
-
-(Question à reformuler sous forme d'hypothèse nulle)
+- Question générale : la pièce est-elle truquée ? (à reformuler sous forme d'hypothèse nulle)
+- Question subsidiaire : combien de temps doit-on attendre, en moyenne, avant d'observer le premier événement "face" ?
 
 ** Opérationnalisation
 
@@ -124,6 +132,12 @@ Pr(k <= 4 or k >= 6) = 0.753906  (two-sided test)
 #+END_SRC
 
 Le résultat suggère que cette séquence de Pile/Face n'est pas incompatible avec l'hypothèse d'équi-distribution des deux côtés de la pièce.
+
+** Différents cadres de raisonnement pour l'inférence
+
+- approche fréquentiste : ce qui a été discuté jusqu'à présent
+- approche par vraisemblance :
+- approche bayésienne
 
 ** Approche bayésienne
 
@@ -150,7 +164,7 @@ TODO : CDF et PDF
 
 ** Variables continues
 
-|--------------------+-----------+--------------+--------------------------------|
+|--------------------+-----------+--------------+-------------------------------|
 |--------------------+-----------+--------------+-------------------------------|
 | loi                | espérance | variance     | application                   |
 |--------------------+-----------+--------------+-------------------------------|
@@ -159,13 +173,22 @@ TODO : CDF et PDF
 | $\chi^2$ (Pearson) | $n$       | $2n$         | tableau de contingence        |
 | Gamma              | $k\theta$ | $k\theta^2$  | processus temps réel          |
 |--------------------+-----------+--------------+-------------------------------|
-|--------------------+-----------+--------------+--------------------------------|
+|--------------------+-----------+--------------+-------------------------------|
 
 ** Exemple de la loi normale
 
 TODO : CDF et PDF
 
+** Tests exacts, approchés, paramétriques et non paramétriques
+
+- Les tests paramétriques constituent de bonnes approximations aux tests exacts (permutation), en général.
+- Les tests non-paramétriques ont, pour certains, une efficacité relative $>80$ % par rapport aux tests paramétriques.
+
 * Applications en bioinformatique
+
+** Recherche de motifs
+
+En faisant l'hypothèse (erronée) que tous les nucléotides sont indépendants les uns des autres, de sorte que la probabilité d'observer n'importe lequel des nucléotides vaut $1/4$, quelle est la probabilité de trouver une séquence d'ADN donnée dans une fenêtre de taille fixée à l'avance ?
 
 ** Seconde loi de Mendel
 
@@ -184,11 +207,9 @@ Deux organismes hétérozygotes ont pour génotype =Aa= et =Bb=. Quelle est la p
 
 Puisqu'il y indépendance, on a $P(\text{aa})\times P(\text{BB})=\frac{1}{4}\times\frac{1}{4}=\frac{1}{16}$.
 
-\marginnote{Le terme 1/4 vient du fait que la probabilité d'observer un descendant de ce sous-type est uniforme quelque soit le croisement considéré.}
-
 ** Prolifération bactérienne
 
-Une suspension bactérienne contient 5000 bactéries/litre. On ensemence à partir de cette suspension 50 boites de Pétri (1 \si{\centi\meter\cubed} par boite). Si $X$ représente le nombre de colonies par boite, $X$ suit une loi de Poisson de paramètre 5, $\mathcal{P}(\lambda=5)$.[fn::[[https://cermics.enpc.fr/~jourdain/][Benjamin Jourdain, Probabilités et statistique pour l'ingénieur (2018)]]]
+Une suspension bactérienne contient 5000 bactéries par litre. On ensemence à partir de cette suspension 50 boites de Pétri (1 \si{\centi\meter\cubed} par boite). Si $X$ représente le nombre de colonies par boite, $X$ suit une loi de Poisson de paramètre 5, $\mathcal{P}(\lambda=5)$.[fn::[[https://cermics.enpc.fr/~jourdain/][Benjamin Jourdain, Probabilités et statistique pour l'ingénieur (2018)]]]
 
 Quelle est la probabilité qu'il n'y ait aucune colonie sur la boite de Pétri ?
 
