@@ -4,8 +4,6 @@
 #+LANGUAGE: fr
 #+OPTIONS: H:2 num:t toc:t
 
-* Introduction
-
 ** Statisticians are applied philosophers
 
 #+BEGIN_QUOTE
@@ -24,14 +22,6 @@ Deux questions récurrentes :
 La première question soulève le choix d'un estimateur efficace et consistant, la seconde celle de définir une statistique de test en lien avec une distribution de probabilité.
 
 $$ \underbrace{\text{variable mesurée}}_{\text{échantillon aléatoire}} = \underbrace{\text{vraie valeur}}_{\text{population théorique}} + \underbrace{\text{erreur de mesure}}_{\text{aléatoire et/ou systématique}} $$
-
-** Quelques mots-clés
-
-- test paramétrique, non paramétrique et test exact
-- risque d'erreur et puissance statistique
-- estimateur consistant et efficace
-- compromis biais/variance
-- significativité statistique et pratique
 
 ** Puissance statistique et erreur de mesure \cite{ioannidis-2005-why-most}
 
@@ -96,6 +86,10 @@ Il faut définir un cadre décisionnel comprenant une hypothèse à tester et un
 Si la différence observée est suffisamment grande, et on considérera que c'est le cas s'il y a moins de 5 % de chance d'observer un *résultat aussi extrême*, alors on conclue que celle-ci ne peut vraisemblablement pas être expliquée par de simples fluctuations d'échantillonnage et que les données observées ne sont pas compatibles avec l'*hypothèse nulle d'absence d'effet*, appelée $H_0$.
 
 On rejettera donc $H_0$ si la probabilité d'observer, du seul fait du hasard, une différence au moins aussi grande que celle observée entre les effets de A et B est inférieure à 5 %. Cette probabilité est appelée *degré de signification*. Ce seuil de signification est arbitraire, mais largement admis dans la communauté biomédicale. En somme, on accepte de se tromper dans 5 % des cas en rejetant l'hypothèse d'absence de différence.
+
+** Des risques d'erreur asymétriques
+
+[[./p/img-screening.png]]
 
 ** Démarche du test d'hypothèse
 
@@ -166,9 +160,9 @@ One of the principal uses of statistical models is to attempt to explain variati
 
 ** Différents cadres de raisonnement pour l'inférence
 
-- approche fréquentiste : ce qui a été discuté jusqu'à présent (confronter une hypothèse unique, dans une expérience contrôlée, via un principe de falsification ; Fisher, puis Neyman & Pearson). Aucune information sur $P(H_0\mid \text{data})$. \cite{cohen-1994-earth-round}
-- approche par vraisemblance : utilisation des données observées pour arbitrer entre deux modèles en compétition (vraisemblance des données pour un modèle donné).
-- approche bayésienne : utilisation d'information externe pour évaluer /a priori/ quel modèle est le plus vraisemblable (mise à jour d'une probabilité /a priori/ par les données pour former une probabilité /a posteriori/) \cite{nascimento-2017-bayes}
+- approche *fréquentiste* : ce qui a été discuté jusqu'à présent (confronter une hypothèse unique, dans une expérience contrôlée, via un principe de falsification ; Fisher, puis Neyman & Pearson). Aucune information sur $P(H_0\mid \text{data})$. \cite{cohen-1994-earth-round}
+- approche par *vraisemblance* : utilisation des données observées pour arbitrer entre deux modèles en compétition (vraisemblance des données pour un modèle donné).
+- approche *bayésienne* : utilisation d'information externe pour évaluer /a priori/ quel modèle est le plus vraisemblable (mise à jour d'une probabilité /a priori/ par les données pour former une probabilité /a posteriori/) \cite{nascimento-2017-bayes}
 
 ** Approche bayésienne
 
@@ -178,8 +172,8 @@ One of the principal uses of statistical models is to attempt to explain variati
 
 La démarche statistique ne se limite pas à l'inférence, mais inclut au préalable
 
-- le recueil des données : collecte et pré-traitements de données numériques
-- la description des données : résumés numérique et graphique synthétiques
+- le *recueil* des données : collecte et pré-traitements de données numériques
+- la *description* des données : résumés numérique et graphique synthétiques
 
 Les petis échantillons sont plus susceptibles de présenter des valeurs extrêmes (observations influentes), ils rendent difficile la mise en évidence de "petites différences", et il est plus difficile de vérifier les conditions de validité des tests statistiques usuels.
 
@@ -192,7 +186,6 @@ Les petis échantillons sont plus susceptibles de présenter des valeurs extrêm
 ** Variables discrètes
 
 |--------------------+-----------+--------------+--------------------------------|
-|--------------------+-----------+--------------+--------------------------------|
 | loi                | espérance | variance     | application                    |
 |--------------------+-----------+--------------+--------------------------------|
 | binomiale          | $np$      | $npq$        | succession d'événements 0/1    |
@@ -200,11 +193,9 @@ Les petis échantillons sont plus susceptibles de présenter des valeurs extrêm
 | binomiale négative | $n/p$     | $nq/p^2$     | temps d'attente avant n succès |
 | géométrique        | $1/p$     | $q/p^2$      | temps d'attente avant 1 succès |
 |--------------------+-----------+--------------+--------------------------------|
-|--------------------+-----------+--------------+--------------------------------|
 
 ** Variables continues
 
-|--------------------+-----------+--------------+-------------------------------|
 |--------------------+-----------+--------------+-------------------------------|
 | loi                | espérance | variance     | application                   |
 |--------------------+-----------+--------------+-------------------------------|
@@ -212,7 +203,6 @@ Les petis échantillons sont plus susceptibles de présenter des valeurs extrêm
 | gaussienne         | $\mu$     | $\sigma^2$   | cumul d'erreurs indépendantes |
 | $\chi^2$ (Pearson) | $n$       | $2n$         | tableau de contingence        |
 | Gamma              | $k\theta$ | $k\theta^2$  | processus temps réel          |
-|--------------------+-----------+--------------+-------------------------------|
 |--------------------+-----------+--------------+-------------------------------|
 
 ** Exemple de la loi normale
@@ -226,7 +216,6 @@ Les petis échantillons sont plus susceptibles de présenter des valeurs extrêm
 
 ** Panorama des tests statistiques usuels
 
-|--------------------+------------+-----------------+-----------------------|
 |--------------------+--------------+---------------+-----------------------|
 | non paramétrique   | prédicteur   | réponse       | paramétrique          |
 |--------------------+--------------+---------------+-----------------------|
@@ -238,9 +227,50 @@ Les petis échantillons sont plus susceptibles de présenter des valeurs extrêm
 | Mann-Whitney       | qualitative  | quantitative  | Student grp. ind. (t) |
 | Wilcoxon           | qualitative  | quantitative  | Student grp. app. (t) |
 |--------------------+------------+-----------------+-----------------------|
-|--------------------+--------------+---------------+-----------------------|
 
-* Applications en bioinformatique
+* Applications en biologie et bioinformatique
+
+** Analyse de variance
+
+Soit $y_{ij}$ la j\textsuperscript{ème} observation dans le groupe $i$. Le modèle d'ANOVA ou "effect model" s'écrit $$ y_{ij}=\mu+\alpha_i+\varepsilon_{ij}, $$ où $\mu$ désigne la moyenne générale, $\alpha_i$ l'effet du groupe $i$, et $\varepsilon_{ij}\sim \mathcal{N}(0,\sigma^2)$ un terme d'erreur aléatoire. On impose généralement que $\sum_{i=1}^k\alpha_i=0$.
+
+L'hypothèse nulle se lit $H_0:\alpha_1=\alpha_2=\dots=\alpha_k$. Sous cette hypothèse d'égalité des moyennes de groupe, la variance entre groupe ("between") et la variance propre à chaque groupe ("within") permettent d'estimer $\sigma^2$. D'où le test F d'égalité de ces deux variances. Sous $H_0$, le rapport entre les carrés moyens inter et intra-groupe (qui estiment les variances ci-dessus) suit une loi F de Fisher-Snedecor à $k-1$ et $N-k$ degrés de liberté.
+
+** Analyse de variance (2)
+
+On utilise des données collectées dans le cadre d'une étude sur le polymorphisme du gène du récepteur estrogène en fonction de l'âge de diagnostic des individus \cite{dupont-2009-statis-model}.
+
++--------+-------+--+-------+-------+
+|        |       |N |Mean   |SD     |
++--------+-------+--+-------+-------+
+|genotype|1.6/1.6|14|64.6429|11.1811|
+|        |1.6/0.7|29|64.3793|13.2595|
+|        |0.7/0.7|16|50.3750|10.6388|
++--------+-------+--+-------+-------+
+|Overall |       |59|60.6441|13.4943|
++--------+-------+--+-------+-------+
+
+** Analyse de variance (3)
+
+[[./p/fig-polymorphism-dist.png]]
+
+** Analyse de variance (4)
+
+#+BEGIN_EXAMPLE
+            Df Sum Sq Mean Sq F value  Pr(>F)
+genotype     2   2316    1158    7.86 0.00098
+Residuals   56   8246     147
+
+ Pairwise comparisons using t tests with pooled SD
+
+data:  age and genotype
+
+        1.6/1.6 1.6/0.7
+1.6/0.7 0.947   -
+0.7/0.7 0.002   5e-04
+
+P value adjustment method: none
+#+END_EXAMPLE
 
 ** Recherche de motifs
 
@@ -251,14 +281,12 @@ En faisant l'hypothèse (erronée) que tous les nucléotides sont indépendants 
 Deux organismes hétérozygotes ont pour génotype =Aa= et =Bb=. Quelle est la probabilité que leur descendant ait le génotype =aa BB= ?[fn::[[https://rosalind.info/problems/lia/][Rosalind bioinformatics problems]]]
 
 |------+-------+-------+-------+-------|
-|------+-------+-------+-------+-------|
 |      |  AB   |  Ab   |  aB   |  ab   |
 |------+-------+-------+-------+-------|
 | AB   | AA BB | AA Bb | Aa Bb | Aa Bb |
 | Ab   | AA bB | AA bb | Aa bB | Aa bb |
 | aB   | aA BB | aA Bb | aa BB | aa Bb |
 | ab   | aA bB | aA bb | aa bB | aa bb |
-|------+-------+-------+-------+-------|
 |------+-------+-------+-------+-------|
 
 Puisqu'il y indépendance, on a $P(\text{aa})\times P(\text{BB})=\frac{1}{4}\times\frac{1}{4}=\frac{1}{16}$.
@@ -289,5 +317,8 @@ Si l'on se trouve dans l'état =A=, on y restera un temps exponentiel de paramè
 Considérons $N_0$ brins d'ADN au début du processus. Chacun de ces brins peut être vu comme un ancêtre d'un processus de Galton-Watson, ayant pour loi de probabilité $p_1=1-p$, $p_2=p$ et $p_k=0$ pour $k\ne 1, 2$. Ici, $p$ représente la probabilité de succès du cycle d'amplification. L'espérance mathématique de la reproduction vaut $m=1+p$, et sa variance $\sigma^2 = p(1-p)=(m-1)(2-m)$, avec $q=0$ (probabilité d'extinction). Le nombre attendu de brins d'ADN après $n$ cycles vaut alors $N_0m^n$.
 
 ** Références
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks,label=
+:END:
 
-#+LATEX: \printbibliography
+#+LATEX: \printbibliography[heading=none]

@@ -10,6 +10,10 @@ Comme dans un essai clinique, on cherche donc à comparer l'effet d'un traitemen
 
 D'un autre côté, il existe un risque $\beta$ de ne pas être en mesure de rejeter l'hypothèse nulle lorsqu'une réelle différence existe. Le complément $1-\beta$, appelée puissance du test, représente donc la probabilité de rejeter correctement l'hypothèse nulle en faveur de l'hypothèse alternative.
 
+** Recherche de motifs
+
+Consider a sequence of size $k$ and a window of size $n$ ($n$ much smaller than the genome length). If all nucleotides are assumed independant, then the probability of not finding this particular sequence is $(1 - 1/4^k)$ (using the complementary is useful to avoid dealing with the number of times this sequence can appear) times the total number of positions available in the window ($n$ or $n$ - $k$ + 1, but if $k \ll n$ this correction factor can be omitted). Hence the answer: $1 - (1 - 1/4^k)^n$.
+
 ** Seconde loi de Mendel
 
 Le terme 1/4 vient du fait que la probabilité d'observer un descendant de ce sous-type est uniforme quelque soit le croisement considéré.
@@ -23,5 +27,9 @@ Le nombre moyen de bactéries par boite est 5. On suppose que le nombre de colon
 ** Le modèle de Jukes-Cantor en phylogénie
 
 En somme, si l'on part de =A=, on attendra $\exp(0.886)=2.425$ unités de temps, et la probabilité de transitionner vers un autre état sera de 0.214 (pour C), 0.714 (G) et 0.071 (T). La transition la plus probable =A->G= implique d'attendre $\exp(-0.633)=0.531$ unité de temps.
+
+** PCR et processus de branchement
+
+From a practical point of view, it is often desired to know $N_0$ in advance, although $N_0$ cannot be identified uniquely. Note, however, that it is possible to consistently estimate the mathematical expectation of the reproduction $m$ with th estimator $\hat m_n = \sum_{k=0}^{\infty} k\hat p_{k_n} = \frac{Y_{(n+1)}-1}{Y_n}$, that is $m$ can be estimated from the observed size of each generation. Hence, the following estimator has been proposed: $\hat N_{0n} = \frac{Z_n}{\hat m_n}$. As an illustration, if the success rate of the PCR is 80% (i.e., $p = 0.8$), its variance equals $\frac{1-p}{1+p}=0.11$.
 
 #+LATEX: \printbibliography
