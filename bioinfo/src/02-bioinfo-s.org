@@ -1,0 +1,71 @@
+#+TITLE: M2 Mycologie
+#+SUBTITLE: Outils bioinformatiques
+#+DATE:
+#+LANGUAGE: fr
+
+* Quelques ordres de grandeur
+
+/Podospora anserina/
+
+- génome 36 Mb (Fasta)
+- données de séquençage 2 x 500-800 Mb (Fastq)
+- 10k gènes annotés
+
+- assemblage nouvelles souches : entre 4 et 8h (12 coeurs 3.5 GHz)
+- phylogénie ITS seuls : 4h (phyml)
+- phylogénie codes barres : 12 à 15h (phyml)
+
+* Implications informatiques
+
+- serveur de calcul avec beaucoup de RAM (assemblage) et GPU (phylogénie)
+- écriture de scripts shell et Python (ou R) pour les prétraitements et le développement de "workflow"
+- serveur de stockage : 400 génomes ADN (+ 96 protéines) = 24 Go
+- scripts de recherche/blast automatique (NCBI, JGI)
+
+* Recherche de motifs
+
+[[./p/img-mRNA-protein.png]]
+
+- blast (shell)
+- scripts Python
+
+* Alignement de séquence
+
+[[./p/img-msa-example.png]]
+
+- clustal
+- mafft
+- muscle[fn::[[https://bioinformaticsreview.com/20151018/multiple-sequence-alignment/]]]
+
+
+
+* Mapping et assemblage
+
+[[./p/img-whole-genome-assembly.png]]
+
+- bowtie2
+- unicycler (spades)
+
+* Phylogénie moléculaire
+
+[[./p/fig-phylogeny.png]]
+
+- fasttree
+- RaXML
+- MEGA
+- [[https://ngphylogeny.fr/][NGPhylogeny]]
+- seaview (phylip)
+
+* RNA-Seq
+
+[[./p/img-RNA-seq.png]]
+
+- kallisto (R)
+
+* Galaxy
+
+- tout ce qui précède sauf Artemis et Seaview
+- préférer le serveur Europe
+- créer un compte pour le transfert de fichiers et les notifications
+
+Source principale des illustrations : [[https://learngenomics.dev/]].
