@@ -21,8 +21,12 @@ samtools sort mutation/tmp.bam >mutation/out.bam
 rm mutation/tmp.bam
 
 # mpileup
-samtools mpileup \
-	-f Podospora_anserina_S_mat.fna mutation/out.bam |
-	samtools view -Ov - >mutation/out.bcf
+samtools mpileup -B -f Podospora_anserina_S_mat.fna mutation/out.bam >mutation/out.pileup
 
 # varscan
+varscan pileup2cns mutation/out.pileup \
+	--min-coverage 20 \
+	--min-reads2 10 \
+	--min-var-freq 0.9 \
+	--output-snp mutation/snp \
+	--output-indel mutation/indel
