@@ -52,6 +52,10 @@ Considérons une expérience imaginaire où on simule des données de pression s
 
 [[./p/img-sampling-d30n30.png]]
 
+** Fluctuations d'échantillonnage (3)
+
+[[./p/img-sampling-d15n15.png]]
+
 ** Taille d'effet et nombre de sujets nécessaires \cite{campbell-1995-estim-sampl}
 
 [[./p/img-sample-size.png]]
@@ -136,7 +140,7 @@ P P P P F F F P F P
 
 ** Opérationnalisation
 
-Si l'on suppose une pièce bien équilibrée et des lancers indépendants, le nombre attendu de "Pile" est $10 \times 0.5 = 5$. La fréquence observée de "Pile" dans l'expérience est de $4/10 = 0.4$.
+Si l'on suppose une pièce bien équilibrée et des lancers indépendants, le nombre attendu de "Face" est $10 \times 0.5 = 5$. La fréquence observée de "Face" dans l'expérience est de $4/10 = 0.4$.
 
 Nous pouvons formuler une hypothèse nulle selon laquelle $p = 0.5$, et l'hypothèse alternative est $p \neq 0.5$. En utilisant un test binomial, il est possible de vérifier si la proportion observée diffère de celle attendue théoriquement, en considérant un risque de 5 % de prendre une mauvaise décision en rejetant l'hypothèse nulle.
 
@@ -232,7 +236,7 @@ Les petis échantillons sont plus susceptibles de présenter des valeurs extrêm
 
 ** Analyse de variance
 
-On utilise des données collectées dans le cadre d'une étude sur le polymorphisme du gène du récepteur estrogène en fonction de l'âge de diagnostic des individus \cite{dupont-2009-statis-model}.
+On utilise des données collectées dans le cadre d'une étude sur le polymorphisme du gène du récepteur estrogène (3 niveaux) en fonction de l'âge de diagnostic des individus \cite{dupont-2009-statis-model}.
 
 1. Décrire le plan d'expérience.
 2. Quelle hypothèse(s) peut-on formuler ?
@@ -301,7 +305,7 @@ Quelle est la probabilité qu'il n'y ait aucune colonie sur la boite de Pétri ?
 
 On souhaite comparer deux espèces (eucaryotes) ayant un ancêtre commun. Des mutations aléatoires intervenant sur le génome au cours de leur évolution, un alignement des deux séquences ne donnera pas 100 % d'identité.
 
-Matrice de transition :
+Matrice de transition (ACGT) :
 
 $$ \begin{pmatrix*}[S]
 -0.886 & 0.190 & 0.633 & 0.063\\
