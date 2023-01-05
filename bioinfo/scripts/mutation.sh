@@ -7,7 +7,7 @@ mkdir mutation
 
 # Build the index for the reference genome and save aligned and unaligned reads
 bowtie2-build Podospora_anserina_S_mat.fna mutation/Podospora_anserina_S_mat
-bowtie2 --quiet \
+bowtie2 -p 12 \
 	-x mutation/Podospora_anserina_S_mat \
 	-1 spoD1_R1_001.fastq.gz \
 	-2 spoD1_R2_001.fastq.gz \
@@ -24,9 +24,12 @@ rm mutation/tmp.bam
 samtools mpileup -B -f Podospora_anserina_S_mat.fna mutation/out.bam >mutation/out.pileup
 
 # varscan
+# NOTE: check read coverage to adjust default parameters below
+# not sure the output-snp and output-indel are really needed
 varscan pileup2cns mutation/out.pileup \
 	--min-coverage 20 \
 	--min-reads2 10 \
 	--min-var-freq 0.9 \
-	--output-snp mutation/snp \
-	--output-indel mutation/indel
+	--output-snp snp \
+	--output-indel indel \
+	>mutation/out.varscan
