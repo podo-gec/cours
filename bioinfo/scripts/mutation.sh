@@ -19,6 +19,7 @@ bowtie2 -p 12 \
 samtools view -b mutation/out.sam >mutation/tmp.bam
 samtools sort mutation/tmp.bam >mutation/out.bam
 rm mutation/tmp.bam
+samtools index mutation/out.bam mutation/out.bai
 
 # mpileup
 samtools mpileup -B -f Podospora_anserina_S_mat.fna mutation/out.bam >mutation/out.pileup
