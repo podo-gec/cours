@@ -35,8 +35,9 @@ echo -e "\033[0;32m[+] [varscan] Check for SNPs and indels\033[0m"
 varscan mpileup2snp mutation/out.pileup -v \
 	--min-coverage 40 \
 	--min-reads2 20 \
-	--min-var-freq 0.8 \
+	--min-var-freq 0.9 \
 	--min-avg-qual 15 \
+	--p-value 0.9 \
 	>mutation/snp.varscan
 
 varscan mpileup2indel mutation/out.pileup -v \

@@ -10,6 +10,8 @@
 - phylogény moléculaire : analyse des données génétiques (ADN) et des différences moléculaires héréditaires
 - objectif : caractériser le processus évolutif ayant permis de générer la diversité observée
 
+Références : \cite{kelchner-2006-model-use-phylog,yang-2012-molec}
+
 * Etapes de construction d'un arbre
 
 - sélection des organismes ou famille de gènes
@@ -31,12 +33,20 @@
 
 - interface graphique
 
+
+
+
 # * Approche NJ
 #
 # * Approche par maximum de vraisemblance
 #
-# * Modèles d'évolution
-#
+
+* Modèles d'évolution\cite{kelchner-2006-model-use-phylog}
+
+[[./p/img-usual-models.jpg]]
+
+GTR+I+$\Gamma$ = 10 paramètres
+
 # * Evaluer la qualité du modèle
 #
 # * Comparaison d'arbres

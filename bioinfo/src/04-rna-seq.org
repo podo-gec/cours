@@ -5,9 +5,8 @@
 
 * Principe des analyses RNA-Seq
 
-- revues de bonnes pratiques : @conesa-2016-survey-best ; @yendrek-2012-bench-scien
-- outils statistiques : [[https://www.bioconductor.org][Bioconductor]] ; @korpelainen-2015-rna ; @anders-2013-count-rna.
-
+- revues de bonnes pratiques : \cite{conesa-2016-survey-best,yendrek-2012-bench-scien}
+- outils statistiques : [[https://www.bioconductor.org][Bioconductor]] ; \cite{korpelainen-2015-rna,anders-2013-count-rna}
 
 * Etapes d'analyse
 
@@ -18,5 +17,29 @@
 5. Identification of genomic variants (SNPs, small insertions and deletions)
 6. Gene quantification (i.e., statistics on count data)
 
+* Principes de l'analyse
 
+Basically, NGS analyses (RNA, CHIP, etc.) need to account for within-group variance estimates when analysing lot of genes, hence the need to pool information across genes. The DESeq approach detects and corrects dispersion estimates that are too low through modeling of the dependence of the dispersion on the average expression strength over all samples. In addition, it provides a novel method for gene ranking and the visualization of stable estimates of effect sizes \cite{love-2014-moder-rna-deseq}. The [[https://bioconductor.org/packages/release/bioc/html/DESeq2.html][DESeq2]] package further includes shrunken fold changes (with SE).
+
+* Kallisto (ultra-fast mapping)
+
+SRA ou Fastq -> TPM
+
+#+BEGIN_EXAMPLE
+target_id       length  eff_length      est_counts      tpm
+jgi|Podans1|100005|CE99640_2373 1994    1895    1407    51.6298
+jgi|Podans1|100060|CE99695_1372 3146    3047    504     11.502
+jgi|Podans1|10015|CE9650_8706   1582    1483    1156    54.2042
+#+END_EXAMPLE
+
+Attention : l'ID du transcrit doit correspondre exactement à l'ID du gène dans le fichier GFF3 d'annotation.
+
+* Fichier d'annotation (GFF3)
+
+#+BEGIN_EXAMPLE
+##gff-version 3
+-%<-----
+38763:scaffold_3	prediction	gene	644807	646915	0	+	.	ID=gene_5098;Name=jgi.p|Podans1|99641;portal_id=Podans1;product_name=Cytochrome P450;proteinId=99641;transcriptId=100005
+38764:scaffold_3	prediction	mRNA	644807	646915	.	+	.	ID=mRNA_5098;Name=jgi.p|Podans1|99641;Parent=gene_5098;proteinId=99641;track=FilteredModels1;transcriptId=100005
+#+END_EXAMPLE
 
