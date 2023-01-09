@@ -1,0 +1,22 @@
+#+TITLE: M2 Mycologie
+#+SUBTITLE: Analyses RNA-Seq
+#+DATE:
+#+LANGUAGE: fr
+
+* Principe des analyses RNA-Seq
+
+- revues de bonnes pratiques : @conesa-2016-survey-best ; @yendrek-2012-bench-scien
+- outils statistiques : [[https://www.bioconductor.org][Bioconductor]] ; @korpelainen-2015-rna ; @anders-2013-count-rna.
+
+
+* Etapes d'analyse
+
+1. DNA extraction from a sample
+2. DNA sequencing
+3. [*] Alignment of sequencing reads to a reference genome
+4. Basic exploratory data analysis
+5. Identification of genomic variants (SNPs, small insertions and deletions)
+6. Gene quantification (i.e., statistics on count data)
+
+
+

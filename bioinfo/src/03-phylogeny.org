@@ -1,0 +1,48 @@
+#+TITLE: M2 Mycologie
+#+SUBTITLE: Approches phylogénétiques
+#+DATE:
+#+LANGUAGE: fr
+
+* Phylogénie moléculaire
+
+- arbre phylogénétique : représentation graphique des relations (de proximité) entre différents organismes, dans un contexte d'évolution temporelle à partir d'un ancêtre commun à tous les descendants
+- relations de similarité et phénomène de divergence extraites à partir de l'alignement des séquences
+- phylogény moléculaire : analyse des données génétiques (ADN) et des différences moléculaires héréditaires
+- objectif : caractériser le processus évolutif ayant permis de générer la diversité observée
+
+* Etapes de construction d'un arbre
+
+- sélection des organismes ou famille de gènes
+- choix des marqueurs moléculaires
+- amplification, séquençage et assemblage
+- [*] alignement (ClustalW, MSA, MAFFT, T-Coffee)
+- choix d'un modèle évolutionnaire
+- analyse phylogénétique (Paup, PAML, PHYLIP, MEGA, Raxml, MrBayes)
+- construction de l'arbre phylogénétique
+- évaluation de l'arbre phylogénétique (bootstrap, parsimonie/distance, vraisemblance)
+
+* Phyml
+
+- utilisable directement depuis Seaview (sur séquences déjà alignées)
+- plusieurs modèles évolutionnaires :
+- disponible en ligne sur [[https://ngphylogeny.fr/][NGPhylogeny]]
+
+* MEGA
+
+- interface graphique
+
+# * Approche NJ
+#
+# * Approche par maximum de vraisemblance
+#
+# * Modèles d'évolution
+#
+# * Evaluer la qualité du modèle
+#
+# * Comparaison d'arbres
+#
+# * Extraction de clades
+#
+# * Combinaison d'arbres
+#
+# * Application pratique
