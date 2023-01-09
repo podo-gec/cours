@@ -43,3 +43,9 @@ Attention : l'ID du transcrit doit correspondre exactement à l'ID du gène dans
 38764:scaffold_3	prediction	mRNA	644807	646915	.	+	.	ID=mRNA_5098;Name=jgi.p|Podans1|99641;Parent=gene_5098;proteinId=99641;track=FilteredModels1;transcriptId=100005
 #+END_EXAMPLE
 
+* Références
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks,label=
+:END:
+
+#+LATEX: \printbibliography[heading=none]

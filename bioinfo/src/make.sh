@@ -8,7 +8,6 @@ find . -type f -name \*-h.org | xargs -I '{}' latexmk -c '{}'
 
 rm *.synctex.gz
 rm *.tex
-rm *.tex~
 rm *.bib
 
 mv *.pdf ../dist
