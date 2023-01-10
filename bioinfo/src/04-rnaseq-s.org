@@ -62,6 +62,32 @@ txi <- tximport(files, "kallisto", txOut = TRUE)
 dds <- DESeqDataSetFromTximport(txi, colData = samples, design = ~ condition)
 #+END_SRC
 
+* Analyse des données de comptage sous R (2)
+
+- contrôle qualité (nombre de hits trop bas)
+- classification automatique et analyse en composantes principales
+- analyse différentielle
+
+* Analyse des données de comptage sous R (3)
+
+#+BEGIN_SRC r
+gene_counts <- counts(dds)
+counts_per_sample <- apply(gene_counts, 1, function(x) all(x) > 0)
+cat(sum(counts_per_sample), "out of", nrow(dds), "\n")
+
+rld <- rlogTransformation(dds, blind = TRUE)
+dd <- as.matrix(dist(t(assay(rld))))
+library(pheatmap)
+pheatmap(dd)
+plotPCA(rld, intgroup = c("condition"))
+
+ddstab <- estimateDispersions(estimateSizeFactors(dds))
+r <- results(nbinomWaldTest(ddstab), pAdjustMethod = "BH")
+table(r$padj < 0.1)
+plotMA(r)
+names(dds)[which(r$padj < 0.1)]
+#+END_SRC
+
 * Références
 :PROPERTIES:
 :BEAMER_opt: allowframebreaks,label=
