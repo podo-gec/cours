@@ -8,9 +8,14 @@
 - arbre phylogénétique : représentation graphique des relations (de proximité) entre différents organismes, dans un contexte d'évolution temporelle à partir d'un ancêtre commun à tous les descendants
 - relations de similarité et phénomène de divergence extraites à partir de l'alignement des séquences
 - phylogény moléculaire : analyse des données génétiques (ADN) et des différences moléculaires héréditaires
-- objectif : caractériser le processus évolutif ayant permis de générer la diversité observée
+- objectif : caractériser le processus évolutif ayant permis de générer la diversité observée \cite{kelchner-2006-model-use-phylog,yang-2012-molec}
 
-Références : \cite{kelchner-2006-model-use-phylog,yang-2012-molec}
+* Classification de séquences
+
+- séquences non redondantes, séquences consensus
+- aggrégation/classification (EST, OTU, famille de protéines)
+- mesure de distance, blast, autre
+- logiciels : cd-hit, vsearch, OrthoFinder
 
 * Etapes de construction d'un arbre
 
@@ -23,39 +28,42 @@ Références : \cite{kelchner-2006-model-use-phylog,yang-2012-molec}
 - construction de l'arbre phylogénétique
 - évaluation de l'arbre phylogénétique (bootstrap, parsimonie/distance, vraisemblance)
 
+* Alignement multiple
+
+- clustal, mafft, muscle[fn::[[https://bioinformaticsreview.com/20151018/multiple-sequence-alignment/]]]
+- algorithme progressif, temps de calcul, taille et nombre de séquences
+- Mafft fournit une sortie Fasta par défault, Mega dispose de son propre format d'exportation
+
+* Modèle de substitution
+
+- plusieurs modèles de substitution : GTR +I/+G[fn::[[https://www.hiv.lanl.gov/content/sequence/findmodel/findmodel.html]] ; \cite{posada-1998-modeltest-testing-dna}]
+- GTR+I+$\Gamma$ = 10 paramètres
+- compromis bias-variance, sur-ajustement, cadre de raisonnement hypothétique
+
+* Modèle GTR
+
+[[./p/img-gtr-model.png]]
+
 * Phyml
 
-- utilisable directement depuis Seaview (sur séquences déjà alignées)
-- plusieurs modèles évolutionnaires :
+- utilisable directement depuis Seaview (sur séquences déjà alignées), ou [[http://www.atgc-montpellier.fr/phyml/][en ligne]]
+- utilisable également sous R (=plot= et =summary=)
 - disponible en ligne sur [[https://ngphylogeny.fr/][NGPhylogeny]]
 
 * MEGA
 
-- interface graphique
+[[./p/img-mega-ml.png]]
 
-
-
-
-# * Approche NJ
-#
-# * Approche par maximum de vraisemblance
-#
-
-* Modèles d'évolution\cite{kelchner-2006-model-use-phylog}
+* Modèles d'évolution \cite{kelchner-2006-model-use-phylog}
 
 [[./p/img-usual-models.jpg]]
 
-# GTR+I+$\Gamma$ = 10 paramètres
+* Applications
 
-# * Evaluer la qualité du modèle
-#
-# * Comparaison d'arbres
-#
-# * Extraction de clades
-#
-# * Combinaison d'arbres
-#
-# * Application pratique
+- Evaluer la qualité du modèle
+- Comparaison d'arbres
+- Extraction de clades
+- Combinaison d'arbres
 
 * Références
 :PROPERTIES:
