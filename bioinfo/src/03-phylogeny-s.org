@@ -33,6 +33,15 @@
 - clustal, mafft, muscle[fn::[[https://bioinformaticsreview.com/20151018/multiple-sequence-alignment/]]]
 - algorithme progressif, temps de calcul, taille et nombre de séquences
 - Mafft fournit une sortie Fasta par défault, Mega dispose de son propre format d'exportation
+- Matrices de subsitution (PAM, BLOSSUM)
+
+* Modèles basés sur les distances ou la parsimonie
+
+[[./p/img-tree-upmga.png]]
+
+* Modèles basés sur les distances ou la parsimonie (2)
+
+[[./p/img-tree-parsimony.png]]
 
 * Modèle de substitution
 
@@ -54,9 +63,17 @@
 
 [[./p/img-mega-ml.png]]
 
+* Nomenclature
+
+[[./p/img-tree-nomenclature.png]]
+
 * Modèles d'évolution \cite{kelchner-2006-model-use-phylog}
 
 [[./p/img-usual-models.jpg]]
+
+* Stabilité de l'arbre (bootstrap)
+
+[[./p/img-tree-bootstrap.png]]
 
 * Applications
 
