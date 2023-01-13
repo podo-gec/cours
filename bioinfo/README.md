@@ -6,18 +6,18 @@ Le répertoire [dist][] contient les diaporamas (version écran ou imprimable, a
 
 Cours de biostatistiques :
 
-- [[https://bioconductor.org/][Bioconductor]]
-- [[https://even4void.github.io/rstats-biostats/][Méthodes biostatistiques]]
+- [Bioconductor](https://bioconductor.org/)
+- [Méthodes biostatistiques](https://even4void.github.io/rstats-biostats/)
 
 Outils pour la phylogénie :
 
-- R : Task View [[https://cran.r-project.org/web/views/Phylogenetics.html][Phylogenetics]] (packages =ape=, =phangorm=, =phytools=)
-- Python : [[https://biopython.org/][Biopython]] et [[https://etetoolkit.org/][ETE Toolkit]]
+- R : Task View [Phylogenetics](https://cran.r-project.org/web/views/Phylogenetics.html) (packages `ape`, `phangorm`, `phytools`)
+- Python : [Biopython](https://biopython.org/) et [ETE Toolkit](https://etetoolkit.org/)
 
 Tutoriels de méta-génomique :
 
-- [[https://sepsis-omics.github.io/tutorials/modules/frogs/][FROGS]]
-- [[https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/general-tutorial/tutorial.html][Galaxy]]
+- [FROGS](https://sepsis-omics.github.io/tutorials/modules/frogs/)
+- [Galaxy](https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/general-tutorial/tutorial.html)
 
 [dist]: https://github.com/podo-gec/cours/tree/master/bioinfo/dist
 [scripts]: https://github.com/podo-gec/cours/tree/master/bioinfo/scripts
