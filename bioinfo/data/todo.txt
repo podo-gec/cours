@@ -1,0 +1,4 @@
+1. Blast Pa_* against reference genome.
+2. [Seaview] Build an ML-tree for {2,4,6}gc.fasta and compare likelihood and AIC.
+3. [Seaview] Same for {2,4,6}gcss.fasta (without Sordariaceae).
+4. [Mega] Compare tree topologies 4 vs. 6 with R phytools (cophylogeny).
