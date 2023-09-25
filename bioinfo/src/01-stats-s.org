@@ -146,7 +146,7 @@ Nous pouvons formuler une hypothèse nulle selon laquelle $p = 0.5$, et l'hypoth
 
 ** Opérationnalisation (2)
 
-Voici les résultats calculés à l'aide d'un logiciel statistique :
+Voici les résultats calculés à l'aide d'un logiciel statistique (test binomial) :
 
 #+BEGIN_SRC stata
 Pr(k >= 4)           = 0.828125  (one-sided test)
@@ -155,6 +155,39 @@ Pr(k <= 4 or k >= 6) = 0.753906  (two-sided test)
 #+END_SRC
 
 Le résultat suggère que cette séquence de Pile/Face n'est pas incompatible avec l'hypothèse d'équi-distribution des deux côtés de la pièce.
+
+** Analyse de séquences ADN
+
+Au lieu d'un alphabet à 2 lettres, ({P, F}, considérons un alphabet à 4 lettres, {A, C, T, G}. On peut toujours se ramener au cas binomial discuté précédemment.
+
+#+BEGIN_QUOTE
+The DNA sequence from different regions of two closely linked human fetal globin genes were analyzed with regard to base composition: regions flanking the genes, introns, exons, and the region between the genes. -- Weir, B.S. (1996) Genetic Data Analysis II.
+#+END_QUOTE
+
+| Region        | Length | A    | C    | G    | T    |
+|---------------+--------+------+------+------+------|
+| 5’ Flanking   | 1000   | 0.33 | 0.23 | 0.22 | 0.22 |
+| 3’ Flanking   | 1000   | 0.29 | 0.15 | 0.26 | 0.30 |
+| Introns       | 1996   | 0.27 | 0.17 | 0.27 | 0.29 |
+| Exons         | 882    | 0.24 | 0.25 | 0.28 | 0.22 |
+| Between Genes | 2487   | 0.32 | 0.19 | 0.18 | 0.31 |
+
+** Analyse de séquences ADN (2)
+
+Les régions bordantes (en particulier 5' qui contient les promoteurs) sont-elles plus riches en A par rapport aux exons ?
+
+Considérons les deux variables aléatoires $X_{A,5'}\sim\text{Bin}(n_1,p_1)$ et $X_{A,\text{exon}}\sim\text{Bin}(n_2,p_2)$, et $H_0 : p_1 = p_2$, ou en d'autres termes $H_0 : p_1 - p_2 = 0$ (versus $H_A : p_1 - p_2 > 0$). Il s'agit d'un test unilatéral pour deux échantillons.
+
+On montre que la statistique de test $$z_{\text{obs}} = \frac{\hat p_1 - \hat p_2}{\sqrt{\hat p_1(1-\hat p_1)/n_1 + \hat p_2(1-\hat p_2)/n_2}}$$ suit une loi normale centrée-réduite sous $H_0$.
+
+Ici, $\hat p_1 = 0.33$, $\hat p_2 = 0.24$, $n_1 = 1000$ et $n_2 = 882$, soit $z_{\text{obs}} = 4.35$. La probabilité d'observer une statistique de test aussi élevée est $< 10^{-4}$.
+
+** Autres applications
+
+- surexpression d'un gène dans des données de RNA-Seq
+- co-occurence de deux espèces dans des données de méta-génomique
+- similitude de deux arbres phylogénétiques
+- correspondance entre deux motifs de séquences ADN ou protéique
 
 ** Plans d'expérience
 
@@ -168,20 +201,7 @@ One of the principal uses of statistical models is to attempt to explain variati
 - approche par *vraisemblance* : utilisation des données observées pour arbitrer entre deux modèles en compétition (vraisemblance des données pour un modèle donné).
 - approche *bayésienne* : utilisation d'information externe pour évaluer /a priori/ quel modèle est le plus vraisemblable (mise à jour d'une probabilité /a priori/ par les données pour former une probabilité /a posteriori/) \cite{nascimento-2017-bayes}
 
-** Approche bayésienne
-
-[[./p/img-bayesian-prior.png]]
-
 ** La description avant l'inférence
-
-La démarche statistique ne se limite pas à l'inférence, mais inclut au préalable
-
-- le *recueil* des données : collecte et pré-traitements de données numériques
-- la *description* des données : résumés numérique et graphique synthétiques
-
-Les petis échantillons sont plus susceptibles de présenter des valeurs extrêmes (observations influentes), ils rendent difficile la mise en évidence de "petites différences", et il est plus difficile de vérifier les conditions de validité des tests statistiques usuels.
-
-** La description avant l'inférence (2)
 
 [[./p/fig-anscombe-all.png]]
 
@@ -232,53 +252,18 @@ Les petis échantillons sont plus susceptibles de présenter des valeurs extrêm
 | Wilcoxon           | qualitative  | quantitative  | Student grp. app. (t) |
 |--------------------+------------+-----------------+-----------------------|
 
+** Données omiques \cite{baumgartner-2016-appli-clinical-bioinformatics}
+
+#+ATTR_LATEX: :width .7\textwidth
+[[./p/img-omics.png]]
+
 * Applications en biologie et bioinformatique
-
-** Analyse de variance
-
-On utilise des données collectées dans le cadre d'une étude sur le polymorphisme du gène du récepteur estrogène (3 niveaux) en fonction de l'âge de diagnostic des individus \cite{dupont-2009-statis-model}.
-
-1. Décrire le plan d'expérience.
-2. Quelle hypothèse(s) peut-on formuler ?
-3. Quel estimateur statistique est le plus approprié ?
-
-** Analyse de variance (2)
-
-|--------+-------+--+-------+-------|
-|        |       |N |Mean   |SD     |
-|--------+-------+--+-------+-------|
-|genotype|1.6/1.6|14|64.6429|11.1811|
-|        |1.6/0.7|29|64.3793|13.2595|
-|        |0.7/0.7|16|50.3750|10.6388|
-|--------+-------+--+-------+-------|
-|Overall |       |59|60.6441|13.4943|
-|--------+-------+--+-------+-------|
-
-** Analyse de variance (3)
-
-[[./p/fig-polymorphism-dist.png]]
-
-** Analyse de variance (4)
-
-#+BEGIN_EXAMPLE
-            Df Sum Sq Mean Sq F value  Pr(>F)
-genotype     2   2316    1158    7.86 0.00098
-Residuals   56   8246     147
-
- Pairwise comparisons using t tests with pooled SD
-
-data:  age and genotype
-
-        1.6/1.6 1.6/0.7
-1.6/0.7 0.947   -
-0.7/0.7 0.002   5e-04
-
-P value adjustment method: none
-#+END_EXAMPLE
 
 ** Recherche de motifs
 
-En faisant l'hypothèse (erronée) que tous les nucléotides sont indépendants les uns des autres, de sorte que la probabilité d'observer n'importe lequel des nucléotides vaut $1/4$, quelle est la probabilité de trouver une séquence d'ADN donnée dans une fenêtre de taille fixée à l'avance ?
+En faisant l'hypothèse (erronée) que tous les nucléotides sont indépendants les uns des autres, de sorte que la probabilité d'observer n'importe lequel des nucléotides vaut $1/4$, quelle est la probabilité de trouver une séquence d'ADN donnée de longueur $k$ dans une fenêtre de taille fixée à l'avance, $n$ ?
+
+$$1 - \underbrace{(1 - 1/4^k)^n}_{\text{no match}}$$
 
 ** Seconde loi de Mendel
 
@@ -300,21 +285,6 @@ Puisqu'il y indépendance, on a $P(\text{aa})\times P(\text{BB})=\frac{1}{4}\tim
 Une suspension bactérienne contient 5000 bactéries par litre. On ensemence à partir de cette suspension 50 boites de Pétri (1 \si{\centi\meter\cubed} par boite). Si $X$ représente le nombre de colonies par boite, $X$ suit une loi de Poisson de paramètre 5, $\mathcal{P}(\lambda=5)$.[fn::[[https://cermics.enpc.fr/~jourdain/][Benjamin Jourdain, Probabilités et statistique pour l'ingénieur (2018)]]]
 
 Quelle est la probabilité qu'il n'y ait aucune colonie sur la boite de Pétri ?
-
-** Le modèle de Jukes-Cantor en phylogénie
-
-On souhaite comparer deux espèces (eucaryotes) ayant un ancêtre commun. Des mutations aléatoires intervenant sur le génome au cours de leur évolution, un alignement des deux séquences ne donnera pas 100 % d'identité.
-
-Matrice de transition (ACGT) :
-
-$$ \begin{pmatrix*}
--0.886 & 0.190 & 0.633 & 0.063\cr
-0.253 & -0.696 & 0.127 & 0.316\cr
-1.266 & 0.190 & -1.519 & 0.063\cr
-0.253 & 0.949 & 0.127 & -1.329
-\end{pmatrix*} $$
-
-Si l'on se trouve dans l'état =A=, on y restera un temps exponentiel de paramètre $-q_{ii} = 0.886$. La probabilité d'observer la transition =A->C= est donnée par $-q_{ij}/q_{ii} = \frac{0.190}{0.886}$.
 
 ** PCR et processus de branchement
 

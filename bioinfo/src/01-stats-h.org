@@ -9,9 +9,42 @@ Comme dans un essai clinique, on cherche donc à comparer l'effet d'un traitemen
 
 * Analyse de variance
 
+On utilise des données collectées dans le cadre d'une étude sur le polymorphisme du gène du récepteur estrogène (3 niveaux) en fonction de l'âge de diagnostic des individus \cite{dupont-2009-statis-model}.
+
+|--------+-------+--+-------+-------|
+|        |       |N |Mean   |SD     |
+|--------+-------+--+-------+-------|
+|genotype|1.6/1.6|14|64.6429|11.1811|
+|        |1.6/0.7|29|64.3793|13.2595|
+|        |0.7/0.7|16|50.3750|10.6388|
+|--------+-------+--+-------+-------|
+|Overall |       |59|60.6441|13.4943|
+|--------+-------+--+-------+-------|
+
+
+[[./p/fig-polymorphism-dist.png]]
+
 Soit $y_{ij}$ la j\textsuperscript{ème} observation dans le groupe $i$. Le modèle d'ANOVA ou "effect model" s'écrit $$ y_{ij}=\mu+\alpha_i+\varepsilon_{ij}, $$ où $\mu$ désigne la moyenne générale, $\alpha_i$ l'effet du groupe $i$, et $\varepsilon_{ij}\sim \mathcal{N}(0,\sigma^2)$ un terme d'erreur aléatoire. On impose généralement que $\sum_{i=1}^k\alpha_i=0$.
 
 L'hypothèse nulle se lit $H_0:\alpha_1=\alpha_2=\dots=\alpha_k$. Sous cette hypothèse d'égalité des moyennes de groupe, la variance entre groupes ("between") et la variance propre à chaque groupe ("within") permettent d'estimer $\sigma^2$. D'où le test F d'égalité de ces deux variances. Sous $H_0$, le rapport entre les carrés moyens inter et intra-groupe (qui estiment les variances ci-dessus) suit une loi F de Fisher-Snedecor à $k-1$ et $N-k$ degrés de liberté.
+
+Voici les résultats produits à l'aide du logiciel R :
+
+#+BEGIN_EXAMPLE
+            Df Sum Sq Mean Sq F value  Pr(>F)
+genotype     2   2316    1158    7.86 0.00098
+Residuals   56   8246     147
+
+ Pairwise comparisons using t tests with pooled SD
+
+data:  age and genotype
+
+        1.6/1.6 1.6/0.7
+1.6/0.7 0.947   -
+0.7/0.7 0.002   5e-04
+
+P value adjustment method: none
+#+END_EXAMPLE
 
 * Recherche de motifs
 
@@ -33,6 +66,19 @@ On calcule dans un premier temps la probabilité d'observer $n$ Aa Bb descendant
 Le nombre moyen de bactéries par boite est 5. On suppose que le nombre de colonies par boite est le même que le nombre moyen de bactéries par boite. On a alors $P(X=0) = \frac{5^0e^{-5}}{0!} = 0.0067$, soit approximativement 0,67 % de chance. \marginnote{On remarquera que la probabilité qu'il y ait au moins une colonie sur la boite de Pétri vaut $P(X > 0) = 1 - P(X = 0) = 1 - 0.0067 = 0.9933$ (99,3 \% de chance) !}
 
 * Le modèle de Jukes-Cantor en phylogénie
+
+On souhaite comparer deux espèces (eucaryotes) ayant un ancêtre commun. Des mutations aléatoires intervenant sur le génome au cours de leur évolution, un alignement des deux séquences ne donnera pas 100 % d'identité.
+
+Matrice de transition (ACGT) :
+
+$$ \begin{pmatrix*}
+-0.886 & 0.190 & 0.633 & 0.063\cr
+0.253 & -0.696 & 0.127 & 0.316\cr
+1.266 & 0.190 & -1.519 & 0.063\cr
+0.253 & 0.949 & 0.127 & -1.329
+\end{pmatrix*} $$
+
+Si l'on se trouve dans l'état =A=, on y restera un temps exponentiel de paramètre $-q_{ii} = 0.886$. La probabilité d'observer la transition =A->C= est donnée par $-q_{ij}/q_{ii} = \frac{0.190}{0.886}$.
 
 En somme, si l'on part de =A=, on attendra $\exp(0.886)=2.425$ unités de temps, et la probabilité de transitionner vers un autre état sera de 0.214 (pour C), 0.714 (G) et 0.071 (T). La transition la plus probable =A->G= implique d'attendre $\exp(-0.633)=0.531$ unité de temps.
 
