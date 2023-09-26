@@ -190,6 +190,7 @@
 
 - Données : reads (FASTQ), génome de référence (FASTA)
 - RPKM (reads per kilobase of exon model per million reads), FPKM (fragments per kilobase of exon model per million reads mapped) : prise en compte de la longeuur des gènes et de la taille de la bibliothèque
+- [[https://www.nature.com/articles/s41598-020-76881-x][Systematic comparison and assessment of RNA-seq procedures for gene expression quantitative analysis]]
 
 **** Right block :B_column:
      :PROPERTIES:
@@ -273,4 +274,4 @@
 4. Mostafa M. Abbas, Qutaibah M. Malluhi & Ponnuraman Balkrishnan (2014) 'Assessment of de novo assemblers for draft genomes: a case study with fungal genomes', /BMC Genomics/ 15, 1--12
 5. Bo Li, Victor Ruotti, Ron M. Stewart, James A. Thomson & Colin N. Dewey (2010) 'RNA-Seq gene expression estimation with read mapping uncertainty', /Bioinformatics/ 26, 493--500
 
-/Source principale des illustrations : [[https://learngenomics.dev/]], [[https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/]]/
+/Source principale des illustrations : [[https://learngenomics.dev/]], [[https://is.gd/xRcxsR]]/
