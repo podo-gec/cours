@@ -266,12 +266,13 @@
 
 [[./p/fig-kraken.png]]
 
-* Références bibliographiques
+** Références
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks,label=
+:END:
 
-1. Ernesto Picardi (2021) /RNA Bioinformatics/, Springer
-2. Ziheng Yang & Bruce Rannala (2012) 'Molecular phylogenetics: principles and practice', /Nature Reviews Genetics/ 13, 303--314
-3. Scot A. Kelchner & Michael A. Thomas (2006) 'Model Use in Phylogenetics: Nine Key Questions', /TRENDS in Ecology and Evolution/ 22, 87--94
-4. Mostafa M. Abbas, Qutaibah M. Malluhi & Ponnuraman Balkrishnan (2014) 'Assessment of de novo assemblers for draft genomes: a case study with fungal genomes', /BMC Genomics/ 15, 1--12
-5. Bo Li, Victor Ruotti, Ron M. Stewart, James A. Thomson & Colin N. Dewey (2010) 'RNA-Seq gene expression estimation with read mapping uncertainty', /Bioinformatics/ 26, 493--500
+\nocite{picardi-2021-rna-bioinformatics, yang-2012-molec, kelchner-2006-model-use-phylog, abbas-2014-assessment-de-novo, li-2010-rna-seq}
+
+#+LATEX: \printbibliography[heading=none]
 
 /Source principale des illustrations : [[https://learngenomics.dev/]], [[https://is.gd/xRcxsR]]/
