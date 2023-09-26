@@ -161,7 +161,7 @@ Le résultat suggère que cette séquence de Pile/Face n'est pas incompatible av
 Au lieu d'un alphabet à 2 lettres, ({P, F}, considérons un alphabet à 4 lettres, {A, C, T, G}. On peut toujours se ramener au cas binomial discuté précédemment.
 
 #+BEGIN_QUOTE
-The DNA sequence from different regions of two closely linked human fetal globin genes were analyzed with regard to base composition: regions flanking the genes, introns, exons, and the region between the genes. -- Weir, B.S. (1996) Genetic Data Analysis II.
+The DNA sequence from different regions of two closely linked human fetal globin genes were analyzed with regard to base composition: regions flanking the genes, introns, exons, and the region between the genes.  \cite{weir-1996-genetic-data-analysis}
 #+END_QUOTE
 
 | Region        | Length | A    | C    | G    | T    |

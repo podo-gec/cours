@@ -2,15 +2,31 @@
 #+SUBTITLE: Outils bioinformatiques
 #+DATE:
 #+LANGUAGE: fr
+#+OPTIONS: H:2 num:t toc:t
 
-* Galaxy
+* Utilisation des serveurs Galaxy publics
 
-- préférer le serveur Europe : [[https://usegalaxy.eu]]
+** [[https://usegalaxy.eu]]
+
 - créer un compte pour le transfert de fichiers et les notifications
 - vérifier disponibilité des données partagées ("data only...")
 - temps de calcul variable (queue, batch job intercurrents, événements), sensibilité aux paramètres par défaut, disponibilité des utilitaires
 
-* Quelques ordres de grandeur
+** Authentification
+
+[[./p/2023-09-26-09-40-04.png]]
+
+** Gestion des données partagées
+
+[[./p/2023-09-26-09-40-26.png]]
+
+** Gestion des historiques
+
+[[./p/2023-09-26-09-40-45.png]]
+
+* Techniques bioinformatiques
+
+** Quelques ordres de grandeur
 
 /Podospora anserina/
 
@@ -22,21 +38,21 @@
 - phylogénie ITS seuls : 4h (phyml)
 - phylogénie codes barres : 12 à 15h (phyml)
 
-* Implications informatiques
+** Implications informatiques
 
 - serveur de calcul avec beaucoup de RAM (assemblage) et GPU (phylogénie)
 - écriture de scripts shell et Python (ou R) pour les prétraitements et le développement de "workflow"
 - serveur de stockage : 400 génomes ADN (+ 96 protéines) = 24 Go (en 2022)
 - scripts de recherche/blast automatique (NCBI, JGI, etc.)
 
-* Recherche de motifs
+** Recherche de motifs
 
 [[./p/img-mRNA-protein.png]]
 
 - blast (shell ou [[https://blast.ncbi.nlm.nih.gov/Blast.cgi][en ligne au NCBI]])
 - scripts (Python, Perl, R, Bash, etc.)
 
-* Alignement de séquence
+** Alignement de séquence
 
 [[./p/img-msa-example.png]]
 
@@ -45,16 +61,16 @@
 - muscle[fn::[[https://bioinformaticsreview.com/20151018/multiple-sequence-alignment/]]]
 - visualisateurs : jalview, seaview
 
-* Mapping et assemblage (de novo)
+** Mapping et assemblage (de novo)
 
 [[./p/img-whole-genome-assembly.png]]
 
-- bowtie2
+- hisat2, tophat, bowtie2
 - bwa[fn::[[https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-184][Benchmarking short sequence mapping tools]]]
 - unicycler (spades) (*)
 - abyss[fn::[[https://www.sciencedirect.com/science/article/pii/S0167701211002508][A biologist's guide to de novo genome assembly using next-generation sequence data]]]
 
-* Phylogénie moléculaire
+** Phylogénie moléculaire
 
 [[./p/fig-phylogeny.png]]
 
@@ -65,7 +81,7 @@
 - [[https://ngphylogeny.fr/][NGPhylogeny]]
 - visualisateurs : seaview (phylip), figtree, itol (payant)
 
-* RNA-Seq
+** RNA-Seq
 
 [[./p/img-RNA-seq.png]]
 
@@ -73,7 +89,7 @@
 - kallisto + DESeq2 (R) (*)
 - Blast2Go (payant, version académique limitée)
 
-* Métagénomique
+** Métagénomique
 
 *** Top two-column block :B_columns:
     :PROPERTIES:
@@ -95,6 +111,160 @@
 - FROGS (workflow Galaxy, base de données ITS)
 - Kraken (bases de données pré-existantes) (*)
 
+* Algorithmes bioinformatiques
+
+** Assemblage de génome /de novo/
+
+*** Top two-column block :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Left block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+
+[[./p/fig-assembly.png]]
+
+**** Right block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.50
+     :END:
+
+- Données : short et/ou long reads (FASTQ)
+- [[https://pubmed.ncbi.nlm.nih.gov/27742661/][The present and future of de novo whole-genome assembly]]
+
+** Alignement sur un génome de référence (mapping)
+
+*** Top two-column block :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Left block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+
+- Données : short reads (FASTQ), génome de référence (FASTA)
+- [[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3375638/][Mapping Reads on a Genomic Sequence: An Algorithmic Overview and a Practical Comparative Analysis]]
+
+**** Right block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.50
+     :END:
+
+[[./p/fig-mapping.png]]
+
+** Détection de mutation (variant calling)
+
+*** Top two-column block :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Left block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+
+[[./p/fig-variantcalling.png]]
+
+**** Right block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.50
+     :END:
+
+- Données : reads (FASTQ), génome de référence (FASTA)
+- Fichier VCF comprenant les positions identifiées et les nucléotides associés (% et probabilité)
+- Haute sensibilité aux paramètres de filtrage (cf. tutoriel Galaxy dans le cas des champignons)
+
+** RNA-Seq : mapping & quantification
+
+*** Top two-column block :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Left block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+
+- Données : reads (FASTQ), génome de référence (FASTA)
+- RPKM (reads per kilobase of exon model per million reads), FPKM (fragments per kilobase of exon model per million reads mapped) : prise en compte de la longeuur des gènes et de la taille de la bibliothèque
+
+**** Right block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.50
+     :END:
+
+[[./p/fig-rnaseq.png]]
+
+** RNA-Seq : analyse différentielle
+
+*** Top two-column block :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Left block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+
+[[./p/fig-rnaseq2.png]]
+
+**** Right block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.50
+     :END:
+
+- Données : RPKM ou FPKM
+- Approche fréquentiste ou bayésienne pour décider si les données de comptage moyennées sur les réplicats techniques et normalisées pour chaque réplicat biologique sont dûes au hasard ou non (gène sur- ou sous-exprimé par analyse de contraste sur condition de référence).
+
+** RNA-Seq : analyse d'enrichissement
+
+*** Top two-column block :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Left block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+
+- Données : tableau de quantification, annotation (go-terms, interpro)
+- Approche par classification (3 classes/ontologies pour les go-terms : cellular component, biological process or molecular function) et "pathway"/"network" analysis (processus biologiques ou fonction moléculaire, et évenements régulatoires)
+
+**** Right block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.50
+     :END:
+
+[[./p/fig-rnaseq3.png]]
+
+** Métagénomique : Principe général
+
+[[./p/fig-metagenomics.png]]
+
+** Métagénomique : Kraken
+
+*** Top two-column block :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Left block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+
+- Utilisation de base de données pré-définies, que l'on peut augmenter avec des souches de référence
+- Mise en oeuvre rapide et rapport importable dans les suites d'analyses statistiques
+
+**** Right block :B_column:
+     :PROPERTIES:
+     :BEAMER_col: 0.50
+     :END:
+
+[[./p/fig-kraken.png]]
+
 * Références bibliographiques
 
 1. Ernesto Picardi (2021) /RNA Bioinformatics/, Springer
@@ -103,4 +273,4 @@
 4. Mostafa M. Abbas, Qutaibah M. Malluhi & Ponnuraman Balkrishnan (2014) 'Assessment of de novo assemblers for draft genomes: a case study with fungal genomes', /BMC Genomics/ 15, 1--12
 5. Bo Li, Victor Ruotti, Ron M. Stewart, James A. Thomson & Colin N. Dewey (2010) 'RNA-Seq gene expression estimation with read mapping uncertainty', /Bioinformatics/ 26, 493--500
 
-/Source principale des illustrations : [[https://learngenomics.dev/]]/
+/Source principale des illustrations : [[https://learngenomics.dev/]], [[https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/]]/
