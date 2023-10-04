@@ -158,7 +158,7 @@ Le résultat suggère que cette séquence de Pile/Face n'est pas incompatible av
 
 ** Analyse de séquences ADN
 
-Au lieu d'un alphabet à 2 lettres, ({P, F}, considérons un alphabet à 4 lettres, {A, C, T, G}. On peut toujours se ramener au cas binomial discuté précédemment.
+Au lieu d'un alphabet à 2 lettres, {P, F}, considérons un alphabet à 4 lettres, {A, C, T, G}. On peut toujours se ramener au cas binomial discuté précédemment.
 
 #+BEGIN_QUOTE
 The DNA sequence from different regions of two closely linked human fetal globin genes were analyzed with regard to base composition: regions flanking the genes, introns, exons, and the region between the genes.  \cite{weir-1996-genetic-data-analysis}
@@ -192,13 +192,13 @@ Ici, $\hat p_1 = 0.33$, $\hat p_2 = 0.24$, $n_1 = 1000$ et $n_2 = 882$, soit $z_
 ** Plans d'expérience
 
 #+BEGIN_QUOTE
-One of the principal uses of statistical models is to attempt to explain variation in measurements. This variation may be due to a variety of factors, including variation from the measurement system, variation due to environmental conditions which change over the course of a study, variation from individual to indi- vidual (or experimental unit to experimental unit), etc. Factors which are not controlled from observation to observation can introduce variation in measured values. In designed experiments, the experimenter deliberately changes the levels of experimental factors to induce variation in the measured quantities, to lead to a better understanding of the relationship between experimental factors and the response. -- Armitage and Colton \cite{armitage-2005-encyclopedia-biostats}
+One of the principal uses of statistical models is to attempt to explain variation in measurements. This variation may be due to a variety of factors, including variation from the measurement system, variation due to environmental conditions which change over the course of a study, variation from individual to individual (or experimental unit to experimental unit), etc. Factors which are not controlled from observation to observation can introduce variation in measured values. In designed experiments, the experimenter deliberately changes the levels of experimental factors to induce variation in the measured quantities, to lead to a better understanding of the relationship between experimental factors and the response. -- Armitage and Colton \cite{armitage-2005-encyclopedia-biostats}
 #+END_QUOTE
 
 ** Différents cadres de raisonnement pour l'inférence
 
 - approche *fréquentiste* : ce qui a été discuté jusqu'à présent (confronter une hypothèse unique, dans une expérience contrôlée, via un principe de falsification ; Fisher, puis Neyman & Pearson). Aucune information sur $P(H_0\mid \text{data})$. \cite{cohen-1994-earth-round}
-- approche par *vraisemblance* : utilisation des données observées pour arbitrer entre deux modèles en compétition (vraisemblance des données pour un modèle donné).
+- approche par *vraisemblance* : utilisation des données observées pour arbitrer entre deux modèles en compétition.
 - approche *bayésienne* : utilisation d'information externe pour évaluer /a priori/ quel modèle est le plus vraisemblable (mise à jour d'une probabilité /a priori/ par les données pour former une probabilité /a posteriori/) \cite{nascimento-2017-bayes}
 
 ** La description avant l'inférence
@@ -285,6 +285,8 @@ Puisqu'il y indépendance, on a $P(\text{aa})\times P(\text{BB})=\frac{1}{4}\tim
 Une suspension bactérienne contient 5000 bactéries par litre. On ensemence à partir de cette suspension 50 boites de Pétri (1 \si{\centi\meter\cubed} par boite). Si $X$ représente le nombre de colonies par boite, $X$ suit une loi de Poisson de paramètre 5, $\mathcal{P}(\lambda=5)$.[fn::[[https://cermics.enpc.fr/~jourdain/][Benjamin Jourdain, Probabilités et statistique pour l'ingénieur (2018)]]]
 
 Quelle est la probabilité qu'il n'y ait aucune colonie sur la boite de Pétri ?
+
+$$P(X=0) = \frac{5^0e^{-5}}{0!} = 0.0067$$
 
 ** PCR et processus de branchement
 
