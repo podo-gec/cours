@@ -5,7 +5,7 @@ Le répertoire [dist][] contient les diaporamas (version écran ou imprimable, a
 ## Logiciels utilisés
 
 - [Galaxy](https://usegalaxy.eu) (serveur Europe)
-- [R](https://cran.r-project.org/) et [Rstudio](https://posit.co/download/rstudio-desktop/)
+- [R](https://cran.r-project.org/) et [Rstudio](https://posit.co/download/rstudio-desktop/) (voir aussi [JASP](https://jasp-stats.org/) pour les analyses fréquentistes et bayésiennes utiles en biologie)
 - [Artemis](https://sanger-pathogens.github.io/Artemis/Artemis/), [Jalview](https://www.jalview.org/), [Seaview](https://doua.prabi.fr/software/seaview), [Mega](https://megasoftware.net/)
 - Outils en ligne : [Mafft](https://mafft.cbrc.jp/alignment/software/), [PhyML](https://www.atgc-montpellier.fr/phyml/)
 

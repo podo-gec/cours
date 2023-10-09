@@ -87,23 +87,58 @@ mc <- Mclust(moon, G = 2)
 
 - UPMGA : simple (proche de l'approche agglomérative) mais peu réaliste (suppose que la vitesse d'évolution est constante)
 - NJ : tient compte de la vitesse d'évolution (additivité des distances) mais fournit un arbre non enraciné (et non ultramétrique) ; utile comme arbre initial pour les approches par vraisemblance
-- parcimonie : minimiser le nombre de "pas" (mutations / substitutions) nécessaires pour passer d'une séquence à une autre (suppose les sites indépendants).
+- parcimonie : minimiser le nombre "d'éditions" (mutations / substitutions) nécessaires pour passer d'une séquence à une autre (suppose les sites indépendants).
 
 ** Modèles basés sur les distances (UPMGA)
 
 #+ATTR_LATEX: :height 0.8\textheight
 [[./p/img-tree-upmga.png]]
 
-** Modèles basés sur les distances (parsimonie)
+** Modèles basés sur les distances (parcimonie)
 
 #+ATTR_LATEX: :height 0.8\textheight
 [[./p/img-tree-parsimony.png]]
 
 * Approches par vraisemblance
 
-** Modèle de substitution
+** Modèle de Jukes-Cantor
 
-- plusieurs modèles de substitution : GTR +I/+G[fn::[[https://www.hiv.lanl.gov/content/sequence/findmodel/findmodel.html]] ; \cite{posada-1998-modeltest-testing-dna}]
+Des mutations aléatoires intervenant sur le génome au cours de leur évolution, un alignement de deux séquences ne donnera pas 100 % d'identité.
+
+Matrice de transition (ACGT) hypothétique :
+
+$$ \begin{pmatrix*}
+-0.886 & 0.190 & 0.633 & 0.063\cr
+0.253 & -0.696 & 0.127 & 0.316\cr
+1.266 & 0.190 & -1.519 & 0.063\cr
+0.253 & 0.949 & 0.127 & -1.329
+\end{pmatrix*} $$
+
+Si l'on se trouve dans l'état =A=, on y restera un temps exponentiel de paramètre $-q_{ii} = 0.886$. La probabilité d'observer la transition =A->C= est donnée par $-q_{ij}/q_{ii} = \frac{0.190}{0.886}$.
+
+** Modèle de Jukes-Cantor (2)
+
+Considérons que les événements surviennent au cours du temps, $t$, avec une fréquence $\lambda$. Le temps d'attente avant d'observer le prochain événement est alors décrit par une loi exponentielle, $f(t)=\lambda e^{-\lambda t}$, tandis que le temps d'attente avant d'observer le $k$-ième événement suit une loi Gamma, $f(t)=\frac{\lambda^k}{\Gamma(k)}t^{k-1}e^{-\lambda t}$. Le nombre d'événements survenant dans l'intervalle $T$ suit une loi de Poisson de paramètre $\lambda T$, $\Pr(k) = \frac{e^{-\lambda t}(\lambda T)^k}{k!}$.
+
+Si l'on part de $A$, on devra attendre $\exp(0.886)=2.425$ unités de temps, and les probabilités de passer à un autre état sont 0.214 (pour C), 0.714 (G) and 0.071 (T). La transition la plus probbale, $A\rightarrow G$, suppose d'attendre $\exp(-0.633)=0.531$ unité de temps.
+
+Temps de divergence = fréquence des états finaux au bout d'un temps $t$ (distribution stationnaire).
+
+** Modèle de Jukes-Cantor (3)
+
+$$ \begin{pmatrix}
+-3\mu & \mu & \mu & \mu\cr
+\mu & -3\mu & \mu & \mu\cr
+\mu & \mu &-3\mu & \mu\cr
+\mu & \mu & \mu & -3\mu
+\end{pmatrix} $$
+
+Ceci signifie que chaque nucléotide a un taux constant de mutation $\mu$. La probabilité que deux espèces ait le même nucléotide sur un site homologue vaut donc $\Pr(\text{same}) = \frac{1}{4}(1+3e^{-8\mu t})$, d'où $\Pr(\text{different}) = 1 - \Pr(\text{same}) = \frac{3}{4}(1-e^{-8\mu t})$.[fn::Jukes, T. H. and Cantor, C. R., Evolution of protein molecules. In Mammalian Protein Metabolism, ed. Munro, H. N., pp. 21-132, New York: Academic Press, 1969]
+
+
+** Modèles de substitution
+
+- plusieurs modèles de substitution : GTR +I/+G[fn::[[https://www.hiv.lanl.gov/content/sequence/findmodel/findmodel.html]] ; \cite{kalyaanamoorthy-2017-modelfinder-selection-accurate} ; \cite{posada-1998-modeltest-testing-dna}]
 - GTR+I+$\Gamma$ = 10 paramètres
 - compromis bias-variance, sur-ajustement, cadre de raisonnement hypothétique
 
