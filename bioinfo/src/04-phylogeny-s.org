@@ -2,87 +2,153 @@
 #+SUBTITLE: Approches phylogénétiques
 #+DATE:
 #+LANGUAGE: fr
+#+OPTIONS: H:2 num:t
 
 * Phylogénie moléculaire
+
+** Principes
 
 - arbre phylogénétique : représentation graphique des relations (de proximité) entre différents organismes, dans un contexte d'évolution temporelle à partir d'un ancêtre commun à tous les descendants
 - relations de similarité et phénomène de divergence extraites à partir de l'alignement des séquences
 - phylogény moléculaire : analyse des données génétiques (ADN) et des différences moléculaires héréditaires
 - objectif : caractériser le processus évolutif ayant permis de générer la diversité observée \cite{kelchner-2006-model-use-phylog,yang-2012-molec}
 
-* Classification de séquences
+** Classification de séquences
 
 - séquences non redondantes, séquences consensus
 - aggrégation/classification (EST, OTU, famille de protéines)
 - mesure de distance, blast, autre
 - logiciels : cd-hit, vsearch, OrthoFinder
 
-* Etapes de construction d'un arbre
+** Etapes de construction d'un arbre
 
 - sélection des organismes ou famille de gènes
 - choix des marqueurs moléculaires
 - amplification, séquençage et assemblage
-- [*] alignement (ClustalW, MSA, MAFFT, T-Coffee)
+- alignement (ClustalW, MSA, MAFFT, T-Coffee)
 - choix d'un modèle évolutionnaire
 - analyse phylogénétique (Paup, PAML, PHYLIP, MEGA, Raxml, MrBayes)
 - construction de l'arbre phylogénétique
 - évaluation de l'arbre phylogénétique (bootstrap, parsimonie/distance, vraisemblance)
 
-* Alignement multiple
+** Nomenclature
 
-- clustal, mafft, muscle[fn::[[https://bioinformaticsreview.com/20151018/multiple-sequence-alignment/]]]
-- algorithme progressif, temps de calcul, taille et nombre de séquences
-- Mafft fournit une sortie Fasta par défault, Mega dispose de son propre format d'exportation
-- Matrices de subsitution (PAM, BLOSSUM)
+[[./p/img-tree-nomenclature.png]]
 
-* Modèles basés sur les distances ou la parsimonie
+* Méthodes de classification
 
+** Classification automatique (en statistiques)
+
+Approche non supervisée :
+
+- statut inconnu
+- identifier des groupes d'unités statistiques partageant des caractéristiques communes ou présentant un certain degré de similarité
+- mesurer la co-occurence d'événements ou la fréquence de motifs plus ou moins réguliers
+- Exemples : classification automatique ("clustering"), système de recommendation et filtrage collaboratif, text mining, etc.
+
+** Classification hiérarchique
+
+- mesure de dissimilarité ou de distance entre chaque paire d'observation : $\vert\vert x-y\vert\vert_2$ (euclidienne), $\vert\vert x-y\vert\vert_2^2$, $\vert\vert x-y\vert\vert_1$
+- "aggrégation ascendante" : chaque observation définit son propre cluster, puis on regroupe les clusters par paires et on itère jusqu'à n'avoir plus qu'un seul cluster
+- "aggrégation descendante" : on part d'un seul cluster et on divise
+- critère d'agglomération : complete, single, average, centroid, diminution de la variance intra-classe (Ward), etc.
+
+** Nuées dynamiques (k-means)
+
+- "aggrégation en centres mobiles" : regroupement itératif des observations par minimisation de la variance intra-cluster, après initialisation aléatoire des centres de classe
+- choix d'une fonction distance : euclidienne, Manhattan (k-medians), et bien d'autres (k-medoids ou PAM)
+
+** Illustration
+
+#+ATTR_LATEX: :height 0.8\textheight
+[[./p/img-classification.png]]
+
+** Application R
+
+#+BEGIN_SRC R
+library(mclust)
+
+hc.s <- hclust(dist(moon), method = "single")
+hc.c <- hclust(dist(moon), method = "complete")
+
+km <- kmeans(moon, centers = 2, nstart = 25)
+mc <- Mclust(moon, G = 2)
+#+END_SRC
+
+** Application R (2)
+
+[[./p/fig-toy-moon-hc.png]]
+
+** Application R (3)
+
+[[./p/fig-toy-moon-km.png]]
+
+** Classification automatique (en phylogénie)
+
+- UPMGA : simple (proche de l'approche agglomérative) mais peu réaliste (suppose que la vitesse d'évolution est constante)
+- NJ : tient compte de la vitesse d'évolution (additivité des distances) mais fournit un arbre non enraciné (et non ultramétrique) ; utile comme arbre initial pour les approches par vraisemblance
+- parcimonie : minimiser le nombre de "pas" (mutations / substitutions) nécessaires pour passer d'une séquence à une autre (suppose les sites indépendants).
+
+** Modèles basés sur les distances (UPMGA)
+
+#+ATTR_LATEX: :height 0.8\textheight
 [[./p/img-tree-upmga.png]]
 
-* Modèles basés sur les distances ou la parsimonie (2)
+** Modèles basés sur les distances (parsimonie)
 
+#+ATTR_LATEX: :height 0.8\textheight
 [[./p/img-tree-parsimony.png]]
 
-* Modèle de substitution
+* Approches par vraisemblance
+
+** Modèle de substitution
 
 - plusieurs modèles de substitution : GTR +I/+G[fn::[[https://www.hiv.lanl.gov/content/sequence/findmodel/findmodel.html]] ; \cite{posada-1998-modeltest-testing-dna}]
 - GTR+I+$\Gamma$ = 10 paramètres
 - compromis bias-variance, sur-ajustement, cadre de raisonnement hypothétique
 
-* Modèle GTR
+** Modèle GTR
 
 [[./p/img-gtr-model.png]]
 
-* Phyml
+** Phyml
 
 - utilisable directement depuis Seaview (sur séquences déjà alignées), ou [[http://www.atgc-montpellier.fr/phyml/][en ligne]]
 - utilisable également sous R (=plot= et =summary=)
 - disponible en ligne sur [[https://ngphylogeny.fr/][NGPhylogeny]]
 
-* MEGA
+** MEGA
 
+#+ATTR_LATEX: :height 0.8\textheight
 [[./p/img-mega-ml.png]]
 
-* Nomenclature
+** IQ-TREE : modèle de substitution NN
 
-[[./p/img-tree-nomenclature.png]]
+#+ATTR_LATEX: :height 0.8\textheight
+[[./p/2023-10-09-15-28-57.png]]
 
-* Modèles d'évolution \cite{kelchner-2006-model-use-phylog}
+** IQ-TREE : modèle de substitution AA
 
+#+ATTR_LATEX: :height 0.8\textheight
+[[./p/2023-10-09-15-35-33.png]]
+
+** Modèles d'évolution \cite{kelchner-2006-model-use-phylog}
+
+#+ATTR_LATEX: :height 0.8\textheight
 [[./p/img-usual-models.jpg]]
 
-* Stabilité de l'arbre (bootstrap)
+** Stabilité de l'arbre (bootstrap)
 
 [[./p/img-tree-bootstrap.png]]
 
-* Applications
+** Applications
 
 - Evaluer la qualité du modèle
 - Comparaison d'arbres
 - Extraction de clades
 - Combinaison d'arbres
 
-* Références
+** Références
 :PROPERTIES:
 :BEAMER_opt: allowframebreaks,label=
 :END:
