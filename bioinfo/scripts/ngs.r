@@ -9,7 +9,7 @@
 ## NOTE: This R script assumes that kallisto data are already available.
 ## Sample data are available in file kallisto.tar.gz.
 ## Update path to reflect the correct location of Kallisto output on your HD
-WD <- "~/cwd/nobackup/galaxy/RNAseq/"
+WD <- "~/cwd/gec-cours/bioinfo/data/out"
 setwd(WD)
 
 if (!requireNamespace("BiocManager", quietly = TRUE)) {
@@ -77,7 +77,7 @@ with(res[topGene, ], {
 
 plotCounts(dds, gene = which.min(res$padj), intgroup = "condition")
 
-dists <- dist(t(assay(ddstxi)))
+dists <- dist(t(assay(dds)))
 dists
 
 dd <- as.matrix(dists)
