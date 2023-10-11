@@ -1,0 +1,19 @@
+PRJNA442527;SRR6960210;Growth conditions: liquid culture grown on soybean hulls; transfer for 48h after pre-culture
+PRJNA442526;SRR6960225;Growth conditions: liquid culture grown on soybean hulls; transfer for 48h after pre-culture
+PRJNA442525;SRR6960223;Growth conditions: liquid culture grown on soybean hulls; transfer for 48h after pre-culture
+PRJNA442524;SRR6960220;Growth conditions: liquid culture grown on corn stover; transfer for 48h after pre-culture
+PRJNA442523;SRR6960214;Growth conditions: liquid culture grown on corn stover; transfer for 48h after pre-culture
+PRJNA442522;SRR6960211;Growth conditions: liquid culture grown on corn stover; transfer for 48h after pre-culture
+PRJNA442521;SRR6960212;Growth conditions: liquid culture grown on soybean hulls; transfer for 24h after pre-culture
+PRJNA442520;SRR6960208;Growth conditions: liquid culture grown on soybean hulls; transfer for 24h after pre-culture
+PRJNA442519;SRR6960215;Growth conditions: liquid culture grown on soybean hulls; transfer for 24h after pre-culture
+PRJNA442518;SRR6960217;Growth conditions: liquid culture grown on corn stover; transfer for 24h after pre-culture
+PRJNA442517;SRR6960216;Growth conditions: liquid culture grown on corn stover; transfer for 24h after pre-culture
+PRJNA442516;SRR6960222;Growth conditions: liquid culture grown on corn stover; transfer for 24h after pre-culture
+PRJNA442515;SRR6960207;Growth conditions: liquid culture grown on soybean hulls; transfer for 4h after pre-culture
+PRJNA442514;SRR6960213;Growth conditions: liquid culture grown on soybean hulls; transfer for 4h after pre-culture
+PRJNA442513;SRR6960218;Growth conditions: liquid culture grown on soybean hulls; transfer for 4h after pre-culture
+PRJNA442512;SRR6960221;Growth conditions: liquid culture grown on corn stover; transfer for 4h after pre-culture
+PRJNA442511;SRR6960219;Growth conditions: liquid culture grown on corn stover; transfer for 4h after pre-culture
+PRJNA442510;SRR6960209;Growth conditions: liquid culture grown on corn stover; transfer for 4h after pre-culture
+PRJNA442509;SRR6960224;Growth conditions: pre-culture grown on LB; grown 3 days
