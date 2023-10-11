@@ -24,6 +24,7 @@ Le répertoire [dist][] contient les diaporamas (version écran ou imprimable, a
 ### Outils pour le RNA-Seq
 
 - R : [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) et [kallisto](https://pachterlab.github.io/kallisto/)
+- [RNA-seq workflow: gene-level exploratory analysis and differential expression](https://bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html)
 - Galaxy : [Reference-based RNA-Seq data analysis](https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/ref-based/tutorial.html)
 
 ### Outils pour la méta-génomique
