@@ -24,13 +24,13 @@ Le répertoire [dist][] contient les diaporamas (version écran ou imprimable, a
 ### Outils pour le RNA-Seq
 
 - R : [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) et [kallisto](https://pachterlab.github.io/kallisto/)
-- [RNA-seq workflow: gene-level exploratory analysis and differential expression](https://bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html)
+- [RNA-seq workflow: gene-level exploratory analysis and differential expression](https://bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html); [Gene set enrichment analysis with topGO](https://www.bioconductor.org/packages/devel/bioc/vignettes/topGO/inst/doc/topGO.pdf) (PDF)
 - Galaxy : [Reference-based RNA-Seq data analysis](https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/ref-based/tutorial.html)
 
 ### Outils pour la méta-génomique
 
 - R : [dada2 pipeline](https://benjjneb.github.io/dada2/tutorial.html), [phyloseq](https://bioconductor.org/packages/release/bioc/html/phyloseq.html) (avec [Kraken](https://ccb.jhu.edu/software/kraken/))
-- [FROGS](https://sepsis-omics.github.io/tutorials/modules/frogs/)
+- [FROGS](https://sepsis-omics.github.io/tutorials/modules/frogs/); [Phyloseq tutorial](https://vaulot.github.io/tutorials/Phyloseq_tutorial.html)
 - Galaxy : [Analyses of metagenomics data - The global picture](https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/general-tutorial/tutorial.html)
 
 [dist]: https://github.com/podo-gec/cours/tree/master/bioinfo/dist

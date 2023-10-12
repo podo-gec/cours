@@ -18,6 +18,9 @@ if (!requireNamespace("BiocManager", quietly = TRUE)) {
 
 BiocManager::install(c("DESeq2", "tximport", "pheatmap", "BiocParallel"))
 
+# If required (Windows):
+# BiocManager::install("rhdf5")
+
 library(DESeq2)
 library(tximport)
 library(pheatmap)
