@@ -12,7 +12,24 @@
 - trouver des alignements significatifs entre une séquence (query) et une banque de séquences (subjects)
 - algorithme de Smith-Waterman trop lent donc utilisation de l'algorithme BLAST (Basic Local Alignment Search Tool)
 
-** Principe général (2)
+** Alignement, similarité et homologie
+
+Une possibilité est de définir la similarité entre deux séquences par leur distance (Levenshtein ou edit), ou par le pourcentage d'identité (résidus appariés / nombre total de résidus) :
+
+#+BEGIN_EXAMPLE
+GTCCTCATAACTCTCTCTAG
+GTCGTCATAAC CTCTCTAG
+   ^       ^
+#+END_EXAMPLE
+
+Une autre possibilité consiste à définir un score d'alignement à partir du nombre d'insertions et de déletions ("gaps").
+
+#+BEGIN_EXAMPLE
+GTCCTCATAACTCTCTCTAG  |  GTCCTCAT-AACTCTCTCTAG  |  ...
+GTCGTCATAAC-CTCTCTAG  |  GTCGTCATAA-C-CTCTCTAG  |  ...
+#+END_EXAMPLE
+
+** Recherche par Blast
 
 Blast utilise des heuristiques pour accélérer la production de résultats et il permet de calculer la significativité statistique des résultats d'alignement. Attention, ce sont les parties conservées de l'alignement qui sont généralement favorisées.
 
@@ -44,6 +61,14 @@ Matrice de substitution :
 On peut toujours aligner deux séquences et définir le meilleur MSP : comment fixer un seuil de significativité statistique (i.e., pour démontrer une réelle homologie) ?
 
 Soit le $S$ le score d'alignement des deux séquences. On définit la E-value comme l'espérance du nombre $n$ de MSP de score $\geq S$ dans 2 séquences aléatoires de même longueur et de même composition. Par exemple, si E=10, on dira que 10 HSP $\geq S$ peuvent être trouvés par chance.
+
+** Valeurs E et P
+
+La valeur $E$ est calculée sur la base du score d'alignement (somme des substitutions et indels, $S$), de la taille de l'espace de recherche (longueur séquence et taille base de données, $m \times n$) et des paramètres dérivés du système de scoring et de la composition de la base de données (paramètres de Karlin-Altschul, $K$ et $\lambda$) :
+
+$$ \text{E-value} = K \times m \times n \times e^{-\lambda S}. $$
+
+Des valeurs plus faibles de $E$ des alignements plus "significatifs" alors que des valeurs plus élevées suggèrent des alignements qui peuvent être des événements aléatoires. La probabilité de ne trouver aucun HSP avec un score $\geq S$ vaut $e^{-E}$, d'où la probabilité de trouver au moins un HSP, $P = 1 - e^{-E}$.[fn::Pour plus de détails, consulter [[https://www.ncbi.nlm.nih.gov/BLAST/tutorial/Altschul-1.html][The Statistics of Sequence Similarity Scores]].]
 
 * Alignement multiple
 
