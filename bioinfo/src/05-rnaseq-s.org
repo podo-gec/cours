@@ -2,63 +2,132 @@
 #+SUBTITLE: Analyses RNA-Seq
 #+DATE:
 #+LANGUAGE: fr
-#+OPTIONS: H:2 num:t
+#+OPTIONS: H:3 num:t
 
 * Principe des analyses RNA-Seq
 
-- revues de bonnes pratiques : \cite{conesa-2016-survey-best,yendrek-2012-bench-scien}
-- outils statistiques : [[https://www.bioconductor.org][Bioconductor]] ; \cite{korpelainen-2015-rna,anders-2013-count-rna}
+** Références bibliographiques
 
-* Etapes d'analyse
+- revues de bonnes pratiques \cite{conesa-2016-survey-best,yendrek-2012-bench-scien}
+- outils statistiques : [[https://www.bioconductor.org][Bioconductor]] \cite{anders-2013-count-rna}
+
+** Références bibliographiques (2)
+
+#+ATTR_LATEX: :height 0.8\textheight
+[[./p/2024-10-17-11-22-08.png]]
+
+** Etapes d'analyse
 
 1. Extraction ADN à partir d'un échantillon
 2. DNA sequencing
-3. [*] Alignement des "reads" sur un transcriptome
+3. Alignement des "reads" sur un transcriptome
 4. Analyse exploratoire des données (contrôle qualité, couverture, etc.)
 5. Identification des variants (SNP, indels -- small insertions and deletions)
 6. Quantification de gènes (statistiques sur des données de comptage)
 
-* Principes de l'analyse
+** Principes de l'analyse
 
 Les "analyses NGS" (RNA, CHIP, etc.) doivent prendre en compte une estimation de la variance intra-groupe lors de l'analyse de multiples gènes, d'où l'idée de combiner l'information entre les gènes. L'approche DESeq permet de détecter et corriger les estimations de dispersion qui restent trop faibles en modélisant la dépendance entre la dispersion de l'expression moyenne sur l'ensemble des échantillons. De plus, cette approche fournit une méthode originale de classement des gènes et de visualisation des tailles d'effet \cite{love-2014-moder-rna-deseq}. La librairie R [[https://bioconductor.org/packages/release/bioc/html/DESeq2.html][DESeq2]] fournit également des estimateurs de type "shrunken fold changes" (avec leur erreur-type).
 
-* TopHat + HTSeq (or FeatureCounts)
+* Solutions logicielles
+
+** TopHat + HTSeq
 
 Cette approche, disponible sous Galaxy, prend plus de temps et repose sur le logiciel TopHat. Celui-ci présente l'avantage de rendre compte des jonctions intron-exon, ce qui le distingue de bowtie.
 
-* Kallisto (ultra-fast mapping)
+** Hisat2 + FeatureCounts
+
+- successeur de TopHat, plus rapide ; nécessite de construire un index
+
+*** Construction de l'index
+#+BEGIN_EXAMPLE
+gff3_to_fasta -g reference/PC0109.gff3 \
+        -f reference/PC0109.scaffolds.fa \
+        -st cds -d simple -o reference/transcriptome
+mv reference/transcriptome.fas_cds.fa reference/cds.fas
+hisat2-build -p 16 \
+  reference/PC0109.scaffolds.fa reference/Pcamemberti.hisat.idx
+#+END_EXAMPLE
+
+** Hisat2 + FeatureCounts (2)
+
+*** Analyse des reads
+#+BEGIN_EXAMPLE
+for f in data/*_R1_001.fastq.gz; do
+        hisat2 -x reference/Pcamemberti.hisat.idx -t -p 32 \
+          --very-sensitive \
+          -1 "$f" \
+          -2 "${f/R1_001.fastq.gz/R2_001.fastq.gz}" \
+          -S out/$(basename $f).sam \
+          --summary-file out/$(basename $f).log
+done
+#+END_EXAMPLE
+
+** Hisat2 + FeatureCounts (3)
+
+*** Génération de fichiers BAM
+#+BEGIN_EXAMPLE
+for f in out/*.sam; do
+        samtools sort -@ 16 -o "${f%.sam}.bam" "$f"
+done
+
+for f in out/*.bam; do
+        samtools index "$f" "$f".bai
+done
+#+END_EXAMPLE
+
+** Hisat2 + FeatureCounts (4)
+
+*** Quantification
+#+BEGIN_EXAMPLE
+for f in out/*.bam; do
+        featureCounts -T 16 -p --countReadPairs \
+          -t exon -g gene_id \
+          -a Penicillium_camemberti_PC0109.gtf \
+          -o "$f".cnt "$f"
+done
+#+END_EXAMPLE
+
+
+** Kallisto (ultra-fast mapping)
 
 - Entrée/Sortie = SRA ou Fastq et fichier d'annotation[fn::Attention : l'ID du transcrit doit correspondre exactement à l'ID du gène dans le fichier GFF3 d'annotation.] -> TPM
-- plus rapide que TopHat, mais moins précis
+- plus rapide que TopHat, mais un peu moins précis
 - chaque "run" doit être en triplicat
 
-* Analyse des données de comptage
+Avantage : rapide et disponible pour tous les OS ; fichiers de résultats peuvent être importés facilement sous R pour traitement avec =DESeq2=.
+
+* Synthèse et analyse exploratoire des données
+
+** Analyse des données de comptage
 
 - contrôle qualité (nombre de hits trop bas)
 - classification automatique et analyse en composantes principales
 - analyse différentielle
 
-* Analyse des données de comptage (2)
+** Analyse des données de comptage (2)
 
 Etape de normalisation : comparaison des facteurs de taille (rapport médian (ou moyenne tronquée avec le package edgeR) entre chaque échantillon et un échantillon virtuel de référence = médiane des valeurs pour chaque gène sur l'ensemble des échantillons). Ces rapports sont supposés tenir compte de la taille des librairies et être à peu égaux à 1. Si l'on divise chaque colonne de nombres de reads par le facteur de taille correspondant, on obtient le nombre de reads normalisé. On exprime celui-ci en unités par million pour l'interprétation.
 
 Un graphique de type MA plot montre la moyenne en fonction de la différence moyenne de fold-change (en log), centré autour de 0. On s'attend à observer une plus grande variété des log ratios quand le nombre de reads est bas.
 
-* Analyse des données de comptage (3)
+** Analyse des données de comptage (3)
 
 Une ACP ou une carte de contarste ("heatmap") des résultats de la classification automatique des échantillons est utilisée pour vérifier la similarité entre les échantillons : les triplicats doivent être groupés ensemble et les échantillons provenant de conditions différentes doivent être éloignés les uns des autres. Généralement, on applique une transformation log régularisée sur les nombres de reads bruts pour minimiser l'impact des quelques gènes très variables, ce qui revient à donner un poids équivalent à tous les gènes. Pour les gènes avec un grand nombre de reads, cela équivaut à une transformation log2, alors que pour les gènes peu exprimés il s'agit plutôt de ramener les valeurs vers la valeur moyenne du gène.
 
 * Analyse différentielle
 
+** Modèle statistique
+
 Le modèle statistique utilisé pour l'analyse différentielle repose sur une loi Binomiale négative. Contrairement à la loi de Poisson, cela permet de rendre compte de la surdispersion des valeurs (variance supérieure à la moyenne). La variance vaut $\mathbb{V}[NB(\mu, \alpha)]=\mu+\alpha\mu^2$, et la première étape de l'analyse consiste à estimer le paramètre de surdispersion (pour chaque gène, indépendemment de la condition).
 
 Notons que pour les gènes avec un très faible nombre de reads, le bruit Poissonien annihile le moindre effet différentiel, et les outils d'analyse utilisent des filtres spéficiques pour supprimer ces gènes de l'analyse et augmenter la puissance statistique.
 
-* Analyse différentielle (2)
+** Analyse différentielle
 
 La dispersion asymptotique des gènes hautement exprimés peut être vue comme une mesure de la variabilité biologique (au sens d'un coefficient de variation au carré) : une valeur de dispersion de 0.1 signifie que l'expression du gène tend à différer par $\sqrt{0.01}=10\%$ entre les échantillons de la même condition. La procédure R =estimateDispersions= permet de calculer et visualiser les valeurs estimées pour le paramètre de dispersion en fonction des valeurs de comptage normalisées.
 
-* Analyse différentielle (3)
+** Analyse différentielle (2)
 
 Le test statistique utilisé pour évaluer si deux gènes sont différentiellement exprimés est un test de Wald
 (=nbinomWaldTest=), avec correction par FDR pour les tests multiples. Les p-valeurs ajustées de Benjamini–Hochberg peuvent être triées pour sousligner les "top gènes". Habituellement, le seuil est fixé à 0.1 et pas 0.05 comme dans le cadre des tests formels d'hypothèse.
@@ -66,7 +135,7 @@ Le test statistique utilisé pour évaluer si deux gènes sont différentielleme
 La distribution des p-valeurs (non ajustées) est utile pour vérifier la distribution sous l'hypothèse nulle de la statistique de test. Si l'histogramme ne présente pas une allure uniforme (e.g., forme en U ou en V), alors il est vraisemblable que la distribution nulle
 $\mathcal{N}(0,1)$ null distribution n'est pas appropriée. [fn::Voir les packages [[http://cran.fhcrc.org/web/packages/fdrtool/index.html][fdrtool]] et [[http://cran.fhcrc.org/web/packages/locfdr/index.html][locfdr]] pour des stratégies alternatives de contrôle du FDR local ou global.]
 
-* Références
+** Références
 :PROPERTIES:
 :BEAMER_opt: allowframebreaks,label=
 :END:
